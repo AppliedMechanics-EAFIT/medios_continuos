@@ -1,0 +1,82 @@
+\documentclass[spanish,letterpaper,12pt,oneside,openany]{book}
+\usepackage[spanish, activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\decimalpoint
+\usepackage{babelbib}
+\usepackage{etoolbox}
+\patchcmd\btxselectlanguage{\csname}{\csname TEMPPATCH}{}{} % Para hacer a babelbib funcionar
+\usepackage{amstext, amssymb, amsthm, amsmath, amsbsy}
+\usepackage{tabularx}
+%\usepackage[ansinew]{inputenc}
+\usepackage[margin=20pt,font=small,labelfont=bf,labelsep=period]{caption}%%Para modificar el formato del texto de los "caption"
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{url}
+\usepackage{listings}%%Para incluir codigo
+\usepackage[final]{pdfpages}%%Para incluir archivos en pdf
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{mathtools}									% Package to use abs command
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}			% abs command
+\usepackage{subfig}%%Para incluir subgraficos
+\usepackage{subfiles}														% include subfies	
+\usepackage[pdftex, pdftitle={Notas de Clase: Mecánica de los Medios Continuos}, pdfauthor={Mecánica Aplicada}, pdfsubject={Class Notes}, pdfkeywords={Medios Continuos}, pdfpagemode=UseOutlines,bookmarks,bookmarksopen,pdfstartview=FitH,colorlinks,linkcolor=blue, urlcolor=black, citecolor=blue]{hyperref} %%Para incluir detalles cucas del pdf
+\usepackage[ruled]{algorithm2e}%%Para incluir algoritmos
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{leftidx}
+%\usepackage{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{cite}  %% Para poner bonitas las citas
+\usepackage{bookmark} %% Para poder organizar las etiquetas en pdf
+\geometry{verbose,letterpaper,tmargin=3cm,bmargin=3cm,lmargin=2cm,rmargin=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Nuevos Comandos
+
+\setlength{\parskip}{0.5cm}
+
+% Comillas:   ``''
+
+\newcommand{\urlbib}[1]{{\footnotesize{\url{#1}}}} % para incluir urls en las referencias
+\newcommand{\fullref}[1]{\ref{#1} de la p\'agina \pageref{#1}}
+
+\usepackage{cleveref}
+\begin{document}
+%%
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{Tabla de Contenido}
+\renewcommand{\listtablename}{Lista de tablas}
+\renewcommand{\listfigurename}{Lista de figuras}
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Portada %%%%%%%%%%
+\include{src/portada}
+
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tabla de contenido
+\pdfbookmark[0]{Tabla de Contenido}{}
+\tableofcontents
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subfile{src/presentacion}
+\subfile{src/algvect}
+\subfile{src/Introduccion}
+\subfile{src/tensiones}
+\subfile{src/Equilibrio}
+\subfile{src/deformaciones}
+\subfile{src/elasticidad}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Bibliografia %%%%%%%%%%
+%%Para referenciar sin cita en el texto
+%\nocite{}
+\addcontentsline{toc}{chapter}{Referencias}
+\bibliographystyle{babunsrt}
+%\bibliography{informe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
