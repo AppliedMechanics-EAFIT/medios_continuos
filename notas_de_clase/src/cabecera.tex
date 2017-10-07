@@ -1,0 +1,72 @@
+\documentclass[spanish, letterpaper, 12pt, oneside]{book}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{babelbib}
+\usepackage{etoolbox}
+\usepackage{amstext, amssymb, amsthm, amsmath, amsbsy}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{url}
+\usepackage[final]{pdfpages}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{subfig}
+\usepackage{subfiles}	
+\usepackage{hyperref} %% Para incluir detalles cucas del pdf
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{leftidx}
+\usepackage{cite}  %% Para poner bonitas las citas
+\usepackage{bookmark} %% Para poder organizar las etiquetas en pdf
+\usepackage{cleveref}
+
+
+%% Configuracion paquetes
+
+\patchcmd\btxselectlanguage{\csname}{\csname TEMPPATCH}{}{} % Para hacer a babelbib funcionar
+
+
+\geometry{
+	verbose
+}
+
+\hypersetup{
+	bookmarksopen=true,
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=blue,
+	urlcolor=black,	
+	linktoc=all,
+	bookmarksopen=false,
+	pdftitle={Notas de Clase: Mecánica de los Medios Continuos},
+	pdfauthor={Mecánica Aplicada},
+	pdfkeywords={Mecánica de los medios continuos, Mecánica de sólidos},
+	pdfsubject={Notas de Clase},
+	pdfpagemode=UseOutlines,
+	pdfstartview=FitH
+}
+
+\captionsetup{
+    margin=20pt,
+    font=small,
+    labelfont=bf,
+    labelsep=period
+}
+
+% Nuevos Comandos
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{Tabla de Contenido}
+\renewcommand{\listtablename}{Lista de tablas}
+\renewcommand{\listfigurename}{Lista de figuras}
+\newcommand{\urlbib}[1]{{\footnotesize{\url{#1}}}} % para incluir urls en las referencias
+\newcommand{\fullref}[1]{\ref{#1} de la página \pageref{#1}}
+
+
+%% Ajustes
+\setlength{\parskip}{0.5cm}
+\decimalpoint

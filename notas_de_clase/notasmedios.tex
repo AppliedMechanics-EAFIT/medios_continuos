@@ -1,0 +1,32 @@
+\include{src/cabecera}
+
+\begin{document}
+
+%%%%%%%%%% Portada %%%%%%%%%%
+\include{src/portada}
+
+%%%%%%%%%% Parte inicial  %%%%%%%%%%
+\frontmatter
+
+% Tabla de contenido
+\pdfbookmark[0]{Tabla de Contenido}{}
+\tableofcontents
+
+%%%%%%%%%% Contenido principal %%%%%%%%%%
+\mainmatter
+\subfile{src/presentacion}
+\subfile{src/algvect}
+\subfile{src/Introduccion}
+\subfile{src/tensiones}
+\subfile{src/Equilibrio}
+\subfile{src/deformaciones}
+\subfile{src/elasticidad}
+
+%%%%%% Bibliografia %%%%%%%%%%
+% Para referenciar sin cita en el texto
+%\nocite{}
+\addcontentsline{toc}{chapter}{Referencias}
+\bibliographystyle{babunsrt}
+
+\end{document}
+

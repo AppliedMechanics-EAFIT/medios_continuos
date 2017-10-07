@@ -5,7 +5,8 @@ ingeniería civil de la Universidad EAFIT.
 
 ## Contenido
 
-- Notas de clase, con los archivos fuente y el documento en [pdf](https://github.com/nicoguaro/medios/raw/master/NOTAS%20DE%20CLASE/LATEX%20FILES/notasmedios.pdf).
+- Notas de clase, con los archivos fuente y el documento en
+  [pdf](https://github.com/nicoguaro/medios/raw/master/NOTAS%20DE%20CLASE/LATEX%20FILES/notasmedios.pdf).
 
 - Notebooks de [Jupyter](http://jupyter.org/).
 
@@ -20,13 +21,13 @@ o directamente usar la opción de descarga desde GitHub.
 
 ## Instrucciones de instalación
 
-Para correr los notebooks de Jupyter, es necesario [Python](https://www.python.org/) 
+Para correr los notebooks de Jupyter, es necesario [Python](https://www.python.org/)
 y algunos paquetes:
 
 - [IPython](http://ipython.org/), un shell interactivo que añade funcionalidades
  extra al modo interactivo incluido con Python, como resaltado de líneas y
 errores mediante colores, una sintaxis adicional para el shell, autocompletado
-mediante tabulador de variables, módulos y atributos; entre otras funcionalidades. 
+mediante tabulador de variables, módulos y atributos; entre otras funcionalidades.
 - [NumPy](http://www.numpy.org/), una extensión de Python, que le agrega mayor
 soporte para vectores y matrices, constituyendo una biblioteca de funciones
 matemáticas de alto nivel para operar con esos vectores o matrices.
@@ -34,7 +35,7 @@ matemáticas de alto nivel para operar con esos vectores o matrices.
 matemáticos para Python
 - [matplotlib](http://matplotlib.org/),  una biblioteca para la generación de
 gráficos a partir de datos contenidos en listas o arrays en el lenguaje de
-programación Python y su extensión matemática NumPy. 
+programación Python y su extensión matemática NumPy.
 
 y el [Sistema de Álgebra por computadora (CAS)](https://en.wikipedia.org/wiki/Computer_algebra_system) [Sympy](http://www.sympy.org/).
 
