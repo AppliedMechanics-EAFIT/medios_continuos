@@ -10,13 +10,13 @@ Al final de esta sección el estudiante deberá estar en la capacidad de:
 
 \begin{itemize}
 \item[•] Reconocer la diferencia entre desplazamientos absolutos y relativos entre los puntos materiales.
-\item[•] Entender los cambios geométricos impartidos al aplicar una transformación líneal sobre un campo vectorial.
+\item[•] Entender los cambios geométricos impartidos al aplicar una transformación lineal sobre un campo vectorial.
 \item[•] Identificar los efectos físicos contenidos en el tensor de deformaciones infinitesimales.
 \item[•] Calcular el tensor de deformaciones infinitesimales a partir del campo de desplazamientos relativos. 
 \item[•] Reconocer la diferencia entre la configuración deformada de un medio continuo y la deformada del punto material
 \end{itemize}
 
-Del análisis de las fuerzas “internas” se concluyó, -vía aplicación de las 3 leyes de Newton sobre un volumen arbitrario de un medio continuo-, que estas corresponden a nivel local a una función (continua) de carácter tensorial y que satisface el problema de valores en la frontera especificado por las ecuaciones de equilibrio (leyes generalizadas de Newton) y la asignación de las tracciones en la superficie del medio (\cref{equtr_5}, \cref{equrot_5}):
+Del análisis de las fuerzas ``internas" se concluyó, -vía aplicación de las 3 leyes de Newton sobre un volumen arbitrario de un medio continuo-, que estas corresponden a nivel local a una función (continua) de carácter tensorial y que satisface el problema de valores en la frontera especificado por las ecuaciones de equilibrio (leyes generalizadas de Newton) y la asignación de las tracciones en la superficie del medio (\cref{equtr_5}, \cref{equrot_5}):
 
 \begin{equation} \label{equtr_5}
 \begin{split}
@@ -36,7 +36,7 @@ Del análisis de las fuerzas “internas” se concluyó, -vía aplicación de l
 
 Se dispone de 6 ecuaciones en 9 incógnitas controlando la distribución espacial de las fuerzas internas $\sigma$ sobre los diferentes puntos materiales del medio continuo.  Dichas fuerzas internas son generadas ya sea por las fuerzas de superficie (tracciones) ${{\vec t}^{(\hat n)}}$  y/o por las interacciones a distancia o fuerzas de cuerpo ${\vec B}$.  Sin embargo, en este punto el problema se hace (matemáticamente) indeterminado ya que se dispone de más incógnitas que ecuaciones.
 
-La indeterminación desde el punto de vista de fuerzas no debe ser para nada sorpresiva, ya que si éstas se consideran como las “funciones causa” es claro que aún falta por involucrar los efectos o “funciones respuesta”. Estas funciones corresponden precisamente a los cambios (cinemáticos) o de configuración, experimentados por las infinitas partículas una vez son sometidas a interacciones externas.
+La indeterminación desde el punto de vista de fuerzas no debe ser para nada sorpresiva, ya que si éstas se consideran como las ``funciones causa" es claro que aún falta por involucrar los efectos o ``funciones respuesta". Estas funciones corresponden precisamente a los cambios (cinemáticos) o de configuración, experimentados por las infinitas partículas una vez son sometidas a interacciones externas.
 
 Claramente se identifica la primera necesidad de estudiar los cambios de configuración como la de tratar de establecer una conexión entre estos cambios y las fuerzas internas $\sigma$ y que permita a la postre eliminar la indeterminación matemática del problema de valores en la frontera (PVF) (especificado por las \cref{equtr_5} y \cref{equrot_5}).
 
@@ -55,7 +55,7 @@ Como resultado de la aplicación de las cargas externas los puntos materiales qu
 \end{figure}
 
 
-Por ejemplo, es evidente que los desplazamientos sobre el empotramiento son "nulos" mientras que los puntos cercanos al extremo derecho de la viga experimentan los máximos desplazamientos. Sin embargo, sabemos que las fuerzas internas (o tensiones) están ligadas al desplazamiento relativo entre los puntos materiales. El propósito de esta sección es hacer una descripción local (o diferencial) de los desplazamientos relativos entre puntos materiales y que pueda ser conectada posteriormente con el tensor de tensiones a través de propiedades de los materiales . Con esto, no solo se conseguirá completar las ecuaciones para el problema de valores en la frontera del medio continuo, sino que además será posible describir la nueva configuración del medio, resultante de la apicación de interacciones externas tanto a nivel local (diferencial) como global.
+Por ejemplo, es evidente que los desplazamientos sobre el empotramiento son "nulos" mientras que los puntos cercanos al extremo derecho de la viga experimentan los máximos desplazamientos. Sin embargo, sabemos que las fuerzas internas (o tensiones) están ligadas al desplazamiento relativo entre los puntos materiales. El propósito de esta sección es hacer una descripción local (o diferencial) de los desplazamientos relativos entre puntos materiales y que pueda ser conectada posteriormente con el tensor de tensiones a través de propiedades de los materiales . Con esto, no solo se conseguirá completar las ecuaciones para el problema de valores en la frontera del medio continuo, sino que además será posible describir la nueva configuración del medio, resultante de la aplicación de interacciones externas tanto a nivel local (diferencial) como global.
 
 Para aclarar, nuevamente de manera intuitiva, el caracter local de los cambios relativos la \cref{steady_state} muestra la configuración original (\cref{nodef}) y deformada (\cref{sidef}) de la viga en voladizo. Como elemento auxiliar de análisis esta vez se ha dibujado una rejilla de elementos perfectamente cuadrados sobre la configuración no-deformada.   Si suponemos que estos elementos son de lado $h$ es claro que en el modelo del continuo el punto material corresponde a uno de estos en el estado limite cuando $h \to 0.$ Es evidente de la \cref{sidef} como los diferentes elementos cambian su forma una vez la viga pasa de la configuración descargada a la cargada. Mas aún es evidente de la misma figura como estos cambios varían de elemento a elemento.
 
@@ -864,7 +864,7 @@ Ahora estudiemos de manera individual los efectos de los distintos compenentes d
 	\label{2dist}
 \end{figure}
 
-Ahora, en el argot ingenieril es común a cada término de la componente simétrica del tensor gradiente de desplazamientos asigarle una nomenclatura particular. Para generalizar la definición consideremos el tensor $\varepsilon$ expresado en coordenasas cartesianas. 
+Ahora, en el argot ingenieril es común a cada término de la componente simétrica del tensor gradiente de desplazamientos asignarle una nomenclatura particular. Para generalizar la definición consideremos el tensor $\varepsilon$ expresado en coordenadas cartesianas. 
 \[	
 [\varepsilon] =
 \begin{bmatrix}
@@ -897,7 +897,7 @@ Por otro lado, la componente rotacional podría escribirse
 en donde $\omega_{xy}$, $\omega_{xz}$ y  $\omega_{yz}$ representan la rotación de cuerpo rígido respecto a los ejes $z$, $y$ y $x$ respectivamente. 
 
 
-Para terminar, el tensor $\varepsilon$ en coordenas cilindricas está definido como:  
+Para terminar, el tensor $\varepsilon$ en coordenadas cilíndricas está definido como:  
 
 \[	
 [\varepsilon] =

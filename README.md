@@ -1,6 +1,6 @@
-# Mecánica
+# Mecánica de los medios continuos
 
-Material de clase IC0263 Mecanica de los Medios Continuos, pregrado en
+Material de clase IC0263 Mecánica de los Medios Continuos, pregrado en
 ingeniería civil de la Universidad EAFIT.
 
 ## Contenido
@@ -41,7 +41,7 @@ y el [Sistema de Álgebra por computadora (CAS)](https://en.wikipedia.org/wiki/C
 
 El método sugerido es usar una distribución de Python, preferiblemente
  [Anaconda](https://www.continuum.io/downloads). Esta incluye todos los paquetes
-mencionas arriba.
+mencionados arriba.
 
 ## Licencia
 
