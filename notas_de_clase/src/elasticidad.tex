@@ -220,7 +220,6 @@ y
 donde $A$ y $B$ son constantes de integración.
 
 
-
 \subsection*{Ejemplo 2: Barra sometida a carga axial}
 
 En la \cref{compresion} se muestra una barra de sección rectangular con $a= 40$ cm, $b = 50$ cm y longitud inicial $L_{c} = 500$ cm, que es  sometida a un ensayo de compresión confinada (está contenida en un recipiente indeformable), mientras que en la \cref{traccion}  se muestra una barra de sección circular con diámetro $d = 50$ cm y longitud inicial $L_{t} = 497$ cm sobre la cual se realiza  un ensayo de tracción simple. Las constantes del material, tanto para la barra rectangular como para la barra circular, son $E=150000$ kgf/cm$^2$ y $\nu=0.20$.
@@ -336,9 +335,101 @@ para  $\sigma_{zz_c} = 1000 \; \text{kgf/cm}^2$,
 
 \end{itemize}
 
+\subsection*{Ejemplo 3: Cilindro sometido a torsión}
+
+Se tiene un cilindro sometido a torsión con un giro por unidad de longitud $2\beta$. El campo de desplazamientos para este problema está dado por
+\[
+  u = -2\beta zy\, ,\quad
+  v = 2\beta zx\, , \quad
+  w = 0\, ,
+\]
+en donde $2\beta = 2\theta/h$, representa el giro por unidad de longitud y está dado en rad/m si los desplazamientos están en m.
+\begin{figure}[H]
+ \centering
+ \includegraphics[height=2 in]{cilindro_torsion.pdf} 
+ \caption{\textbf{(Izquierda)} Esquema de un cilindro sometido a una torsión en la parte superior y empotrado en la parte inferior. \textbf{(Derecha)} Configuración deformada para el cilindro sometido a torsión. Se dibuja una rejilla sobre el sólido por claridad.}
+ \label{fig:cilindro_torsion}
+\end{figure}
+
+\begin{itemize}
+\item
+Si el cilindro debe ir al interior de una cavidad cilíndrica, es decir, el radio de la cavidad debe ser mayor o igual al del cilindro deformado ¿Cuál es el radio interno mínimo de la cavidad si $h=1$ m, $R = 10$ cm y $2\theta = \sqrt{5}/2$ rad?
+
+
+Para resolver este problema debemos saber cuál es el máximo radio que el cilindro va a tener luego de deformarse, para ello necesitamos la región con mayores desplazamientos. Para saber en dónde ocurren los mayores desplazamientos podemos analizar las ecuaciones de desplazamientos para ver que esto pasa en $z=h$. El campo de desplazamiento allí sería (sin considerar el desplazamiento en $z$ que es nulo):
+\[u = -2\theta y,\quad v = 2\theta x\, .\]
+
+Alternativamente, podríamos saber que el mayor desplazamiento pasa en $z=h$ analizando la configuración deformada que se presenta en los anexos.
+
+Adicionalmente, sabemos que el nuevo radio del cilindro estaría dado por la posición de los puntos ubicados en la circunferencia $x^2 + y^2 = R^2$. Estos puntos tienen como ecuaciones paramétricas
+\begin{align*}
+  x &= R \cos\alpha\, ,\\
+  y &= R \sin\alpha\, ,
+\end{align*}
+en donde $\alpha$ es un parámetro. Tenemos, pues, que la posición de los nuevos puntos de la circunferencia estarían dados por
+\begin{align*}
+  x_\text{deformado} &= R \cos\alpha - 2R\theta \sin\alpha \, ,\\
+  y_\text{deformado} &= R \sin\alpha + 2R\theta \cos\alpha\, .
+\end{align*}
+
+Usando el teorema de Pitágoras, podemos calcular la magnitud del nuevo radio
+\begin{align*}
+  R_\text{deformado}^2 &= x_\text{deformado}^2 + y_\text{deformado}^2\\
+    &= [R \cos\alpha - 2R\theta \sin\alpha]^2 + [R \sin\alpha + 2R\theta \cos\alpha]^2\\
+    &= 4R^2\theta^2\sin^2\alpha + 4R^2\theta^2\cos^2\alpha + R^2\sin^2\alpha + R^2\cos^2\alpha\\
+    &= 4R^2\theta^2[\sin^2\alpha + \cos^2\alpha] + R^2[\sin^2\alpha + \cos^2\alpha]\\
+    &= 4R^2\theta^2 + R^2\\
+    &= R^2 (1 + 4\theta^2)\, .
+\end{align*}
+que es equivalente a
+\[R_\text{deformado} = R\sqrt{1 + 4\theta^2}\, ,\]
+o
+\[\frac{R_\text{deformado}}{R} = \sqrt{1 + 4\theta^2}\, .\]
+
+También se pudo haber analizado cómo se movía el punto $(R, 0)$, que en la configuración deformada estaría en $(R, 2\theta R)$. Lo que nos permitiría llegar a la misma conclusión, pero de manera más simple.
+
+Ahora, si $2\theta =\sqrt{5}/2$, entonces $\theta = \sqrt{5}/4$ y tendríamos que
+\begin{align*}
+  \frac{R_\text{deformado}}{R} &= \sqrt{1 + 4\times \frac{5}{16}} \\
+    &= \sqrt{1 + \frac{5}{4}} \\
+    &= \sqrt{\frac{9}{4}} \\
+    &= \frac{3}{2}\, ,
+\end{align*}
+Lo que nos permite concluir que el radio máximo es 15 cm.
+
+\item
+Si el cilindro está hecho de hormigón, material para el cual se tiene que $\gamma_{\max} = 10^{-4}$ ¿Cuál es el valor máximo de $\theta$ posible antes que el material falle si $R = 1$ m y $h=10$ m?
+
+El tensor de deformaciones unitarias en este caso es
+\[[\varepsilon] =\begin{bmatrix}
+	0 &0 &-\beta y\\
+	0 &0 &\beta x\\
+	-\beta y &\beta x &0
+    \end{bmatrix}\, .
+   \]
+   
+Para calcular $\gamma_{\max}$ necesitamos encontrar los valores principales de $[\varepsilon]$ (que se pueden hallar como se describe en el anexo). Estos son la solución del polinomio característico
+\[\lambda^3 - \lambda \beta^2(x^2 + y^2) = 0\, ,\]
+o
+\[\lambda^3 - \lambda \beta^2 r^2 = 0\, .\]
+
+Este polinomio puede factorizarse como
+\[\lambda[\lambda^2 - \beta^2 r^2] = 0\, ,\]
+las raíces son, entonces,
+\[\lambda_1 = |\beta r|,\, \lambda_2 = 0,\, \lambda_3 = -|\beta r|\, ,\]
+y $\gamma_{\max} = |\beta r| - (-|\beta r|) = 2|\beta r|$. El valor máximo es cuando $r=R$ y tenemos que
+\[\gamma_{\max} = 2\beta R\, ,\]
+en donde no tuvimos en cuenta el signo de $\beta$, pues este sólo expresa si la torsión se hizo en sentido horario o anti-horario.
+
+Despejando, obtenemos que
+\[\theta = \frac{\gamma_{\max}}{2} \left(\frac{h}{R}\right)\, ,\]
+y sustituyendo los valores dados
+\[\theta = \frac{10^{-4}}{2} \left(\frac{10}{1} \right) = 5\times 10^{-4} \, .\]
+
+\end{itemize}
+
 
 \section{Ejercicios}
-
 
 \begin{enumerate}
 
@@ -376,8 +467,9 @@ para  $\sigma_{zz_c} = 1000 \; \text{kgf/cm}^2$,
 \begin{enumerate}
 \item Calcular los campos de deformaciones si las propiedades del material son $\nu$ y $E$.
 \end{enumerate}
-\newpage
-\item \label{punto04_m}En la  \cref{fig:viga} se muestra una viga en voladizo de sección unitaria con una carga distribuida en su extremo de forma parabólica.
+
+
+\item \label{punto04_m} En la \cref{fig:viga} se muestra una viga en voladizo de sección unitaria con una carga distribuida en su extremo de forma parabólica.
 \[\mathbf{t} = \frac{Pc^2}{2I}\left(1-\frac{y^2}{c^2}\right)\hat{\mathbf{j}}\].La solución para esfuerzos es de la forma
 \begin{align*}
 &\sigma_{xx} = -\frac{P}{I}xy \enspace ,\\
@@ -391,7 +483,6 @@ Y para el campo de desplazamientos es:
 &u_{y} = \frac{\nu P xy^2}{2EI} + \frac{Px^3}{6EI} - \frac{Pl^2x}{2EI} + \frac{Pl^3}{3EI} \enspace ,
 \end{align*}
 en donde $G=E/(2 + 2\nu)$ es el módulo de cortante e $I$ es el momento de inercia.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=5cm]{Viga_Voladizo.pdf}
@@ -405,7 +496,6 @@ en donde $G=E/(2 + 2\nu)$ es el módulo de cortante e $I$ es el momento de inerc
 \item Encontrar la región de la viga que está a compresión y la región tensión, y por tanto el eje neutro. Y determinar la ecuación de desplazamientos para este eje neutro. Comparar con la teoría clásica de vigas.
 \end{enumerate}
 
-\newpage
 \item \label{punto05_m} En la  \cref{bloques} se muestra un paralelepípedo de dimensiones $a$, $b$ , $c$, constituido por un material homogéneo elástico y lineal se aloja en una cavidad de la misma forma y dimensiones, cuyas paredes son de un material lo suficientemente rígido para poderlo suponer indeformable.
 Sobre la abertura de la cavidad de dimensiones $a\times b$ y a través de una placa rígida de peso y rozamiento despreciables se aplica, perpendicularmente a ella, una fuerza $F$ que comprime al bloque elástico. \footnote{Tomado del ejemplo 3.5 en \cite{book:problemas_resueltos}.}
 
@@ -445,11 +535,10 @@ Se pide:
 que supere $40$ kPa. Verificar si se produce la rotura.
 \end{enumerate}
 
-\item \label{punto08_m}  En la \cref{barcomp}  se muestra una barra, de sección rectangular, $a= 40$ $cm$, $b = 50$ $cm$ y longitud inicial $L_{c} = 500$ $cm$, que es  sometida a un ensayo de compresión confinada (está contenida en un recipiente indeformable). En la \cref{bartrac} se muestra una barra, de sección circular, de diámetro $d = 50$ $cm$ y longitud inicial $L_{t} =497$ $cm$ sobre la cual se realiza  un ensayo de tracción simple. Las constantes del material, tanto para la barra rectangular como para la barra circular, son $E=150000$ $kgf/cm^2$ y $\nu=0.20$.
+\item \label{punto08_m}  En la \cref{barcomp}  se muestra una barra, de sección rectangular, $a= 40$ cm, $b = 50$ cm y longitud inicial $L_{c} = 500$ cm, que es  sometida a un ensayo de compresión confinada (está contenida en un recipiente indeformable). En la \cref{bartrac} se muestra una barra, de sección circular, de diámetro $d = 50$ cm y longitud inicial $L_{t} =497$ cm sobre la cual se realiza  un ensayo de tracción simple. Las constantes del material, tanto para la barra rectangular como para la barra circular, son $E=150000$ kgf/cm$^2$ y $\nu=0.20$.
 
 Ambos ensayos se realizan con su extremo fijo  en el plano $z = 0$ y están cargados con un sistema que no transmite esfuerzos cortantes y que hace que el esfuerzo axial se distribuya uniformemente sobre la superficie transversal de las barras. Los esfuerzos que se inducen a las barras varían con el tiempo, conforme a lo mostrado en la  \cref{time}
-%
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\subfloat[Barra compresión]{\includegraphics[width=4.0cm]{Compresion.pdf} \label{barcomp}}
 	\subfloat[Barra tracción]{\includegraphics[width=4.0cm]{Traccion.pdf}\label{bartrac}}
@@ -460,10 +549,10 @@ Ambos ensayos se realizan con su extremo fijo  en el plano $z = 0$ y están carg
 
 \begin{enumerate}
 	\item ¿Cuál es el tiempo $t$ en el cual las dos barras tienen la misma longitud? \\
-	\item En la barra circular, ¿cuáles son los desplazamientos $u$, $v$ y $w$ y las deformaciones $\varepsilon_{xx}$ $\varepsilon_{yy}$ y $\varepsilon_{zz}$ en el punto de coordenadas $(x,y,z) = (20,15,450)$ $cm$ para el tiempo $t = 300$ $s$?
+	\item En la barra circular, ¿cuáles son los desplazamientos $u$, $v$ y $w$ y las deformaciones $\varepsilon_{xx}$ $\varepsilon_{yy}$ y $\varepsilon_{zz}$ en el punto de coordenadas $(x,y,z) = (20,15,450)$ cm para el tiempo $t = 300$ s?
 	\item ¿Cuál es el valor del máximo esfuerzo cortante en un punto al interior de la barra rectangular durante el ensayo?
 	\item  ¿Cuál es el área mínima que alcanza la sección transversal de la barra circular durante el ensayo?
-	\item  ¿En la barra rectangular, en el tiempo $t=1000$ $s$ cuál son las fuerzas $F_x$ y $F_y$ que le transmite la barra a las paredes del recipiente?
+	\item  ¿En la barra rectangular, en el tiempo $t=1000$ s cuál son las fuerzas $F_x$ y $F_y$ que le transmite la barra a las paredes del recipiente?
 \end{enumerate}
 
 \item En la \cref{placa} se presenta una placa en forma de rombo sometida a la acción de una carga, en el plano $XY$, que se encuentra distribuida sobre su perímetro y cuyo campo de desplazamientos está dado por:
@@ -471,7 +560,7 @@ Ambos ensayos se realizan con su extremo fijo  en el plano $z = 0$ y están carg
 v \left(x,y,z \right) = \dfrac{A}{E}  \left(1 - \nu \right) y,\quad
 w \left(z \right) = -\dfrac{2A \nu}{E} z\]
 con $A$ una constante positiva, $E$  el módulo de elasticidad del material y $\nu$ la relación de Poisson.
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\subfloat[Placa]{\includegraphics[width=2.5in]{cuna.pdf}\label{placa}}
 	\hspace{2 cm}
