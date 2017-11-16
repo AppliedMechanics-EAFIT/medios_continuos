@@ -177,7 +177,7 @@ podemos escribir las relaciones de deformación-tensión como
 & \varepsilon_{yy} = \frac{1}{\bar E}(\sigma_{yy} - \bar\nu \sigma_{xx})\\
 & \gamma_{xy} = \frac{\tau_{xy}}{G}\, ,
 \end{align*}
-note que el módulo de cortante \(G\) no se ve afectado por esta tranformación.
+note que el módulo de cortante \(G\) no se ve afectado por esta transformación.
 
 \section{Ejemplos resueltos}
 \subsection*{Ejemplo 1: Cuña autosoportada}
@@ -353,7 +353,7 @@ en donde $2\beta = 2\theta/h$, representa el giro por unidad de longitud y está
 
 \begin{itemize}
 \item
-Si el cilindro debe ir al interior de una cavidad cilíndrica, es decir, el radio de la cavidad debe ser mayor o igual al del cilindro deformado ¿Cuál es el radio interno mínimo de la cavidad si $h=1$ m, $R = 10$ cm y $2\theta = \sqrt{5}/2$ rad?
+Si el cilindro debe ir al interior de una cavidad cilíndrica, es decir, el radio de la cavidad debe ser mayor o igual al del cilindro deformado ¿Cuál es el radio interno mínimo de la cavidad si $h=1$ m, $R = 10$ cm y $2\theta = \sqrt{21}/10$ rad?
 
 
 Para resolver este problema debemos saber cuál es el máximo radio que el cilindro va a tener luego de deformarse, para ello necesitamos la región con mayores desplazamientos. Para saber en dónde ocurren los mayores desplazamientos podemos analizar las ecuaciones de desplazamientos para ver que esto pasa en $z=h$. El campo de desplazamiento allí sería (sin considerar el desplazamiento en $z$ que es nulo):
@@ -388,14 +388,14 @@ o
 
 También se pudo haber analizado cómo se movía el punto $(R, 0)$, que en la configuración deformada estaría en $(R, 2\theta R)$. Lo que nos permitiría llegar a la misma conclusión, pero de manera más simple.
 
-Ahora, si $2\theta =\sqrt{5}/2$, entonces $\theta = \sqrt{5}/4$ y tendríamos que
+Ahora, si $2\theta =\sqrt{21}/10$, entonces $\theta = \sqrt{21}/20$ y tendríamos que
 \begin{align*}
-  \frac{R_\text{deformado}}{R} &= \sqrt{1 + 4\times \frac{5}{16}} \\
-    &= \sqrt{1 + \frac{5}{4}} \\
-    &= \sqrt{\frac{9}{4}} \\
-    &= \frac{3}{2}\, ,
+  \frac{R_\text{deformado}}{R} &= \sqrt{1 + 4\times \frac{21}{400}} \\
+    &= \sqrt{1 + \frac{21}{100}} \\
+    &= \sqrt{\frac{121}{100}} \\
+    &= \frac{11}{10}\, ,
 \end{align*}
-Lo que nos permite concluir que el radio máximo es 15 cm.
+Lo que nos permite concluir que el radio máximo es 11 cm.
 
 \item
 Si el cilindro está hecho de hormigón, material para el cual se tiene que $\gamma_{\max} = 10^{-4}$ ¿Cuál es el valor máximo de $\theta$ posible antes que el material falle si $R = 1$ m y $h=10$ m?
@@ -425,6 +425,37 @@ Despejando, obtenemos que
 \[\theta = \frac{\gamma_{\max}}{2} \left(\frac{h}{R}\right)\, ,\]
 y sustituyendo los valores dados
 \[\theta = \frac{10^{-4}}{2} \left(\frac{10}{1} \right) = 5\times 10^{-4} \, .\]
+
+\item
+Si el cilindro está hecho de acero 1020 con una resistencia al corte \(\tau_\text{cr} = 280 \text{ MPa}\), un módulo de Young de 186 GPa y un coeficiente de Poisson de 0.29
+¿Cuál es el valor de par de torsión \(M\) que hace material falle y a qué ángulo de torsión \(\theta_{\max}\) sucede si $R = 20$ mm y $h=1$ m? Use la expresión
+\[M = \frac{I_z}{R} \tau_{\max}\, ,\]
+para calcular el par de torsión, en donde \(I_z\) es el segundo momento de área para la sección transversal.
+
+Tenemos que \(\tau_{\max} \leq \tau_\text{cr}\), y además \(I_z = \dfrac{\pi R^4}{2}\), luego
+\begin{align*}
+M &= \frac{\pi R^3}{2}\tau_\text{cr}\\
+  &= \frac{\pi \times (20\times 10^{-3}\text{ m})^3 \times 280 \times 10^6 \text{ Pa}}{2}\\
+  &= 1120 \pi \text{ N\, m}\\
+  &\approx 3518.58 \text{ N\, m}\, .
+\end{align*}
+
+Procedemos a calcular el ángulo de torsión al que sucede la falla. A partir de las relaciones de deformación-tensión, tenemos que el esfuerzo está dado por
+\[[\sigma] = \beta G\begin{bmatrix}
+	0 &0 &-y\\
+	0 &0 & x\\
+	-y & x &0
+    \end{bmatrix}\, ,
+   \]
+y el esfuerzo cortante máximo estaría dado por \(\tau_{\max} = 2\beta G R\), o
+\[\tau_{\max} = \frac{\theta R E}{(1 + \nu) h}\, ,\]
+y resolviendo esta ecuación para \(\theta\), obtenemos
+\begin{align*}
+\theta_{\max} &= \frac{(1 + \nu) h \tau_\text{cr}}{E R} \\
+  &= \frac{(1 + 0.29) \text{ m}\times 280\times 10^6 \text{ Pa}}{186\times 10^{9}\text{ Pa} \times 20\times 10^{-3}\text{m}} \\
+  &=\frac{301}{3100}\text{ rad}\\
+  &\approx 0.097 \text{ rad}\, .
+\end{align*}
 
 \end{itemize}
 
