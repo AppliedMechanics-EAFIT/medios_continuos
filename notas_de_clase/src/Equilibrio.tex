@@ -470,18 +470,17 @@ se encuentra atada sobre la superficie superior y esta sometida a la acción de 
 \end{equation}
 
 
-\subsection{Viga Cantiliver}
+\subsection{Viga en voladizo}
 
-La \cref{Viga} muestra una viga cantiliver sometida a una carga $P$ en uno de sus extremos: 
+La \cref{Viga} muestra una viga en voladizo sometida a una carga $P$ en uno de sus extremos: 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{Viga.pdf}
-	\caption{Viga cantiliver}
+	\caption{Viga en voladizo.}
 	\label{Viga}
 \end{figure}
 
 El tensor solución se da en la \cref{slnc}.
-
 \begin{equation}
 \begin{split}
 {\sigma_{xx}} & = - \dfrac{P}{I} (XY) \\
@@ -494,8 +493,7 @@ El tensor solución se da en la \cref{slnc}.
 
 
 \subsection{Cilindro sometido a presión interna y externa}
-Para este problema se requiren las ecuaciones de equlibrio local en coordenadas polares dadas por:
-
+Para este problema se requieren las ecuaciones de equilibrio local en coordenadas polares dadas por:
 \begin{equation} \label{equcil}
 \begin{split}
 & \frac{{\partial {\sigma _{rr}}}}{{\partial r}} + \frac{1}{r}\frac{{\partial {\tau _{\theta r}}}}{{\partial \theta }} + \frac{{{\sigma _{rr}} - {\sigma _{\theta \theta }}}}{r} + {B_r} = 0 \\
@@ -503,8 +501,7 @@ Para este problema se requiren las ecuaciones de equlibrio local en coordenadas 
 \end{split}
 \end{equation}
 
-La \cref{cilindro} muestra un cilindro de radio interno $a$ y radio externo $b$ sometido a presiones internas y externas $p_a$ y $p_b$ respectivamente. 
-
+La \cref{cilindro} muestra un cilindro de radio interno $a$ y radio externo $b$ sometido a presiones internas y externas $p_a$ y $p_b$ respectivamente
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{cilindro.pdf}
@@ -512,19 +509,16 @@ La \cref{cilindro} muestra un cilindro de radio interno $a$ y radio externo $b$ 
 	\label{cilindro}
 \end{figure}
 
-El tensor solución se da en la \cref{slnc}.
-
-\begin{equation}
+El tensor solución se da en la \cref{slnc}\begin{equation}
 \begin{split}
-{\sigma _{rr}} & =  - \frac{{\left( {\frac{{{b^2}}}{{{r^2}}} - 1} \right)}}{{\left( {\frac{{{b^2}}}{{{a^2}}} - 1} \right)}}{p_a} - \frac{{\left( {1 - \frac{{{a^2}}}{{{r^2}}}} \right)}}{{\left( {1 - \frac{{{a^2}}}{{{b^2}}}} \right)}}{p_b} \\
-{\sigma _{\theta \theta }} & = \frac{{\left( {\frac{{{b^2}}}{{{r^2}}} + 1} \right)}}{{\left( {\frac{{{b^2}}}{{{a^2}}} - 1} \right)}}{p_a} - \frac{{\left( {1 + \frac{{{a^2}}}{{{r^2}}}} \right)}}{{\left( {1 - \frac{{{a^2}}}{{{b^2}}}} \right)}}{p_b}
+\sigma_{rr} & =  - \frac{\left( \frac{b^2}{r^2} - 1 \right)}{\left(\frac{b^2}{a^2} - 1\right)} p_a - \frac{\left(1 - \frac{a^2}{r^2} \right)} {\left(1 - \frac{a^2}{b^2} \right)} p_b \\
+\sigma_{\theta\theta} & = \frac{\left(\frac{b^2}{r^2} + 1\right)}{\left(\frac{b^2}{a^2} - 1\right)} p_a - \frac{\left(1 + \frac{a^2}{r^2} \right)}{\left( 1 - \frac{a^2}{b^2}\right)} p_b
 \end{split}
 \label{slnc}
 \end{equation}
 
 \subsection{Flamant}
-
-La \cref{Flamant} muestra un semi-espacio sometido a una carga lineal superficial P. 
+La \cref{Flamant} muestra un semi-espacio sometido a una carga lineal superficial \(P\). 
 
 \begin{figure}[H]
 \centering

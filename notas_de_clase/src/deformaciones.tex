@@ -927,13 +927,10 @@ Para terminar, el tensor $\varepsilon$ en coordenadas cilíndricas está definid
 \section*{Ejemplo}
 
 El campo de desplazamientos para la cuña auto-soportada mostrada en la \cref{wedge} esta dado por:
-
 \begin{equation*}	
-	u = \frac{S}{E}{K_1}\left( {\nu ,\phi } \right)\left( {x - \ell {C_\phi }} \right)
-	\hspace{2cm}
-	v =  - \frac{S}{E}{K_2}\left( {\nu ,\phi } \right)y
+	u = \frac{S}{E} K_1 (\nu ,\phi) (x - \ell \cos\phi)\qquad
+	v =  - \frac{S}{E} K_2 (\nu ,\phi) y
 \end{equation*}
-
 donde $u$ y $v$ corresponden a los desplazamientos en las direcciones horizontal y vertical respectivamente y ${K_1}\left( {\nu ,\phi } \right)$ y ${K_2}\left( {\nu ,\phi } \right)$ son constantes que dependen del semi-ángulo de la cuña y del material. $E$ es una constante que depende del material. 
 \begin{figure}[H]
 \centering
@@ -948,8 +945,7 @@ donde $u$ y $v$ corresponden a los desplazamientos en las direcciones horizontal
 \item[•] Determinar las direcciones de máximo cambio de tamaño y máxima rotación.
 \end{itemize}
 
-Para esbozar la configuración deformada de la cuña es preciso evaluar el campo de desplazamientos en puntos de la misma. Por la linealidad de las funciones del campo de desplazamientos $u$ y $v$ y por la simetría del problema, en este caso reviremos lo que pasa en cada una de las esquinas \footnote{para funciones de desplazamiento más complejas puede ser preciso usar métodos más elaborados para la evaluación de dichas funciones}. Es decir, evaluamos los desplazamientos en los puntos $A = (0,0)$,  $B = (lcos\phi,l sen\phi)$, $C = (lcos\phi,-lsen\phi)$ y $D = (2lcos\phi,0)$. En la \cref{wedgedef} se muestra esquematicamente en linea punteada la configuración deformada de la cuña. Nótese  como los puntos ubicados en el eje de simetría $A-D$ solo tienen desplazamiento en $x$, $u$, miéntras que los puntos en el eje de simetría $B-C$ solo en $y$, $v$. El punto central del medio continuo no se desplaza. 
-
+Para esbozar la configuración deformada de la cuña es preciso evaluar el campo de desplazamientos en puntos de la misma. Por la linealidad de las funciones del campo de desplazamientos $u$ y $v$ y por la simetría del problema, en este caso reviremos lo que pasa en cada una de las esquinas \footnote{para funciones de desplazamiento más complejas puede ser preciso usar métodos más elaborados para la evaluación de dichas funciones}. Es decir, evaluamos los desplazamientos en los puntos $A = (0,0)$,  $B = (\ell \cos\phi, \ell \sin\phi)$, $C = (\ell \cos\phi, -\ell \sin\phi)$ y $D = (2\ell \cos\phi,0)$. En la \cref{wedgedef} se muestra esquemáticamente en linea punteada la configuración deformada de la cuña. Nótese  como los puntos ubicados en el eje de simetría $A-D$ solo tienen desplazamiento en $x$, $u$, mientras que los puntos en el eje de simetría $B-C$ solo en $y$, $v$. El punto central del medio continuo no se desplaza. 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{wedgedef.pdf}
@@ -958,26 +954,20 @@ Para esbozar la configuración deformada de la cuña es preciso evaluar el campo
 \end{figure}
 
 Por otro lado, el tensor gradiente de desplazamientos está dado por: 
-
-
 \[J = \frac{S}{E}\left[ {\begin{array}{*{20}{c}}
 {{K_1}\left( {\nu ,\phi } \right)}&0\\
 0&{ - {K_2}\left( {\nu ,\phi } \right)}
 \end{array}} \right]\]
+y, en este caso, se tiene que \(\varepsilon  \equiv J\).
 
-\[\varepsilon  \equiv J\]
+Luego, las rotaciones de cuerpo rígido son nulas
+\[\omega  = 0\, .\]
 
-En este caso las rotaciones de cuerpo rígido son nulas
-
-\[\omega  = 0\]
-
- Nótese que el tensor $\varepsilon $ ya está escrito en sus valores principales, lo que quiere decir que las deformaciones axiales máximas están dadas por: $\frac{S}{E}{K_1}\left( {\nu ,\phi }\right) $ como el estiramiento máximo. y $ \frac{S}{E} {K_2}\ \left({\nu ,\phi } \right)$  como el acortamiento máximo.
+Nótese que el tensor $\varepsilon $ ya está escrito en sus valores principales, lo que quiere decir que las deformaciones axiales máximas están dadas por: $\frac{S}{E}{K_1}\left( {\nu ,\phi }\right) $ como el estiramiento máximo. y $ \frac{S}{E} {K_2}\ \left({\nu ,\phi } \right)$  como el acortamiento máximo.
 
 \subsection{Ejemplo: Barra apoyada sometida a su peso propio}
 
-%
-En la  \cref{BarApo} se muestra un elemento de secci\'on circular de radio $R$, altura $H$, apoyado en su extremo inferior y que est\'a sometido solamente a la acci\'on de su peso propio. Se indica el campo de desplazamientos en el sistema coordenado $xyz$.\\
-%
+En la  \cref{BarApo} se muestra un elemento de sección circular de radio $R$, altura $H$, apoyado en su extremo inferior y que está sometido solamente a la acción de su propio peso. Se indica el campo de desplazamientos en el sistema coordenado $xyz$.
 \begin{equation*}	
 	u= \nu \dfrac{\gamma}{E} z x 
 	\hspace{2cm}
@@ -985,18 +975,17 @@ En la  \cref{BarApo} se muestra un elemento de secci\'on circular de radio $R$, 
 	\hspace{2cm}
 	w= -\dfrac{\gamma}{2E} z^2 - \dfrac{\gamma \nu}{2E} (x^2+y^2)+\dfrac{\gamma}{2E} H^2  
 \end{equation*}
-%
-Donde 	$u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamente. $E$, $\gamma$ y $\nu$ son constantes del material. \\ 		
-\begin{figure}[h]
+
+Donde 	$u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamente. $E$, $\gamma$ y $\nu$ son constantes del material. \\ 		\begin{figure}[h]
 	\centering
 	\includegraphics[height=6cm]{barraapoyada.pdf}
 	\caption{Barra apoyada}
 	 \label{BarApo}
 \end{figure}\\
-%
+
 \begin{enumerate}
-% 
-	\item[•] Esboce la configuraci\'on deformada de la barra.\\
+
+	\item[•] Esboce la configuración deformada de la barra.\\
 	
 	\textbf{Solución:}\\
 	
