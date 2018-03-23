@@ -3,19 +3,19 @@
 \begin{document}
 \chapter{Equilibrio}
 
-\graphicspath{{img/Cap4/}} 								 % Specifies the directory where pictures are stored
+\graphicspath{{img/Cap4/}} 	% Specifies the directory where pictures are stored
 \section{Introducción}
 
-En esta sección se formularán las ecuaciones de equilibrio para un medio continuo, haciendo uso del principio de conservación de momentum y de momento de momentun. Estas darán como resultado un sistema de ecuaciones diferenciales parciales en las componentes del tensor de tensiones y demostrarán la simetría del tensor de tensiones. Una vez planteadas las ecuaciones, la sección concluye con el estudio de algunas soluciones\footnote{Por soluciones nos referimos a funciones de las componenetes del tensor de esfuerzos que satisfacen las ecuaciones de equilibrio y las condiciones de frontera.} clásicas para el caso de sólidos.
+En esta sección se formularán las ecuaciones de equilibrio para un medio continuo, haciendo uso del principio de conservación de moméntum y de momento de moméntum. Estas darán como resultado un sistema de ecuaciones diferenciales parciales en las componentes del tensor de tensiones y demostrarán la simetría del tensor de tensiones. Una vez planteadas las ecuaciones, la sección concluye con el estudio de algunas soluciones\footnote{Por soluciones nos referimos a funciones de las componentes del tensor de esfuerzos que satisfacen las ecuaciones de equilibrio y las condiciones de frontera.} clásicas para el caso de sólidos.
 
 Al final de esta sección el estudiante deberá estar en la capacidad de:
 
 \begin{itemize}
 \item[•] Identificar el dominio del problema y su frontera (o superficie).
-\item[•] Reconocer la diferencia entre equlibrio local y global en un medio continuo.
+\item[•] Reconocer la diferencia entre equilibrio local y global en un medio continuo.
 \item[•] Identificar condiciones de frontera de tracciones para diferentes problemas particulares.
 \item[•] Recuperar y/o verificar condiciones de frontera.
-\item[•] Entender los aspectos matématicos fundamentales del problema de valores en la frontera de la mecánica de los medios continuos en sistemas de referencia cartesianos y cilíndricos.
+\item[•] Entender los aspectos matemáticos fundamentales del problema de valores en la frontera de la mecánica de los medios continuos en sistemas de referencia cartesianos y cilíndricos.
 \item[•] Verificar si una función de tensiones es solución a un problema particular de la mecánica de los medios continuos.
 \item[•] Analizar,desde el punto de vista de tensiones, algunas soluciones clásicas de la mecánica de los medios continuos.
 \end{itemize}
@@ -28,16 +28,17 @@ Nuestro siguiente objetivo es entonces el de proponer las ecuaciones que gobiern
 
 Es esperable además, si se sabe que el modelo matemático utilizado para el tratamiento del sistema de muchas (infinitas) partículas ha sido construido a partir de las leyes de la Mecánica Newtoniana, que las ecuaciones resultantes deban estar estrechamente ligadas a estas (¿O son las mismas?).  Acá partimos entonces de los principios fundamentales de la mecánica Newtoniana.
 
-Considerese un elemento diferencial arbitrario tomado de un medio continuo y de dimensiones $dx \times dy \times dz$ como el que se muestra en la \cref{diff}\footnote{Debe notarse que este bloque de tensiones corresponde a un elemento del continuo de tamaño diferencial, mientras que en las secciones anteriores haciamos uso de un elemento similar pero que no tenía ningún tamaño asociado y que solo se convertía en una forma práctica de representar el estado detensiones en un punto material en un sistema de referencia cartesiano.
+Considerese un elemento diferencial arbitrario tomado de un medio continuo y de dimensiones $dx \times dy \times dz$ como el que se muestra en la \cref{diff}\footnote{Debe notarse que este bloque de tensiones corresponde a un elemento del continuo de tamaño diferencial, mientras que en las secciones anteriores hacíamos uso de un elemento similar pero que no tenía ningún tamaño asociado y que solo se convertía en una forma práctica de representar el estado de tensiones en un punto material en un sistema de referencia cartesiano.
 
-Por ejemplo en aquel caso si cortabamos un punto material con un plano con dirección normal $\hat{n}$ y con vector de tracciones asociado ${\vec t^{(\hat n)}}$ teniamos que este vector era igual y opuesto al asociado al corte con un plano con dirección $-\hat{n}$. De esta forma se decidió representar el tensor de esfuerzos para un punto del continuo mediante los tres vectores de tracción asociados con  3 direcciones perpendiculares $\hat{i}$, $\hat{j}$ y $\hat{k}$ y sus direcciones opuestas $-\hat{i}$, $-\hat{j}$ y $-\hat{k}$.}
+Por ejemplo en aquel caso si cortábamos un punto material con un plano con dirección normal $\hat{n}$ y con vector de tracciones asociado ${\vec t^{(\hat n)}}$ teniamos que este vector era igual y opuesto al asociado al corte con un plano con dirección $-\hat{n}$. De esta forma se decidió representar el tensor de esfuerzos para un punto del continuo mediante los tres vectores de tracción asociados con  3 direcciones perpendiculares $\hat{i}$, $\hat{j}$ y $\hat{k}$ y sus direcciones opuestas $-\hat{i}$, $-\hat{j}$ y $-\hat{k}$.}
 
 Denotemos las áreas superficiales de las caras de dicho elemento y su volumen como;
-
-\[d{S_x} = dydz\]
-\[d{S_z} = dxdy\]
-\[d{S_y} = dxdz\]
-\[dV = dxdydz.\]
+\begin{align*}
+d{S_x} = dydz
+d{S_z} = dxdy
+d{S_y} = dxdz
+dV = dxdydz.
+\end{align*}
 
 En lo que sigue nos proponemos plantear las condiciones de equilibrio del elemento como si se tratara de un cuerpo rígido. Para esto supondremos además que el elemento se encuentra sometido a la acción de fuerzas de cuerpo $\vec B = {B_x}\hat i + {B_y}\hat j + {B_z}\hat k$.
 
@@ -123,7 +124,7 @@ De manera similar planteando $\sum {{M_x} = 0}$ y $\sum {{M_y} = 0}$ resulta en;
 \[{\tau _{xz}} = {\tau _{zx}}\]
 \[{\tau _{yz}} = {\tau _{zy}}.\]
 
-Las condiciones de equlibrio traslacional y rotacional se resumen en las \cref{equtr} y \cref{equrot}. Las primeras corresponden a 3 ecuaciones diferenciales parciales y las segundas a la relación de simetría del tensor. Nótese que en total se tienen 6 ecuaciones en 9 incógnitas\footnote{Las 9 componentes del tensor de tensiones} lo cual significa que desde el punto de vista de tensiones el problema es estáticamente indetermiando.
+Las condiciones de equilibrio traslacional y rotacional se resumen en las \cref{equtr} y \cref{equrot}. Las primeras corresponden a 3 ecuaciones diferenciales parciales y las segundas a la relación de simetría del tensor. Nótese que en total se tienen 6 ecuaciones en 9 incógnitas\footnote{Las 9 componentes del tensor de tensiones} lo cual significa que desde el punto de vista de tensiones el problema es estáticamente indeterminado.
 
 \begin{equation} \label{equtr}
 \begin{split}
@@ -157,22 +158,15 @@ Aunque debido a la indeterminación estática no es posible aplicar ningún mét
 
 \subsubsection{Tarea}
 
-La ecuación;
-
+La ecuación
 \[\frac{d}{{dx}}\left( {EA\frac{{du}}{{dx}}} \right) = 0\]
-
-gobierna el desplazamiento axial $u(x)$ de una barra de sección transversal variable $A(x)$ y modulo de elasticidad $E$. La barra esta sometida a las condiciones de frontera dadas por;
-
+gobierna el desplazamiento axial $u(x)$ de una barra de sección transversal variable $A(x)$ y modulo de elasticidad $E$. La barra esta sometida a las condiciones de frontera dadas por
 \[{\left. {EA\frac{{du}}{{dx}}} \right|_{x = L}} = 0\]
-
 \[{\left. u \right|_{x = 0}} = 0\]
 
-Si el área de la sección transversal esta dada por;
-
+Si el área de la sección transversal esta dada por
 \[A(x) = {A_0}(2 - x/L)\]
-
 demostrar que la siguiente función es solución del problema de valores en la frontera.
-
 \[u = \frac{{FL}}{{E{A_0}}}\ln \left( {\frac{2}{{2 - x/l}}} \right)\]
 
 \subsection{Coordenadas cilíndricas}
@@ -196,8 +190,6 @@ demostrar que la siguiente función es solución del problema de valores en la f
 \subsection*{Ejemplo 1: Cuña autosoportada}
 
 Considere la cuña doble de lado $\ell$ y ángulo interno $2 \phi$ mostrada en la \cref{WEDGE}. Se asume que esta se encuentra contenida en el plano $X-Y$, con condiciones de carga idealizables mediante un estado plano de tensiones (es decir 2D). La cuña se encuentra cargada por tracciones uniformes de intensidad $S$ aplicadas sobre sus 4 caras de tal manera que esta se encuentra auto-equilibrada. Determinar la solución al problema de valores en la frontera {\bf proponiendo una solución y verificando las condiciones de frontera}.
-
-%
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{wedge.pdf}
@@ -216,13 +208,11 @@ En el caso de estados de tensiones idealizables en 2 dimensiones y contenidos en
 \label{equilibrium}
 \end{equation}
 
-mientras que el equlibrio rotacional se reduce a;
+mientras que el equilibrio rotacional se reduce a;
 
 \[{\tau _{xy}} = {\tau _{yx}}.\]
 
-Para proponer una solución planteamos las ecuaciones de equlibrio global de la cuña, lo cual es equivalente a asumir que las solución es constante. Se tiene entonces que;
-
-
+Para proponer una solución planteamos las ecuaciones de equlibrio global de la cuña, lo cual es equivalente a asumir que las solución es constante. Se tiene entonces que
 \[\sum F_x=0 \longrightarrow -\ell C_\phi S+\sigma_{xx}\ell S_\phi=0\]\\
 \[\sum F_y=0 \longrightarrow -\ell S_\phi S-\sigma_{yy}\ell C_\phi=0\] 
 
@@ -287,20 +277,19 @@ los cuales coinciden con las tracciones especificadas como condiciones de fronte
 
 \subsection*{Ejemplo 2: Empujes sobre presa de concreto}
 
-Si se sabe que la función de tensiones dada en la \cref{sln1} es solución al problema de valores en la frontera del medio continuo sobre el dominio mostrado en la \cref{dam}, en donde $\gamma$ es una constante\footnote{Un script .py con las funciones de esfuerzo está disponible en:  {\url{https://github.com/casierraa/MMC/blob/master/dam.py}}} . Se pide: 
-
+Si se sabe que la función de tensiones dada en la \cref{sln1} es solución al problema de valores en la frontera del medio continuo sobre el dominio mostrado en la \cref{dam}, en donde $\gamma$ es una constante.\footnote{Un script de Python con las funciones de esfuerzo está disponible en: \url{https://github.com/casierraa/MMC/blob/master/dam.py}.} Se pide:
 \begin{equation}
 \begin{split}
-{\sigma _{xx}} & = \gamma x - 2\gamma y \\
-{\sigma _{yy}} & =  - \gamma x \\
-{\tau _{xy}}   & =  - \gamma y
+\sigma_{xx} & = \gamma x - 2\gamma y \\
+\sigma_{yy} & =  - \gamma x \\
+\tau_{xy}   & =  - \gamma y
 \end{split}
 \label{sln1}
 \end{equation}
 
 \begin{figure}[H]
 \centering
-	\includegraphics[width=2.5 in]{dam.pdf}
+	\includegraphics[width=2 in]{dam.pdf}
 	\caption{Dominio de validez de la solución.}
 	\label{dam}
 \end{figure}
@@ -315,8 +304,7 @@ Si se sabe que la función de tensiones dada en la \cref{sln1} es solución al p
 
 
 \subsubsection*{Solución}
-Sustituyendo la solución dada en \cref{sln1} en las ecuaciones de equilibrio local y considerando que $B_x =0$ y $B_y =0$ se verifica que la solución satisface equilibrio;
-
+Sustituyendo la solución dada en \cref{sln1} en las ecuaciones de equilibrio local y considerando que $B_x =0$ y $B_y =0$ se verifica que la solución satisface equilibrio
 \[\frac{{\partial (\gamma x - 2\gamma y)}}{{\partial x}} + \frac{{\partial ( - \gamma y)}}{{\partial y}} + {B_x} = 0\]
 \[\gamma  - \gamma  = 0\] 
 \[\frac{{\partial ( - \gamma y)}}{{\partial x}} + \frac{{\partial ( - \gamma x)}}{{\partial y}} + {B_y} = 0\]
@@ -327,9 +315,7 @@ Sean los vectores normales a las caras vertical, horizontal e inclinada ${{\hat 
 \[{\sigma _{yy}} =  - \gamma x\]
 y
 \[{\tau _{xy}} = 0 \]
-
-luego;
-
+luego
 \[\left\{ {\begin{array}{*{20}{c}}
 {{t_x}}\\
 {{t_y}}
@@ -343,9 +329,7 @@ luego;
 0\\
 {\gamma x}
 \end{array}} \right\}\]
-
-esta distribución se muestra en la \cref{sigy};
-
+esta distribución se muestra en la \cref{sigy}
 
 \begin{figure}[H]
 \centering
@@ -355,14 +339,14 @@ esta distribución se muestra en la \cref{sigy};
 \end{figure}
 
 
-Similarmente, sobre la superficie con normal ${{\hat n}^2} =   \hat i$ ($x=H$) se tiene;
-
-\[{\sigma _{xx}} = \gamma H - 2\gamma y\]
-\[{\sigma _{yy}} =  - \gamma H\]
+Similarmente, sobre la superficie con normal $\hat{n}^2 =   \hat\imath$ ($x=H$) se tiene
+\begin{align*}
+&\sigma_{xx} = \gamma H - 2\gamma y\\
+&\sigma_{yy} =  -\gamma H
+\end{align*}
 y
-\[{\tau _{xy}} =  - \gamma y\]
-luego;
-
+\[\tau_{xy} =  - gamma y\]
+luego
 \[\left\{ {\begin{array}{*{20}{c}}
 {{t_x}}\\
 {{t_y}}
@@ -378,8 +362,7 @@ luego;
 \end{array}} \right\}.\]
 
 
-La distribución de la componente $t_x$ sobre esta cara, corresponde a la tensión normal $\sigma_{xx}$ tal y como se muestra en la \cref{sigx}. 
-
+La distribución de la componente $t_x$ sobre esta cara, corresponde a la tensión normal $\sigma_{xx}$ tal y como se muestra en la \cref{sigx}.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.0 in]{sigx.pdf}
@@ -387,8 +370,7 @@ La distribución de la componente $t_x$ sobre esta cara, corresponde a la tensi�
 	\label{sigy}
 \end{figure}
 
-Similarmente, la componente $t_y$ corresponde a la componente $\tau_{xy}$. Sobre esta cara se tiene en $y=0$  que $t_y = 0$, mientras que en $y=H$ $t_y = - \gamma H$. Esta distribución se muestra en la \cref{taoxy};
-
+Similarmente, la componente $t_y$ corresponde a la componente $\tau_{xy}$. Sobre esta cara se tiene en $y=0$  que $t_y = 0$, mientras que en $y=H$ $t_y = - \gamma H$. Esta distribución se muestra en la \cref{taoxy}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.0 in]{tauxy.pdf}
@@ -397,34 +379,25 @@ Similarmente, la componente $t_y$ corresponde a la componente $\tau_{xy}$. Sobre
 \end{figure}
 
 
-La solución para la presa se ha implementado en el script de python dam.py distribuido en EAFIT interactiva. En la \cref{Sx}, \cref{Sy}, \cref{Txy} y \cref{Sc} se peresenta la distribución de tensiones sobre toda la presa en forma de contornos o curvas de nivel de isotensiones (igual valor de tensión)
-
+En la \cref{fig:contornos_presa} se presentan las distribuciones de tensiones sobre toda la presa en forma de contornos y curvas de nivel de isotensiones (igual valor de tensión).
 \begin{figure}[H]
      \centering
-     \subfloat[Esfuerzo axial en x]{\includegraphics[width=2.2 in]{sigmax.pdf}\label{Sx}}
-     \hspace{0.5cm}
-     \subfloat[Esfuerzo axial en y]{\includegraphics[width=2.2 in]{sigmay.pdf}\label{Sy}}\\
-     \subfloat[Esfuerzo cortante]{\includegraphics[width=2.2 in]{taoxy.pdf}\label{Txy}}
-     \hspace{0.5cm}
-     \subfloat[Esfuerzo cortante máximo]{\includegraphics[width=2.2 in]{sigmac.pdf}\label{Sc}}\\
+     \includegraphics[width=3.5 in]{presa_esfuerzos.pdf}
      \caption{Variación de las tensiones que producen fuerzas en la dirección $x$ y $y$ sobre la presa.}
-     \label{python}
+     \label{fig:contornos_presa}
 \end{figure}
 
 
 Para verificar el equilibrio global consideremos el diagrama de cuerpo libre mostrado en la \cref{dcl}
-
 \begin{figure}[H]
 \centering
-	\includegraphics[width=3.0 in]{fbodydam.pdf}
+	\includegraphics[width=2.0 in]{fbodydam.pdf}
 	\caption{Diagrama de cuerpo libre de la presa.}
 	\label{dcl}
 \end{figure}
-
-
-donde;
-\[F_x^1 = \frac{{\gamma {H^2}}}{4}\]
-\[F_x^2 =  - \frac{{\gamma {H^2}}}{4}\]
+donde
+\[F_x^1 = \frac{\gamma H^2}{4}\, ,\quad
+F_x^2 =  - \frac{\gamma H^2}{4}\, ,\]
 luego
 \[\sum {{F_x} = 0} \]
 y
@@ -1019,14 +992,28 @@ Adem\'as dicho esfuerzo es descrito por una funci\'on lineal en z.
 	\hspace*{10mm} $ \sigma_{xx} (t)= K(t)$; \hspace*{5mm} $\sigma_{yy} (t) = -6K(t)$;\hspace*{5mm} $ \sigma_{zz} (t)= -K(t)$; \\\\
 	\hspace*{10mm} $ \tau_{xy} (t) = 0$; \hspace*{5mm} $\tau_{xz} (t) = 0$; \hspace*{5mm} $\tau_{yz} (t) = 0$ \\
 \\	
-Donde, $K(t)$ es un par\'ametro que var\'ia en funci\'on del tiempo $t$, tal como se muestra en la gr\'afica y tabla presentadas en la \cref{carga}.
-%
+Donde, $K(t)$ es un par\'ametro que var\'ia en funci\'on del tiempo $t$, tal como se muestra en la gráfica y tabla presentadas en la \cref{fig:esfuerzo_dependiente_tiempo}.
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{cc}
+$t$ (s) & $K(t)$ (kgf/cm$^2$) \\ 
+\hline\\
+0.0 & 2.0 \\ 
+5.0 & 2.0 \\ 
+10.0 & 4.0 \\ 
+15.0 & 0.0 \\ 
+20.0 & -6.0 \\  
+25.0 & 0.0\\
+\end{tabular} 
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
 \begin{figure}[H]
-	\centering
-	\includegraphics[height=7.0cm]{Ejer4_19.pdf} 	
-	\caption{Variaci\'on del par\'ametro $K$}
-	\label{carga}
+  \centering
+  \includegraphics[width=3 in]{esfuerzo_dependiente_tiempo.pdf} 	
+  \caption{Variación del parámetro $K$}
+  \label{fig:esfuerzo_dependiente_tiempo}
 \end{figure}
+\end{minipage}
+
 
 \begin{enumerate}
 	\item Si el material es infinitamente resistente ante esfuerzos normales (axiales), pero no soporta esfuerzos cortantes mayores o iguales a $13\dfrac{kgf}{cm^2}$ determine el instante en que se presenta la falla en caso de que se presente. Si no hay falla ind\'iquelo claramente.\\
