@@ -17,26 +17,25 @@ Al final de esta sección el estudiante deberá estar en la capacidad de:
 \end{itemize}
 
 Del análisis de las fuerzas ``internas'' se concluyó --usando las 3 leyes de Newton sobre un volumen arbitrario de un medio continuo-- que estas corresponden a nivel local a una función (continua) de carácter tensorial y que satisface el problema de valores en la frontera especificado por las ecuaciones de equilibrio (leyes generalizadas de Newton) y la asignación de las tracciones en la superficie del medio (\cref{equtr_5}, \cref{equrot_5}):
-
 \begin{equation} \label{equtr_5}
 \begin{split}
 & \frac{\partial \sigma_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z} + B_x = 0 \\
 & \frac{\partial \tau_{xy}}{\partial x} + \frac{\partial \sigma_{yy}}{\partial y} + \frac{\partial \tau_{zy}}{\partial z} + B_y = 0 \\
-& \frac{\partial \tau_{xz}}{\partial x} + \frac{\partial \tau_{yz}}{\partial y} + \frac{\partial \sigma_{zz}}{\partial z} + B_z = 0 
+& \frac{\partial \tau_{xz}}{\partial x} + \frac{\partial \tau_{yz}}{\partial y} + \frac{\partial \sigma_{zz}}{\partial z} + B_z = 0\, ,
 \end{split}
 \end{equation}
-
+y
 \begin{equation} \label{equrot_5}
 \begin{split}
 & \tau_{xy} = \tau_{yx} \\
 & \tau_{xz} = \tau_{zx} \\
-& \tau_{yz} = \tau_{zy}
+& \tau_{yz} = \tau_{zy}\, .
 \end{split}
 \end{equation}
 
-Se dispone de 6 ecuaciones en 9 incógnitas controlando la distribución espacial de las fuerzas internas $\sigma$ sobre los diferentes puntos materiales del medio continuo.  Dichas fuerzas internas son generadas ya sea por las fuerzas de superficie (tracciones) ${{\vec t}^{(\hat n)}}$  y/o por las interacciones a distancia o fuerzas de cuerpo ${\vec B}$.  Sin embargo, en este punto el problema se hace (matemáticamente) indeterminado ya que se dispone de más incógnitas que ecuaciones.
+Se dispone de 6 ecuaciones en 9 incógnitas controlando la distribución espacial de las fuerzas internas $\sigma$ sobre los diferentes puntos materiales del medio continuo.  Dichas fuerzas internas son generadas por fuerzas de superficie (tracciones) $\vec{t}^{(\hat n)}$  o por interacciones a distancia o fuerzas de cuerpo $\vec {B}$.  Sin embargo, en este punto el problema se hace (matemáticamente) indeterminado ya que se dispone de más incógnitas que ecuaciones.
 
-La indeterminación desde el punto de vista de fuerzas no debe ser para nada sorpresiva, ya que si éstas se consideran como las ``funciones causa" es claro que aún falta por involucrar los efectos o ``funciones respuesta". Estas funciones corresponden precisamente a los cambios (cinemáticos) o de configuración, experimentados por las infinitas partículas una vez son sometidas a interacciones externas.
+La indeterminación desde el punto de vista de fuerzas no debe ser para nada sorpresiva, ya que si éstas se consideran como las ``funciones causa'' aún falta involucrar los efectos o ``funciones respuesta". Estas funciones corresponden precisamente a los cambios (cinemáticos) o de configuración, experimentados por las infinitas partículas una vez son sometidas a interacciones externas.
 
 Claramente se identifica la primera necesidad de estudiar los cambios de configuración como la de tratar de establecer una conexión entre estos cambios y las fuerzas internas $\sigma$ y que permita a la postre eliminar la indeterminación matemática del problema de valores en la frontera (PVF) (especificado por las \cref{equtr_5} y \cref{equrot_5}).
 
@@ -45,7 +44,7 @@ Aunque es claro que las nuevas configuraciones aparecen debidas a los desplazami
 \subsection{Concepto intuitivo de deformación}
 La \cref{viga1} muestra, en sombreado gris, una viga en voladizo en su configuración original (antes de aplicar las cargas externas) y en línea punteada su configuración final (o deformada)\footnote{En la configuración deformada los puntos materiales o elementos constitutivos de la viga estarán sometidos a un estado de tensiones que satisface las ecuaciones de equilibrio local ( a nivel diferencial) y global.} resultante tras aplicar alguna distribución de cargas externas en forma de tracciones.
 
-Como resultado de la aplicación de las cargas externas los puntos materiales que conforman la viga experimentan desplazamientos. En lo que sigue denominaremos campo de desplazamientos a la variación espacial de estos, y lo denotaremos como $\vec u(\vec x)$. Tal y como se aprecia de manera intutitiva, los desplazamientos varían para los diferentes puntos de la viga generándose \textbf{\textit{desplazamientos relativos}}.
+Como resultado de la aplicación de las cargas externas los puntos materiales que conforman la viga experimentan desplazamientos. En lo que sigue denominaremos campo de desplazamientos a la variación espacial de estos, y lo denotaremos como $\vec u(\vec x)$. Tal y como se aprecia de manera intutitiva, los desplazamientos varían para los diferentes puntos de la viga generándose \textbf{desplazamientos relativos}.
 
 \begin{figure}[H]
 \centering
@@ -57,7 +56,7 @@ Como resultado de la aplicación de las cargas externas los puntos materiales qu
 
 Por ejemplo, es evidente que los desplazamientos sobre el empotramiento son "nulos" mientras que los puntos cercanos al extremo derecho de la viga experimentan los máximos desplazamientos. Sin embargo, sabemos que las fuerzas internas (o tensiones) están ligadas al desplazamiento relativo entre los puntos materiales. El propósito de esta sección es hacer una descripción local (o diferencial) de los desplazamientos relativos entre puntos materiales y que pueda ser conectada posteriormente con el tensor de tensiones a través de propiedades de los materiales . Con esto, no solo se conseguirá completar las ecuaciones para el problema de valores en la frontera del medio continuo, sino que además será posible describir la nueva configuración del medio, resultante de la aplicación de interacciones externas tanto a nivel local (diferencial) como global.
 
-Para aclarar, nuevamente de manera intuitiva, el caracter local de los cambios relativos la \cref{steady_state} muestra la configuración original (\cref{nodef}) y deformada (\cref{sidef}) de la viga en voladizo. Como elemento auxiliar de análisis esta vez se ha dibujado una rejilla de elementos perfectamente cuadrados sobre la configuración no-deformada.   Si suponemos que estos elementos son de lado $h$ es claro que en el modelo del continuo el punto material corresponde a uno de estos en el estado limite cuando $h \to 0.$ Es evidente de la \cref{sidef} como los diferentes elementos cambian su forma una vez la viga pasa de la configuración descargada a la cargada. Mas aún es evidente de la misma figura como estos cambios varían de elemento a elemento.
+Para aclarar, nuevamente de manera intuitiva, el carácter local de los cambios relativos la \cref{steady_state} muestra la configuración original (\cref{nodef}) y deformada (\cref{sidef}) de la viga en voladizo. Como elemento auxiliar de análisis esta vez se ha dibujado una rejilla de elementos perfectamente cuadrados sobre la configuración no-deformada.   Si suponemos que estos elementos son de lado $h$ es claro que en el modelo del continuo el punto material corresponde a uno de estos en el estado limite cuando $h \to 0.$ Es evidente de la \cref{sidef} como los diferentes elementos cambian su forma una vez la viga pasa de la configuración descargada a la cargada. Mas aún es evidente de la misma figura como estos cambios varían de elemento a elemento.
 
 \begin{figure}[H]
      \centering
@@ -68,9 +67,9 @@ Para aclarar, nuevamente de manera intuitiva, el caracter local de los cambios r
      \label{steady_state}
 \end{figure}
 
-La \cref{viga3} muestra nuevamente ambas configuraciones y sobre estas se han seleccionado para efectos ilustrativos dos elementos localizados sobre el empotramiento y sobre el extremo libre del voladizo. En la configuración original ambos elementos son identicos y corresponden a cudrados de lado $h$. En la configuración deformada, mostrada con líneas punteadas, se resaltan nuevamente estos 2 elementos de donde se pueden hacer las siguientes observaciones:
+La \cref{viga3} muestra nuevamente ambas configuraciones y sobre estas se han seleccionado para efectos ilustrativos dos elementos localizados sobre el empotramiento y sobre el extremo libre del voladizo. En la configuración original ambos elementos son identicos y corresponden a cuadrados de lado $h$. En la configuración deformada, mostrada con líneas punteadas, se resaltan nuevamente estos 2 elementos de donde se pueden hacer las siguientes observaciones:
 
-El elemento sobre la parte superior del empotramiento experimenta cambios de tamaño y de forma a través de alargamientos en la dirección longitudinal, mientras que el elemento sobre la parte inferior experimenta acortamientos igualmente en la dirección longitudinal. Estos cambios suceden a pesar de que dichos elementos se encuentran sobre el empotramiento donde los desplazamientos como tal son nulos. De otro lado, el elemento sobre el extremo libre de la viga experimenta pequeños cambios de forma  (no apreciables en el dibujo) y experimentan las mayores rotaciones como si fuera un cuerpo rigido. Los pequeños cambios de forma son equivalentes a pequeños desplazamientos relativos aunque estos puntos experimentan los mayores desplazamientos absolutos.
+El elemento sobre la parte superior del empotramiento experimenta cambios de tamaño y de forma a través de alargamientos en la dirección longitudinal, mientras que el elemento sobre la parte inferior experimenta acortamientos igualmente en la dirección longitudinal. Estos cambios suceden a pesar de que dichos elementos se encuentran sobre el empotramiento donde los desplazamientos como tal son nulos. De otro lado, el elemento sobre el extremo libre de la viga experimenta pequeños cambios de forma  (no apreciables en el dibujo) y experimentan las mayores rotaciones como si fuera un cuerpo rígido. Los pequeños cambios de forma son equivalentes a pequeños desplazamientos relativos aunque estos puntos experimentan los mayores desplazamientos absolutos.
 
 
 \begin{figure}[H]
@@ -94,13 +93,11 @@ En lo que sigue estudiaremos la relación entre 2 fibras arbitrarias como las mo
 
 \section{Transformaciones lineales}
 Con el propósito de conceptualizar el proceso deformación o cambios de configuración a nivel local o diferencial es conveniente apoyarnos como herramienta de análisis en las transformaciones lineales\footnote{Esta sección esta basada en los textos: Principles of Solid Mechanics. Rowland Richards Jr. CRC Press, 2001 y Introduction to the Mechanics of Continuous Medium. Lawrence E Malvern. Prentice Hall, 1969.}. En términos simples estas corresponden a la traformación de un vector en otro conservando la propiedad de línealidad. Esta idea se ilustra en la \cref{amat} en la que $\vec r = {r_x}\hat i + {r_y}\hat j$ representa el vector posición de un punto $P$. Como resultado de alguna acción externa, representada por un tensor $A$ este punto material experimenta un desplazamiento $\vec \Delta  = {\Delta _x}\hat i + {\Delta _y}\hat j$ con lo que que el vector $\vec{r}$ se transforma en el vector $\vec \rho  = {\rho _x}\hat i + {\rho _y}\hat j$. Esta relación puede escribirse como:
-
 \begin{equation}
 \vec \rho  = A \cdot \vec r
 \label{amat}
 \end{equation}
 
-%
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{trans.pdf}
@@ -109,14 +106,12 @@ Con el propósito de conceptualizar el proceso deformación o cambios de configu
 \end{figure}
 
 El vector $\vec{r}$ al transformarse en el vector $\vec{\rho}$ experimenta 2 tipos de cambios:
-
 \begin{itemize}
 \item[i] Cambios de magnitud (o de tamaño).
 \item[ii] Cambios de orientación (dirección). 
 \end{itemize}
 
 La relación \cref{amat} entre $\vec{r}$ y $\vec{\rho}$ puede escribirse en forma explicita como:
-
 \begin{equation}
 \left\{ {\begin{array}{*{20}{c}}
 {{\rho _x}}\\
@@ -132,14 +127,12 @@ La relación \cref{amat} entre $\vec{r}$ y $\vec{\rho}$ puede escribirse en form
 \end{equation}
 
 La \cref{roaere} indica que la matriz $A$ transforma el vector $\vec{r}$ en el vector $\vec{\rho}$ y por ende ésta contiene toda la información referente a los cambios de magnitud y dirección que experimentan las infinitas direcciones que emanan del punto $O$. Una transformación como la descrita en la \cref{roaere} se denomina lineal si satisface la condición dada por:
-
 \begin{equation}
 A \cdot \left( {{{\vec r}_1} + {{\vec r}_2}} \right) = A \cdot {{\vec r}_1} + A \cdot {{\vec r}_2}
 \label{lineal}
 \end{equation}
 
 la cual implica que lineas rectas y paralelas antes de la transformación permanecen rectas y paralelas después de la transformación o en otras palabras que conservan la ley del paralelogramo. Esto se ilustra en la \cref{paralelo}:
-
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{paralelo.pdf}
@@ -147,18 +140,14 @@ la cual implica que lineas rectas y paralelas antes de la transformación perman
 	\label{paralelo}
 \end{figure}
 
-Alternativamente, es posible escribir la transformación en términos del vector de desplazamientos ${\vec \Delta }$  que experimenta la cabeza del vector $\vec{r}$ como sigue;  
-
-\[\vec \Delta  = \vec \rho  - \vec r\]
-
-\[\vec \Delta  = A \cdot \vec r - \vec r\]
-
-\[\vec \rho  = \left[ {A - I} \right] \cdot \vec r\]
-
-\[\vec \Delta  = D \cdot \vec r\]
-
-y de manera explicta escribimos;
-
+Alternativamente, es posible escribir la transformación en términos del vector de desplazamientos ${\vec \Delta }$  que experimenta la cabeza del vector $\vec{r}$ como sigue:  
+\begin{align*}
+&\vec \Delta  = \vec \rho  - \vec r\\
+&\vec \Delta  = A \cdot \vec r - \vec r\\
+&\vec \rho  = \left[ {A - I} \right] \cdot \vec r\\
+&\vec \Delta  = D \cdot \vec r
+\end{align*}
+y de manera explícita escribimos
 \begin{equation}
 \left\{ {\begin{array}{*{20}{c}}
 {{\Delta _x}}\\
@@ -295,7 +284,6 @@ y la configuración deformada mostrada en línea punteada en la \cref{sime}.
 
 \subsection{Componentes escalar y distorsional}
 La componente simétrica del tensor de transformación de desplazamientos es análoga al tensor de tensiones estudiado en secciones anteriores. De hecho, dado su caracter simétrico este puede ser estudiado en términos del circulo de Mohr. Identificando esta conexión es posible resolver esta componente en términos adicionales que permiten ahondar en el entendimiento físico del analísis de deformaciones. En particular considere la siguiente descomposición:
-
 \begin{equation}
 \left[ {\begin{array}{*{20}{c}}
 {{\varepsilon _{xx}}}&\bar{\gamma} \\
@@ -499,7 +487,6 @@ por lo que el tensor resultante corresponde a:
 \subsection*{Problema propuesto}
 
 La \cref{problem} corresponde a la configuración original de un medio continuo. Si sobre este se aplica el tensor de transformación de desplazamientos:
-
 \[D = \left[ {\begin{array}{*{20}{c}}
 {{d_{xx}}}&{{d_{xy}}}\\
 {{d_{yx}}}&{{d_{yy}}}
@@ -507,8 +494,6 @@ La \cref{problem} corresponde a la configuración original de un medio continuo.
 
 
 determinar la configuración deformada del medio indicando claramente el efecto de cada una de las componentes definidas de acuerdo con:
-
-
 \[D = \varepsilon  + \omega  \equiv pI + S + C + \omega \]
 
 
@@ -522,11 +507,8 @@ determinar la configuración deformada del medio indicando claramente el efecto 
 
 \section{Tensor de deformaciones unitarias}
 Procedamos ahora a comparar lo que sucede con una fibra materiales infinitesimal tras haber sido sometida al proceso de deformación. Ésta se muestra en la \cref{pelos} conectando los puntos materiales que ocupan las posiciones $P$ y $Q$ antes de la deformación y las posiciones $p$ y $q$ en la configuración deformada. En la configuración original la fibra $PQ$ esta dada por el vector $d\vec{r}$ expresado en términos de magnitud y dirección como:
-
 \[d\vec r = \hat ndS\]
-
 donde
-
 \[\hat n = \frac{{dx}}{{dS}}\hat i + \frac{{dy}}{{dS}}\hat j.\]
 
 \begin{figure}[H]
@@ -546,31 +528,20 @@ En la configuración deformada la fibra $PQ$ se convierte en la fibra $pq$ dada 
 \end{figure}
 
 Escribiendo el desplazamiento relativo $d\vec u$  en términos de los vectores fibra original y deformado $d\vec{r}$ y $d\vec{x}$  se tiene:
-
 \[d\vec u = d\vec x - d\vec r\]
-
 o usando una relación como:
-
 \[d\vec x = A \cdot d\vec r\]
-
 donde $A$ transforma $d\vec{r}$ en $d\vec{x}$ se tiene:
-
 \[d\vec u = \left[ {A - I} \right] \cdot d\vec r\]
-
 o finalmente:
-
 \begin{equation}
 d\vec u = J \cdot d\vec r.
 \label{jacobian}
 \end{equation}
 
-En la expresión \cref{jacobian} el tensor $J$ \footnote{El tensor $J$ es el análogo al tensor $D$ visto en la sección de trasformaciónes lineales} permite obtener el desplazamiento relativo $d\vec{u}$ del punto material $Q$ con respecto a $P$. Escribiendo $d\vec{u}$ en términos de sus componentes rectangulares como; 
-
+En la expresión \cref{jacobian} el tensor $J$ \footnote{El tensor $J$ es el análogo al tensor $D$ visto en la sección de trasformaciónes lineales} permite obtener el desplazamiento relativo $d\vec{u}$ del punto material $Q$ con respecto a $P$. Escribiendo $d\vec{u}$ en términos de sus componentes rectangulares como
 \[d\vec u = du\hat i + dv\hat j\]
-
 permite escribir la \cref{jacobian} en forma explicita de acuerdo con:
-
-
 \[\left\{ {\begin{array}{*{20}{c}}
 {du}\\
 {dv}
@@ -583,14 +554,9 @@ permite escribir la \cref{jacobian} en forma explicita de acuerdo con:
 \end{array}} \right\}.\]
 
 Reconociendo los términos del tensor $J$ como las variaciones de las componentes rectangulares $du$ y $dv$ a lo largo de distancias diferenciales $dx$ y $dy$ permite escribir:
-
-
 \[du = {J_{xx}}dx + {J_{xy}}dy \equiv \frac{{\partial u}}{{\partial x}}dx + \frac{{\partial u}}{{\partial y}}dy\]
-
 \[dv = {J_{yx}}dx + {J_{yy}}dy \equiv \frac{{\partial v}}{{\partial x}}dx + \frac{{\partial v}}{{\partial y}}dy\]
-
 o en forma explicita:
-
 \[\left\{ {\begin{array}{*{20}{c}}
 {du}\\
 {dv}
@@ -601,9 +567,7 @@ o en forma explicita:
 {dx}\\
 {dy}
 \end{array}} \right\}\]
-
 y en donde el tensor $J$ corresponde al gradiente de desplazamientos. Normalizando el vector de desplazamientos relativos por la magnitud original $dS$ de la fibra, permite obtener el desplazamiento relativo unitario como una transformación
-
 \[\left\{ {\begin{array}{*{20}{c}}
 {\frac{{du}}{{dS}}}\\\\
 {\frac{{dv}}{{dS}}}
@@ -614,21 +578,15 @@ y en donde el tensor $J$ corresponde al gradiente de desplazamientos. Normalizan
 {\frac{{dx}}{{dS}}}\\\\
 {\frac{{dy}}{{dS}}}
 \end{array}} \right\}\]
-
 o
-
 \begin{equation}
 \left\{ {\frac{{d\vec u}}{{dS}}} \right\} = J \cdot \hat n.
 \label{trans}
 \end{equation}
 
 Para identificar los diferentes efectos contenidos en el gradiente de desplazamientos este se descompone en términos de sus componentes simétrica y anti-simétrica como:
-
-
 \[J = \varepsilon  + \omega \]
-
 o en forma explicita:
-
 \[\left[ {\begin{array}{*{20}{c}}
 {\frac{{\partial u}}{{\partial x}}}&{\frac{{\partial u}}{{\partial y}}}\\\\
 {\frac{{\partial v}}{{\partial x}}}&{\frac{{\partial v}}{{\partial y}}}
@@ -642,7 +600,6 @@ o en forma explicita:
 
 
 Los efectos físicos de las diferentes componentes del tensor $J$ serán estudiados analizando los cambios impuestos por este sobre el elemento diferencial mostrado en la \cref{diferencial}. En particular, se calcularán los desplazamientos de los puntos $A$, $B$ y $C$ con vectores posición:
-
 \[{\vec r_A} = dx\hat i\]
 \[{\vec r_B} = dy\hat j\]
 \[{\vec r_C} = dy\hat i + dx\hat j. \]
@@ -658,7 +615,6 @@ Los efectos físicos de las diferentes componentes del tensor $J$ serán estudia
 
 \subsection{Rotación de cuerpo rígido}
 Estudiando inicialmente la componente anti-simétrica $\omega$ del tensor $J$ aplicando la transformación sobre el elemento diferencial se tiene respectivamente para los desplazamientos relativos de los puntos $A$, $B$ y $C$:
-
 \[{\left\{ {\begin{array}{*{20}{c}}
 {du}\\\\
 {dv}

@@ -30,48 +30,39 @@ Es esperable además, si se sabe que el modelo matemático utilizado para el tra
 
 Considerese un elemento diferencial arbitrario tomado de un medio continuo y de dimensiones $dx \times dy \times dz$ como el que se muestra en la \cref{diff}\footnote{Debe notarse que este bloque de tensiones corresponde a un elemento del continuo de tamaño diferencial, mientras que en las secciones anteriores hacíamos uso de un elemento similar pero que no tenía ningún tamaño asociado y que solo se convertía en una forma práctica de representar el estado de tensiones en un punto material en un sistema de referencia cartesiano.
 
-Por ejemplo en aquel caso si cortábamos un punto material con un plano con dirección normal $\hat{n}$ y con vector de tracciones asociado ${\vec t^{(\hat n)}}$ teniamos que este vector era igual y opuesto al asociado al corte con un plano con dirección $-\hat{n}$. De esta forma se decidió representar el tensor de esfuerzos para un punto del continuo mediante los tres vectores de tracción asociados con  3 direcciones perpendiculares $\hat{i}$, $\hat{j}$ y $\hat{k}$ y sus direcciones opuestas $-\hat{i}$, $-\hat{j}$ y $-\hat{k}$.}
+Por ejemplo en aquel caso si cortábamos un punto material con un plano con dirección normal $\hat{n}$ y con vector de tracciones asociado $\vec t^{(\hat n)}$ teníamos que este vector era igual y opuesto al asociado al corte con un plano con dirección $-\hat{n}$. De esta forma se decidió representar el tensor de esfuerzos para un punto del continuo mediante los tres vectores de tracción asociados con  3 direcciones perpendiculares $\hat{\imath}$, $\hat{\jmath}$ y $\hat{k}$ y sus direcciones opuestas $-\hat{\imath}$, $-\hat{\jmath}$ y $-\hat{k}$.}
 
 Denotemos las áreas superficiales de las caras de dicho elemento y su volumen como;
 \begin{align*}
-d{S_x} = dydz
-d{S_z} = dxdy
-d{S_y} = dxdz
-dV = dxdydz.
+&d{S_x} = dydz\, ,\\
+&d{S_z} = dxdy\, ,\\
+&d{S_y} = dxdz\, ,\\
+&dV = dxdydz\, .
 \end{align*}
 
-En lo que sigue nos proponemos plantear las condiciones de equilibrio del elemento como si se tratara de un cuerpo rígido. Para esto supondremos además que el elemento se encuentra sometido a la acción de fuerzas de cuerpo $\vec B = {B_x}\hat i + {B_y}\hat j + {B_z}\hat k$.
-
-
-\begin{figure}[H]
+En lo que sigue nos proponemos plantear las condiciones de equilibrio del elemento como si se tratara de un cuerpo rígido. Para esto supondremos además que el elemento se encuentra sometido a la acción de fuerzas de cuerpo $\vec B = B_x \hat\imath + B_y \hat\jmath + {B_z}\hat k$.
+\begin{figure}[h]
 \centering
 	\includegraphics[width=4.0 in]{diffblock.pdf}
-	\caption{Tensiones en un elemento diferencial de tamaño $dxdydz$.}
+	\caption{Tensiones en un elemento diferencial de tamaño $dx\, dy\, dz$.}
 	\label{diff}
 \end{figure}
 
-Dado que el bloque en cuestión tiene ahora tamaño (así sea diferencial) es esperable que las tensiones sobre una cara y otra ya no permanezcan constantes sino que estas experimenten variaciones también diferenciales. Por ejemplo, si la tensión normal sobre la cara con vector $-\hat{i}$ y localizada sobre el punto O es ${\sigma _{xx}}$ entonces se tiene que la tensión normal sobre el punto $x_O+dx$ está dada por ${\sigma _{xx}} + \frac{{\partial {\sigma _{xx}}}}{{\partial x}}dx$ tal y como se muestra en la \cref{EQx}.
+Dado que el bloque en cuestión tiene tamaño (así sea diferencial) es esperable que las tensiones sobre una cara y otra ya no permanezcan constantes sino que estas experimenten variaciones también diferenciales. Por ejemplo, si la tensión normal sobre la cara con vector $-\hat{i}$ y localizada sobre el punto O es ${\sigma _{xx}}$ entonces se tiene que la tensión normal sobre el punto $x_O+dx$ está dada por ${\sigma _{xx}} + \frac{{\partial {\sigma _{xx}}}}{{\partial x}}dx$ tal y como se muestra en la \cref{EQx}.
 
 
-Con esta consideración de por medio planteamos ahora la condición de equlibrio en la dirección $x$
+Con esta consideración de por medio planteamos ahora la condición de equilibrio en la dirección $x$:
+\[\sum F_x = 0\, . \]
 
-\[\sum {{F_x} = 0} \]
-
-y teniendo cuidado de convertir las tensiones a fuerzas tras considerar el área de cada cara. Apoyándonos nuevamente en la \cref{EQx} en la cual se muestran todas las tensiones en la dirección $x$ tenemos que;
-
-
+Y teniendo cuidado de convertir las tensiones a fuerzas tras considerar el área de cada cara. Apoyándonos nuevamente en la \cref{EQx} en la cual se muestran todas las tensiones en la dirección $x$ tenemos que
 \begin{align*}
-\left( {{\sigma _{xx}} + \frac{{\partial {\sigma _{xx}}}}{{\partial x}}dx} \right)d{S_x} & - {\sigma _{xx}}d{S_x} - {\tau _{yx}}d{S_y} + \left( {{\tau _{yx}} + \frac{{\partial {\tau _{yx}}}}{{\partial y}}dy} \right)d{S_y} \nonumber \\ 
+\left( \sigma_{xx} + \frac{\partial \sigma_{xx}}{\partial x}dx \right)d{S_x} & - {\sigma _{xx}}d{S_x} - {\tau _{yx}}d{S_y} + \left( {{\tau _{yx}} + \frac{{\partial {\tau _{yx}}}}{{\partial y}}dy} \right)d{S_y} \nonumber \\ 
 &\qquad {} - {\tau _{zx}}d{S_z} + \left( {{\tau _{zx}} + \frac{{\partial {\tau _{zx}}}}{{\partial z}}dy} \right)d{S_z} + {B_x}dV = 0
 \end{align*}
+cancelando los términos iguales y opuestos y eliminando el diferencial de volumen común a todos los términos se tiene
+\[\frac{{\partial {\sigma _{xx}}}}{{\partial x}}\cancel{dxd{S_x}} + \frac{{\partial {\tau _{yx}}}}{{\partial y}}\cancel{dyd{S_y}} + \frac{{\partial {\tau _{zx}}}}{{\partial z}}\cancel{dyd{S_z}} + {B_x}\cancel{dV} = 0\, .\]
 
-
-cancelando los términos iguales y opuestos y eliminando el diferencial de volumen común a todos los términos se tiene;
-
-
-\[\frac{{\partial {\sigma _{xx}}}}{{\partial x}}\cancel{dxd{S_x}} + \frac{{\partial {\tau _{yx}}}}{{\partial y}}\cancel{dyd{S_y}} + \frac{{\partial {\tau _{zx}}}}{{\partial z}}\cancel{dyd{S_z}} + {B_x}\cancel{dV} = 0.\]
-
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 	\includegraphics[width=3.0 in]{Eqx.pdf}
 	\caption{Variación de las tensiones que producen fuerzas en la dirección $x$ sobre un elemento diferanecial de dimensiones $dx$, $dy$, $dz$.}
@@ -86,17 +77,15 @@ cancelando los términos iguales y opuestos y eliminando el diferencial de volum
 \label{Equil_x}
 \end{equation}
 
-La \cref{Equil_x} es una ecuación diferencial parcial que controla la variación de las componentes ${\sigma _{xx}}$, ${\tau _{yx}}$ y ${\tau _{zx}}$.
+La \cref{Equil_x} es una ecuación diferencial parcial que controla la variación de las componentes $\sigma_{xx}$, $\tau_{yx}$ y $\tau_{zx}$.
 
 
 \subsubsection{Tarea}
-Usando las condiciones de equilibrio en las direcciones $y$ y $z$ (dadas por $\sum {{F_y} = 0}$ y $\sum {{F_z} = 0}$) para los elementos diferenciales mostrados en las \cref{EQy} y \cref{EQz} demostrar que estas resultan en;
-
-
-\[\frac{{\partial {\tau _{xy}}}}{{\partial x}} + \frac{{\partial {\sigma _{yy}}}}{{\partial y}} + \frac{{\partial {\tau _{zy}}}}{{\partial z}} + {B_y} = 0\]
-
-
-\[\frac{{\partial {\tau _{xz}}}}{{\partial x}} + \frac{{\partial {\tau _{yz}}}}{{\partial y}} + \frac{{\partial {\sigma _{zz}}}}{{\partial z}} + {B_z} = 0.\]
+Usando las condiciones de equilibrio en las direcciones $y$ y $z$ (dadas por $\sum {{F_y} = 0}$ y $\sum {{F_z} = 0}$) para los elementos diferenciales mostrados en las \cref{EQy} y \cref{EQz} demostrar que estas resultan en
+\begin{align*}
+&\frac{{\partial {\tau _{xy}}}}{{\partial x}} + \frac{{\partial {\sigma _{yy}}}}{{\partial y}} + \frac{{\partial {\tau _{zy}}}}{{\partial z}} + {B_y} = 0\\
+&\frac{{\partial {\tau _{xz}}}}{{\partial x}} + \frac{{\partial {\tau _{yz}}}}{{\partial y}} + \frac{{\partial {\sigma _{zz}}}}{{\partial z}} + {B_z} = 0\, .
+\end{align*}
 
 
 \begin{figure}[H]
@@ -161,13 +150,15 @@ Aunque debido a la indeterminación estática no es posible aplicar ningún mét
 La ecuación
 \[\frac{d}{{dx}}\left( {EA\frac{{du}}{{dx}}} \right) = 0\]
 gobierna el desplazamiento axial $u(x)$ de una barra de sección transversal variable $A(x)$ y modulo de elasticidad $E$. La barra esta sometida a las condiciones de frontera dadas por
-\[{\left. {EA\frac{{du}}{{dx}}} \right|_{x = L}} = 0\]
-\[{\left. u \right|_{x = 0}} = 0\]
+\begin{align*}
+&\left. {EA\frac{du}{dx}} \right|_{x = L} = F\\
+&\left. u \right|_{x = 0} = 0\, .
+\end{align*}
 
 Si el área de la sección transversal esta dada por
 \[A(x) = {A_0}(2 - x/L)\]
 demostrar que la siguiente función es solución del problema de valores en la frontera.
-\[u = \frac{{FL}}{{E{A_0}}}\ln \left( {\frac{2}{{2 - x/l}}} \right)\]
+\[u = \frac{FL}{E A_0}\ln \left(\frac{2}{2 - x/L}\right)\]
 
 \subsection{Coordenadas cilíndricas}
 
@@ -197,9 +188,8 @@ Considere la cuña doble de lado $\ell$ y ángulo interno $2 \phi$ mostrada en l
 \label{WEDGE}
 \end{figure}
 
-%
-En el caso de estados de tensiones idealizables en 2 dimensiones y contenidos en el plano $x-y$ nada es función de $z$ y las ecuaciones de equlibrio \cref{equtr} y \cref{equrot} se reducen a;
 
+En el caso de estados de tensiones idealizables en 2 dimensiones y contenidos en el plano $x-y$ nada es función de $z$ y las ecuaciones de equlibrio \cref{equtr} y \cref{equrot} se reducen a
 \begin{equation}
 \begin{aligned}
 &\dfrac{\partial\sigma_{xx}}{\partial x}+\dfrac{\partial\tau_{xy}}{\partial y}=0\\
@@ -208,70 +198,64 @@ En el caso de estados de tensiones idealizables en 2 dimensiones y contenidos en
 \label{equilibrium}
 \end{equation}
 
-mientras que el equilibrio rotacional se reduce a;
+mientras que el equilibrio rotacional se reduce a
+\[\tau_{xy} = \tau_{yx}.\]
 
-\[{\tau _{xy}} = {\tau _{yx}}.\]
-
-Para proponer una solución planteamos las ecuaciones de equlibrio global de la cuña, lo cual es equivalente a asumir que las solución es constante. Se tiene entonces que
-\[\sum F_x=0 \longrightarrow -\ell C_\phi S+\sigma_{xx}\ell S_\phi=0\]\\
-\[\sum F_y=0 \longrightarrow -\ell S_\phi S-\sigma_{yy}\ell C_\phi=0\] 
-
-de donde resulta la siguiente función para el campo de tensiones;
-
+Para proponer una solución planteamos las ecuaciones de equilibrio global de la cuña, lo cual es equivalente a asumir que las solución es constante. Se tiene entonces que
+\begin{align*}
+&\sum F_x=0 \longrightarrow -\ell S \cos\phi + \sigma_{xx}\ell \sin\phi=0\\
+&\sum F_y=0 \longrightarrow -\ell S \sin\phi - \sigma_{yy}\ell \cos\phi=0
+\end{align*}
+de donde resulta la siguiente función para el campo de tensiones
 \begin{equation}
 \begin{aligned}
-\sigma_{xx}&=SCot\phi\\
-\sigma_{yy}&=-STan\phi\\
+\sigma_{xx}&=S\cot\phi\\
+\sigma_{yy}&=-S\tan\phi\\
 \tau_{xy}&=0
 \end{aligned}
 \label{solution}
 \end{equation}
-
 con la condición $\tau_{xy}=0$ debida a la simetría del problema.
-\\
+
 Para verificar que esta solución satisface las ecuaciones gobernantes reemplazamos la \cref{solution} en \cref{equilibrium}, notando que en este problema en particular no hay fuerzas de cuerpo ($\vec B = 0$)  resultando en;
-
-\[\frac{{\partial (SCo{t_\phi })}}{{\partial x}} = 0\]
-
+\[\frac{\partial (S \cot\phi )}{\partial x} = 0\]
 y
+\[\frac{\partial (-S\tan\phi)}{\partial y} = 0.\]
 
-\[\frac{{\partial ( - STa{n_\phi })}}{{\partial y}} = 0.\]
 
-
-Sin embargo es claro que existen infinitas funciones $\sigma  = \sigma (x,y)$  que satisafacen las \cref{equilibrium} y para garantizar que la solución {\bf propuesta} es la solución correcta al problema es necesario verificar que esta satisface además las condiciones de frontera del problema.
+Sin embargo, existen infinitas funciones $\sigma  = \sigma (x,y)$  que satisfacen las \cref{equilibrium} y para garantizar que la solución {\bf propuesta} es la solución correcta al problema es necesario verificar que esta satisface además las condiciones de frontera del problema.
 
 Sean $\hat{n}^1$,$\hat{n}^2$,$\hat{n}^3$,$\hat{n}^4$ los vectores normales externos a las caras expuestas de la cuña y escritos en el sistema de referencia $x-y$ como;
 
-\[\hat{n}^1=-S_{\phi}\hat{e}_{x}+C_{\phi}\hat{e}_{y}\]
-\[\hat{n}^2=-S_{\phi}\hat{e}_{x}-C_{\phi}\hat{e}_{y}\]
-\[\hat{n}^3=+S_{\phi}\hat{e}_{x}+C_{\phi}\hat{e}_{y}\]
-\[\hat{n}^4=+S_{\phi}\hat{e}_{x}-C_{\phi}\hat{e}_{y}.\]
+\[\hat{n}^1 = -\sin\phi \hat{e}_{x} + \cos\phi \hat{e}_{y}\]
+\[\hat{n}^2 = -\sin\phi \hat{e}_{x} - \cos\phi \hat{e}_{y}\]
+\[\hat{n}^3 = +\sin\phi \hat{e}_{x} + \cos\phi \hat{e}_{y}\]
+\[\hat{n}^4 = +\sin\phi \hat{e}_{x} - \cos\phi \hat{e}_{y}.\]
 
 
-Para calcular las componentes del vector de tracciones sobre cada una de las caras usamos la fórmula de Cauchy escrita como;
-
+Para calcular las componentes del vector de tracciones sobre cada una de las caras usamos la fórmula de Cauchy escrita como
 \[t_{i}=\sigma_{ij}\hat{n}_{j}.\]
 
-Luego, sobre la cara con vector normal $\hat{n}^1$ tenemos;
-
-\[t_{x}=-SC_{\phi}\]
-\[t_{y}=-SS_{\phi}\]
-
+Luego, sobre la cara con vector normal $\hat{n}^1$ tenemos
+\begin{align*}
+&t_{x}=-S \cos\phi\\
+&t_{y}=-S \sin\phi\, ,
+\end{align*}
 similarmente sobre la cara con vector normal $\hat{n}^2$
-
-\[t_{x}=-SC_{\phi}\]
-\[t_{y}=+SS_{\phi}\]
-
-sobre la cara con vector normal $\hat{n}^3$ 
-
-\[t_{x}=+SC_{\phi}\]
-\[t_{y}=-SS_{\phi}\]
-
-y finalmente, sobre la cara con vector normal $\hat{n}^4$;
-
-\[t_{x}=+SC_{\phi}\]
-\[t_{y}=+SS_{\phi}\]
-
+\begin{align*}
+&t_{x}=-S \cos\phi\\
+&t_{y}=+S \sin\phi\, ,
+\end{align*}
+sobre la cara con vector normal $\hat{n}^3$
+\begin{align*}
+&t_{x} = +S \cos\phi\\
+&t_{y} = -S \sin\phi\, ,
+\end{align*}
+y finalmente, sobre la cara con vector normal $\hat{n}^4$
+\begin{align*}
+&t_{x} = +S \cos\phi\\
+&t_{y} = +S \sin\phi\, ,
+\end{align*}
 los cuales coinciden con las tracciones especificadas como condiciones de frontera del problema.
 
 
@@ -1016,9 +1000,8 @@ $t$ (s) & $K(t)$ (kgf/cm$^2$) \\
 
 
 \begin{enumerate}
-	\item Si el material es infinitamente resistente ante esfuerzos normales (axiales), pero no soporta esfuerzos cortantes mayores o iguales a $13\dfrac{kgf}{cm^2}$ determine el instante en que se presenta la falla en caso de que se presente. Si no hay falla ind\'iquelo claramente.\\
+	\item Si el material es infinitamente resistente ante esfuerzos normales (axiales), pero no soporta esfuerzos cortantes mayores o iguales a $13\dfrac{kgf}{cm^2}$ determine el instante en que se presenta la falla en caso de que se presente. Si no hay falla ind\'iquelo claramente.
 \end{enumerate}
-% *************************** %
 \item \label{punto20} En la figura \ref{dona} se presenta la secci\'on
 transversal de un cilindro. Los esfuerzos en el dominio est\'an representados por:\\\\
 	\\
@@ -1052,31 +1035,7 @@ transversal de un cilindro. Los esfuerzos en el dominio est\'an representados po
 \begin{enumerate}
 	\item Escribir el tensor de tensiones en el sistema de referencia polar $r,\theta$. \\
 \end{enumerate}
-%
-%\item \label{punto22} La solución para un cilindro de radio interno $a$ y radio externo $b$ sometido a presiones internas y externas $p_a$ y $p_b$ respectivamente (ver \cref{cilindro}), está dado por:
-%
-%\begin{equation*}
-%\sigma _{rr}  =  - \frac{{\left( {\frac{{{b^2}}}{{{r^2}}} - 1} \right)}}{{\left( {\frac{{{b^2}}}{{{a^2}}} - 1} \right)}}{p_a} - \frac{{\left( {1 - \frac{{{a^2}}}{{{r^2}}}} \right)}}{{\left( {1 - \frac{{{a^2}}}{{{b^2}}}} \right)}}{p_b} \hspace{1.5cm}
-%\sigma _{\theta \theta } = \frac{{\left( {\frac{{{b^2}}}{{{r^2}}} + 1} \right)}}{{\left( {\frac{{{b^2}}}{{{a^2}}} - 1} \right)}}{p_a} - \frac{{\left( {1 + \frac{{{a^2}}}{{{r^2}}}} \right)}}{{\left( {1 - \frac{{{a^2}}}{{{b^2}}}} \right)}}{p_b} \hspace{1.5cm}
-%\tau _{r\theta} = 0
-%\label{slnc}
-%\end{equation*}
-%%
-%\begin{figure}[H]
-%\centering
-%	\includegraphics[width=2.8 in]{cilindro.pdf}
-%	\caption{Cilindro sometido a presión interna $p_a$ y presión externa $p_b$}
-%	\label{cilindro}
-%\end{figure}
-% 	
-%Usando la solución anterior, determinar las tensiones para un cilindro de radio interno $a$ y radio externo $2a$ sometido a una presión interna $q$ y apoyado sobre una superficie rígida en su cara externa, tal y como se muestra en la \cref{cilbase}
-%%
-%\begin{figure}[H]
-%\centering
-%	\includegraphics[width=3.3 in]{Cilbase.pdf}
-%	\caption{Cilindro sometido a presión interna $q$ con superficie rígida en cara externa}
-%	\label{cilbase}
-%\end{figure}
+
 
 \item \label{punto23}  Los tensores
 \[[\sigma(r,{\theta})]_P
@@ -1095,13 +1054,7 @@ transversal de un cilindro. Los esfuerzos en el dominio est\'an representados po
  	
 representan el estado de tensiones en un punto de coordenadas $(r, \theta)$ al interior de las cuñas de semi-ángulo interno $\alpha$ (medido en radianes) mostradas en las \cref{CargaP} y \cref{CargaQ}, resultantes de la aplicación de cargas puntuales $P$ y $Q$ respectivamente. 
 
-%
-%\subfloat [Soluci\'on carga vertical $P$]{ \includegraphics[width=3.0in]{Ejer4_16_1.pdf}\label{SolucionP}}
-%		\hspace{1.0cm}
-%		\subfloat [carga uniforme superficial $w$]{ \includegraphics[width=3.0in]{Ejer4_16_2.pdf}\label{Solucionw}}		
 
-
-%
 \begin{figure}[H]
 	\centering	
 	\subfloat[Cuña de semi-ángulo interno $\alpha$ sometida a una carga vertical P.]{\includegraphics[width=3.0in]{figure_1b_T1.pdf}\label{CargaP}}	
