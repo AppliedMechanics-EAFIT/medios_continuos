@@ -6,7 +6,7 @@ ingeniería civil de la Universidad EAFIT.
 ## Contenido
 
 - Notas de clase, con los archivos fuente y el documento en
-  [pdf](https://github.com/AppliedMechanics-EAFIT/Notas-MMC/raw/master/notas_de_clase/notasmedios.pdf).
+  [pdf](https://github.com/AppliedMechanics-EAFIT/Notas-MMC/raw/master/notas_de_clase/notas_medios.pdf).
 
 - Notebooks de [Jupyter](http://jupyter.org/).
 
