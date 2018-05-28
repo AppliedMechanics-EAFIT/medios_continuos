@@ -289,32 +289,37 @@ Si se sabe que la función de tensiones dada en la \cref{sln1} es solución al p
 
 \subsubsection*{Solución}
 Sustituyendo la solución dada en \cref{sln1} en las ecuaciones de equilibrio local y considerando que $B_x =0$ y $B_y =0$ se verifica que la solución satisface equilibrio
-\[\frac{{\partial (\gamma x - 2\gamma y)}}{{\partial x}} + \frac{{\partial ( - \gamma y)}}{{\partial y}} + {B_x} = 0\]
-\[\gamma  - \gamma  = 0\] 
-\[\frac{{\partial ( - \gamma y)}}{{\partial x}} + \frac{{\partial ( - \gamma x)}}{{\partial y}} + {B_y} = 0\]
-\[0 + 0 = 0.\]
+\begin{align*}
+&\frac{\partial (\gamma x - 2\gamma y)}{\partial x} + \frac{\partial ( - \gamma y)}{\partial y} + B_x = 0\\
+&\gamma  - \gamma  = 0\\
+&\frac{\partial ( - \gamma y)}{\partial x} + \frac{\partial ( - \gamma x)}{\partial y} + B_y = 0\\
+&0 + 0 = 0\, .
+\end{align*}
 
-Sean los vectores normales a las caras vertical, horizontal e inclinada ${{\hat n}^1} =  - \hat j$, ${{\hat n}^2} =   \hat i$ y ${{\hat n}^3} =  - {S_\phi }\hat i + {C_\phi }\hat j$ respectivamente. En la superficie con normal ${{\hat n}^1}$ ($y=0$) se tiene que;
-\[{\sigma _{xx}} = \gamma x\]
-\[{\sigma _{yy}} =  - \gamma x\]
+Sean los vectores normales a las caras vertical, horizontal e inclinada $\hat{n}^1 =  - \hat \jmath$, ${{\hat n}^2} =   \hat \imath$ y $\hat{n}^3 =  - \sin\phi\, \hat \imath + \cos\phi\, \hat \jmath$. En la superficie con normal $\hat{n}^1$ ($y=0$) se tiene que;
+\begin{align*}
+  &\sigma_{xx} = \gamma x\\
+  &\sigma_{yy} =  -\gamma x
+\end{align*}
 y
-\[{\tau _{xy}} = 0 \]
-luego
-\[\left\{ {\begin{array}{*{20}{c}}
-{{t_x}}\\
-{{t_y}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{\gamma x}&0\\
-0&{ - \gamma x}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
+\[\tau_{xy} = 0\, , \]
+luego,
+\[\begin{Bmatrix}
+t_x\\
+t_y
+\end{Bmatrix} = \begin{bmatrix}
+\gamma x &0\\
+0 & -\gamma x
+\end{bmatrix}
+\begin{Bmatrix}
 0\\
-{ - 1}
-\end{array}} \right\} = \left\{ {\begin{array}{*{20}{c}}
+-1
+\end{Bmatrix} = \begin{Bmatrix}
 0\\
-{\gamma x}
-\end{array}} \right\}\]
-esta distribución se muestra en la \cref{sigy}
+\gamma x
+\end{Bmatrix}\, .\]
 
+Esta distribución se muestra en la \cref{sigy}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.0 in]{sigy.pdf}
@@ -329,21 +334,21 @@ Similarmente, sobre la superficie con normal $\hat{n}^2 =   \hat\imath$ ($x=H$) 
 &\sigma_{yy} =  -\gamma H
 \end{align*}
 y
-\[\tau_{xy} =  - gamma y\]
-luego
-\[\left\{ {\begin{array}{*{20}{c}}
-{{t_x}}\\
-{{t_y}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{\gamma H - 2\gamma y}&{ - \gamma y}\\
-{ - \gamma y}&{ - \gamma H}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
+\[\tau_{xy} =  - \gamma y\, ,\]
+luego,
+\[\begin{Bmatrix}
+t_x\\
+t_y
+\end{Bmatrix} = \begin{bmatrix}
+\gamma H - 2\gamma y &-\gamma y\\
+ -\gamma y &-\gamma H
+\end{bmatrix} \begin{Bmatrix}
 1\\
 0
-\end{array}} \right\} = \left\{ {\begin{array}{*{20}{c}}
-{\gamma H - 2\gamma y}\\
-{ - \gamma y}
-\end{array}} \right\}.\]
+\end{Bmatrix} = \begin{Bmatrix}
+\gamma H - 2\gamma y\\
+-\gamma y
+\end{Bmatrix}\, .\]
 
 
 La distribución de la componente $t_x$ sobre esta cara, corresponde a la tensión normal $\sigma_{xx}$ tal y como se muestra en la \cref{sigx}.
@@ -382,14 +387,14 @@ Para verificar el equilibrio global consideremos el diagrama de cuerpo libre mos
 donde
 \[F_x^1 = \frac{\gamma H^2}{4}\, ,\quad
 F_x^2 =  - \frac{\gamma H^2}{4}\, ,\]
-luego
-\[\sum {{F_x} = 0} \]
+luego,
+\[\sum F_x = 0 \, , \]
 y
-\[F_y^1 = \frac{{\gamma {H^2}}}{2}\]
-luego
-\[\sum {{F_y} = 0} \]
-similarmente
-\[\sum {{M_A} = } \frac{4}{{24}}\gamma {H^3} + \frac{1}{{24}}\gamma {H^3} - \frac{5}{{24}}\gamma {H^3} = 0\]
+\[F_y^1 = \frac{\gamma H^2}{2}\]
+luego,
+\[\sum F_y = 0 \]
+similarmente,
+\[\sum M_A =  \frac{4}{24}\gamma H^3 + \frac{1}{24}\gamma H^3 - \frac{5}{24}\gamma H^3 = 0\, ,\]
 con lo que se verifica que la solución satisface equilibrio global.
 
 \subsection*{Tarea}
@@ -397,20 +402,19 @@ Para el problema de la presa;
 
 \begin{itemize}
 \item[•] Demostrar que la solución dada solo es valida para $\phi = \pi/4$
-\item[•] Si la presa es de concreto, el cual presenta baja resistencia a la tracción determinar la zona de la presa que se debe reforzar para que esta no flalle. Nota: Identificar la superficie donde las tensiones normales ($\sigma_{xx}$) cambian de compresión a tracción.
+\item[•] Si la presa es de concreto, el cual presenta baja resistencia a la tracción determinar la zona de la presa que se debe reforzar para que esta no falle. Nota: Identificar la superficie donde las tensiones normales ($\sigma_{xx}$) cambian de compresión a tracción.
 \end{itemize}
 
 \section{Soluciones clásicas para sólidos}
-En esta sección se presentan algunas soluciones clásicas en términos de tensiones. Se inivta al estudiante a realizar el análisis de las mismas usando razonamientos similares a los presentados en los 2 ejemplos anteriores y de acuerdo con los objetivos de aprendizaje declarados al inicio del capitulo.
+En esta sección se presentan algunas soluciones clásicas en términos de tensiones. Se invita al estudiante a realizar el análisis de las mismas usando razonamientos similares a los presentados en los 2 ejemplos anteriores y de acuerdo con los objetivos de aprendizaje declarados al inicio del capitulo.
 
 \subsection{Barra prismática soportada en la superficie superior y sometida a la acción de su propio peso}
 
 La barra prismatica mostrada en la \cref{barra}
-
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.5 in]{barrapp.pdf}
-	\caption{Barra prismática sometica a la acción de peso propio.}
+	\caption{Barra prismática sometida a la acción de peso propio.}
 	\label{barra}
 \end{figure}
 
