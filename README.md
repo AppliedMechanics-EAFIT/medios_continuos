@@ -49,3 +49,28 @@ El contenido de este repositorio está licenciado bajo una licencia
 [Creative Commons Attribution 4.0](http://choosealicense.com/licenses/cc-by-4.0/),
 y el código fuente que le acompaña bajo una
 [licencia MIT](https://opensource.org/licenses/mit-license.php).
+
+## Citación
+
+Para citar estas notas de clase use
+
+    Juan Gómez, César Augusto Sierra, Juan Carlos Vergara,
+    Mario Sáenz, y Nicolás Guarín-Zapata (2018).
+    Notas de clase: Mecánica del medio continuo. Universidad EAFIT,
+    Disponible en: https://github.com/AppliedMechanics-EAFIT/Notas-MMC.
+
+Una entrada de BibTeX para los usuarios de LaTeX es
+
+.. code:: bibtex
+
+    @misc{notas_medios,
+     title = {Notas de clase: Mecánica del medio continuo},
+     author = {Gómez, Juan and Sierra, César Augusto and
+               Vergara, Juan Carlos and Mario Sáez and
+               Guarín-Zapata, Nicolás},
+     year = {2018},
+     keywords = {Mecánica del medio continuo, Elasticidad, Python,
+                Mecánica computacional},
+     publisher = {Universidad EAFIT},
+     url = {https://github.com/AppliedMechanics-EAFIT/Notas-MMC}
+    }
