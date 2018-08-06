@@ -54,14 +54,12 @@ y el código fuente que le acompaña bajo una
 
 Para citar estas notas de clase use
 
-    Juan Gómez, César Augusto Sierra, Juan Carlos Vergara,
-    Mario Sáenz, y Nicolás Guarín-Zapata (2018).
-    Notas de clase: Mecánica del medio continuo. Universidad EAFIT,
-    Disponible en: https://github.com/AppliedMechanics-EAFIT/Notas-MMC.
+> Juan Gómez, César Augusto Sierra, Juan Carlos Vergara,
+  Mario Sáenz, y Nicolás Guarín-Zapata (2018).
+  Notas de clase: Mecánica del medio continuo. Universidad EAFIT,
+  Disponible en: https://github.com/AppliedMechanics-EAFIT/Notas-MMC.
 
 Una entrada de BibTeX para los usuarios de LaTeX es
-
-.. code:: bibtex
 
     @misc{notas_medios,
      title = {Notas de clase: Mecánica del medio continuo},
