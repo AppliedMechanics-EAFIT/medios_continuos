@@ -5,7 +5,7 @@
 
 \graphicspath{{img/Cap3/}} 								 % Specifies the directory where pictures are stored
 \section{Introducción}
-
+%
 En la sección introductoria se presentaron algunas ideas simples que permitían
 pasar del problema discreto (modelo de partículas) al continuo (modelo de puntos
 materiales). En términos generales, se planteaba la conversión de las ecuaciones
@@ -125,7 +125,7 @@ para mantener la condición de continuidad entre el medio ambiente y el medio co
 	\caption{Diagrama de cuerpo libre de la región interna interactuando con la región externa.}
 	\label{dcl_rep}
 \end{figure}
-
+%
 La \cref{dcl_ext} muestra el correspondiente diagrama de cuerpo libe para la
 región externa. En esta figura, la función $\vec t$ nuevamente representa la
 fuerza por unidad de superficie sobre la superficie $S(t)$ de la región externa
@@ -855,8 +855,6 @@ $\sigma=3.83$ y  $\tau = -17.99$ para el estado $2$ respectivamente. En la
 	\label{Cubos}
 \end{figure}
 
-%
-
 \item[•] Para cada uno de los estados de tensiones mostrados determinar los valores
 propios y las direcciones principales. \\\\
 %
@@ -888,9 +886,6 @@ el estado principal.
 	\label{CubosPrincipal}
 \end{figure}
 
-%
-%
-%
 Nótese que para encontrar el estado principal $1$ rotamos desde el sistema
 original $xy$ un ángulo $\alpha = \arctan\left(\dfrac{50}{5}\right)$ en sentido
 contrario a las manecillas del reloj, mientras que para el estado principal $2$
@@ -980,8 +975,6 @@ El tensor escrito en direcciones principales es:
 \end{equation}
 
 \end{enumerate}
-%%%%
-%%%%%
 
 \subsubsection*{Ejemplo 3: Planos de falla}
 Un punto material en un medio continuo est\'a sometido al estado de tensiones mostrado en la \cref{punto}. Si las líneas punteadas corresponden a planos de falla del material y sabiendo que los dos planos {\bf son perpendiculares entre sí}, se pide:
@@ -992,9 +985,7 @@ Un punto material en un medio continuo est\'a sometido al estado de tensiones mo
 	\caption{Estado de tensiones}
 	\label{punto}
 \end{figure}
-
-
-
+%
 \begin{itemize}
 
 \item[•] Calcular las tensiones normal y tangencial al plano 1.
@@ -1050,7 +1041,7 @@ t_1 \cdot \hat{n_1} =
 \end{bmatrix} \equiv
 T\sin^2\theta
 \end{equation*}
-
+%
 El esfuerzo tangencial se puede calcular proyectando la tensión $t_1$ sobre un vector unitario inscrito en el plano 1. Dando como resultado:
 
 \begin{equation*}
@@ -1135,19 +1126,11 @@ R = \frac{S}{3} =  \frac{\sigma_{xx} - \sigma_{yy}}{2} \rightarrow
 En la \cref{estado3} se ilustra le cambio en las configuraciones de tensiones.
 
 
-
-
 \subsection*{Ejemplo 5: Problema de Cauchy usando Python}
-En los enlaces:
-
-\begin{enumerate} 
-\item {\url{http://nbviewer.ipython.org/github/casierraa/Notebooks_MMC/blob/master/Ej3_Cauchy.ipynb}}
-
-\item  {\url{https://github.com/casierraa/MMC/blob/master/Mohr2D.py}} 
-\end{enumerate}
-
-se presenta un ejemplo adicionales relativos a la formula de Cauchy y  adicionalmente se entrega un script en Python para manipulación del círculo de Mohr en 2D.
-
+En el enlace: 
+%
+ {\url{https://github.com/AppliedMechanics-EAFIT/Notas-MMC/blob/master/notebooks/Ej3_Cauchy.ipynb}}
+%
 \section{Valores y direcciones principales para un estado de tensiones en 3D}
 En la sección anterior, para el caso de estados de tensiones en 2 dimensiones (2D), identificamos direcciones o planos trazados por un punto material para los cuales el vector de tracciones solo tenía componente en la dirección normal al plano. Mas aún, se demostró que estas componenetes correspondían a las tensiones máximas y mínimas que experimentaba el punto material. En esta sección se aborda el mismo problema para el caso de estados de tensiones en 3D.  
 %
@@ -1226,7 +1209,7 @@ donde;
 
 son constantes independientes del sistema de referencia\footnote{Estas constantes se denominan los invariantes del tensor de tensiones y juegan un papel análogo a la magnitud de un vector la cual permanece constante independientemente del sistema de referencia en el que se escriba el vector}.
 
-\subsection*{Ejemplo 6: cálculo de valores principales}
+%\textbf{•}\subsection*{Ejemplo 6: cálculo de valores principales}
 %\footnote{Este ejemplo ha sido implementado en el siguiente notebook de Python http://nbviewer.ipython.org/urls/dl.dropbox.com/s/0bnyl2qvauk85i2/Ej4\_Eingen.ipynb}
 Consideremos el siguiente estado de tensiones con componentes correspondientes a un sistema de referencia $x-y-z$;
 
@@ -1303,7 +1286,7 @@ Similarmente, resolviendo para ${{\tilde \sigma }_2} = 0$ se tiene;
 \end{array}} \right\}\]
 
 De la segunda (o la tercera) ${n_x} = 0$ mientras que de la primera ${n_y} =  - 3{n_z}$. Finalmente de la condición $n_x^2 + n_y^2 + n_z^2 = 1$ se tiene que la dirección asociada con la tensión principal ${{\tilde \sigma }_2} = 0$ corresponde a ${{\hat n}^2} =-948\hat j + 0.316\hat k$.
-
+%
 Finalmente para la tensión principal ${{\tilde \sigma }_3} =  - 232$ resolvemos;
 
 \[\left[ {\begin{array}{*{20}{c}}
@@ -1325,12 +1308,12 @@ De la segunda y la tercera se tiene que ${n_y} =  - \frac{{100}}{{231}}{n_x}$ y 
 Nótese que en el paso final del cálculo de las direcciones principales ${{\hat n}^1}$, ${{\hat n}^2}$ y ${{\hat n}^3}$ se uso la condicíon $n_x^2 + n_y^2 + n_z^2 = 1$ para determinar una de las componentes a partir de las cuales era posible determinar las 2 restantes.
 
 Por ejemplo en el caso de ${{\tilde \sigma }_1} = 432$ esta condición arrojó como resultado ${n_x} =  \pm 0.807$. Para determinar las componentes ${n_y}$ y ${n_z}$ usamos las relaciones ${n_y} = \pm \frac{{100}}{{432}}{n_x}$ y ${n_z} = \pm \frac{{300}}{{432}}{n_x}$ sobre las cuales trasladamos los 2 posibles signos de ${n_x}$. Lo anterior indica que las direcciones principales corresponden a vectores con direcciones opuestas lo cual es equivalente a observar de manera simultanea las tracciones sobre la dirección positiva y negativa del punto material. Por ejemplo, en el caso de la tensión principal ${{\tilde \sigma }_1} = 432$ obtenemos las direcciones ${{\hat n}^1} = 0.807\hat i + 0.187\hat j + 0.560\hat k$ y su opuesta ${{-\hat n}^1} = -0.807\hat i - 0.187\hat j - 0.560\hat k$.
-
+%
 \subsubsection{Tarea}
 Comprobar la ortogonalidad de las direcciones principales.
 Transformar el tensor de tensiones al sistema de referencia determinado por las direcciones principales y verificar que el tensor se diagonaliza en dicha dirección. 
 
-%\subsection{Circulo de Mohr en 3D}
+\subsection{Circulo de Mohr en 3D}
 
 Con los tres valores principales ${{\tilde \sigma }_1}$, ${{\tilde \sigma }_2}$ y  ${{\tilde \sigma }_3}$ es posible realizar una representación plana del problema de tensión en 3D tal y como se muestra en \cref{Mohr3D}. Estos circulos tienen centro y radio dados por;
 
@@ -1460,13 +1443,13 @@ valores propios y las direcciones principales.
 	\item Asuma que ambos estados de tensiones ocurren al mismo tiempo y determine
 las direcciones principales y valores propios para el estado de tensiones resultantes.
 	\item Para el estado de tensiones resultante de sumar los estados mostrados,
-determinar el estado de tensiones en un sitema de referencia que se encuentra a $90^0$ del mostrado en la figura.
+determinar el estado de tensiones en un sistema de referencia que se encuentra a $90^0$ del mostrado en la figura.
 	\item Para el estado de tensiones resultante de sumar los estados mostrados,
-determinar el estado de tensiones en un sitema de referencia que se encuentra a $180^0$ del mostrado en la figura.
+determinar el estado de tensiones en un sistema de referencia que se encuentra a $180^0$ del mostrado en la figura.
 	\item Para el estado de tensiones resultante de sumar los estados mostrados,
-determinar el estado de tensiones en un sitema de referencia que se encuentra a $270^0$ del mostrado en la figura.
+determinar el estado de tensiones en un sistema de referencia que se encuentra a $270^0$ del mostrado en la figura.
 	\item Para el estado de tensiones resultante de sumar los estados mostrados,
-determinar el estado de tensiones en un sitema de referencia que se encuentra a $45^0$ del mostrado en la figura.
+determinar el estado de tensiones en un sistema de referencia que se encuentra a $45^0$ del mostrado en la figura.
 \end{enumerate}
 %
 
@@ -1507,7 +1490,7 @@ y la direcci\'on de los cortantes m\'aximos.\\
 %
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=6cm]{Ejer3_9.pdf}
+	\includegraphics[width=5cm]{Ejer3_9.pdf}
 	\caption{}
 	\label{prisma}
 \end{figure}
@@ -1528,9 +1511,9 @@ de la prueba de laboratorio de compresi\'on simple usada para determinar la resi
 %
 \begin{figure}[H]	
 	\centering	
-	\subfloat [Ensayo de compresi\'on simple]{ \includegraphics[width=2.5in]{Ejer3_11_1.pdf}\label{compresimple}}
+	\subfloat [Ensayo de compresi\'on simple]{ \includegraphics[width=2.2in]{Ejer3_11_1.pdf}\label{compresimple}}
 	\hspace{10mm}
-	\subfloat [Sección en planta de lado $b$, ensayo confinado]{ \includegraphics[width=2.0in]{Ejer3_11_2.pdf}\label{compreconf}}
+	\subfloat [Sección en planta de lado $b$, ensayo confinado]{ \includegraphics[width=1.8in]{Ejer3_11_2.pdf}\label{compreconf}}
 	\caption{Columna en ensayo de compresión}
 \end{figure}
 %
@@ -1643,25 +1626,26 @@ compresi\'on uniforme de $100\hspace{.15cm} kgf/cm^2$ en su superficie superior,
 \begin{figure}[H]
 	\centering
 		\subfloat [Columna sometida a una tensi\'on de compresi\'on $\sigma_{yy}$.]{ \includegraphics[width=2.5in]{Ejer3_16_1.pdf}\label{Bloq_corte}}
-		\hspace{2.0cm}
+		\hspace{1.0cm}
 		\subfloat [Tensor de tensiones en cualquier punto al interior de la columna.]{ \includegraphics[width=2.5in]{Ejer3_16_2.pdf}\label{curvas}}		
 	\label{ColComp}
-	\caption{Columna sometida a compresión}
+	\caption{Columna sometida a carga vertical en la parte superior}
 \end{figure}
 %
 \begin{table}[H]
-\center
 \small
-    \begin{tabular}{ p{10cm}  c  c  c  c  c}
-     & Material 1 & Material 2 & Material 3 & Material 4 & Material 5 \\ \hline
+\center
+    \begin{tabular}{p{4cm} c  c  c  c   c }
+     & Material 1 & Material 2 & Material 3 & Material 4 & Material 5 \\  \hline
     Capacidad M\'axima a Cortante & $40$ & $60$ & $40$ & $160$ & $50$\\
     Capacidad M\'axima a Tracci\'on & $100$ & $60$ & $10$ & $20$ & $10$\\ 
-    Capacidad M\'axima a Compresi\'on & $120$ & $60$ & $110$ & $80$ & $80$\\    
+    Capacidad M\'axima a Compresi\'on & $120$ & $60$ & $110$ & $80$ & $80$\\ 
    \end{tabular}
 \caption {Esfuerzos m\'aximos soportados por los materiles en $kgf/cm^2$.} \label{tab:materiales} 
 \end{table}
 %
-Determina con cual(es) material(es) debe ser construida la columna para que no se presente su falla. 
+
+Determine con cual o cuales materiales se puede construir la columna sin que se produzca la falla.
 %
 % *************************** %
 \item \label{punto17} En las \cref{viga:empo} y  \cref{viga:emp2}  se
@@ -1732,23 +1716,14 @@ Donde, $K(t)$ es un par\'ametro que var\'ia en funci\'on del tiempo $t$, tal com
 %
 \begin{figure}[H]
 	\centering
-		\subfloat []{ \includegraphics[width=2.2in]{Ejer3_20_1.pdf}\label{piramide}}
+		\subfloat []{ \includegraphics[width=2.5in]{Ejer3_20_1.pdf}\label{piramide}}
 		\hspace{2.0cm}
-		\subfloat []{ \includegraphics[width=2.2in]{Ejer3_20_2.pdf}\label{plano45}}		
-	\caption{ }
+		\subfloat []{ \includegraphics[width=2.3in]{Ejer3_20_2.pdf}\label{plano45}}		
+	\caption{Planos de corte en el medio continuo}
 \end{figure}
 %
-Si se tiene conocen tres vectores de tracciones dados por: 
-%
-\begin{enumerate}
-%
-\item $\overset{\rightarrow} t _{1}= \dfrac{3 \sqrt{2}}{2} \hat{i} + 4 \sqrt{2} \hat{j} + 5 \sqrt{2} \hat{k}$
-\item $\overset{\rightarrow} t _{2}= \dfrac{\sqrt{2}}{2} \hat{i} + 2 \sqrt{2} \hat{j} -  \sqrt{2} \hat{k}$
-\item $\overset{\rightarrow} t _{3}= 4 \hat{i} + 1 \hat{j} + 2 \hat{k}$
-%
-\end{enumerate} 
-%
-Se pide hallar el tensor de tensiones $ \left[ \sigma \right] $, en el sistema de referencia $x-y-z$, que proyectado sobre los planos con vectores normales $\hat{n}_{1}$, $\hat{n}_{2}$ y $\hat{n}_{3}$ genera los vectores de tensiones $\overset{\rightarrow} t _{1}$, $\overset{\rightarrow} t _{2}$ y $\overset{\rightarrow} t _{3}$. Los vectores $\hat{n}_{1}$ y $\hat{n}_{2}$ se encuentran contenidos en el plano $z-y$, tal como se muestra en la \cref{plano45} y $\hat{n}_{3}=1 \hat{i}$.
+ Si se tiene conocen tres vectores de tracciones dados por: $\overset{\rightarrow} t _{1}= \dfrac{3 \sqrt{2}}{2} \hat{i} + 4 \sqrt{2} \hat{j} + 5 \sqrt{2} \hat{k}$ , $\overset{\rightarrow} t _{2}= \dfrac{\sqrt{2}}{2} \hat{i} + 2 \sqrt{2} \hat{j} -  \sqrt{2} \hat{k}$, 
+$\overset{\rightarrow} t _{3}= 4 \hat{i} + 1 \hat{j} + 2 \hat{k}$; determine el tensor de tensiones $ \left[ \sigma \right] $, en el sistema de referencia $x-y-z$, que proyectado sobre los planos con vectores normales $\hat{n}_{1}$, $\hat{n}_{2}$ y $\hat{n}_{3}$ genera los vectores de tensiones $\overset{\rightarrow} t _{1}$, $\overset{\rightarrow} t _{2}$ y $\overset{\rightarrow} t _{3}$. Los vectores $\hat{n}_{1}$ y $\hat{n}_{2}$ se encuentran contenidos en el plano $z-y$, tal como se muestra en la \cref{plano45} y $\hat{n}_{3}=1 \hat{i}$.
 
 \item \label{punto21} El tensor de tensiones en el punto $P$ está definido
 como
@@ -1820,7 +1795,6 @@ Si se quiere estudiar el punto A y se sabe que el valor de la carga $P_1$ es $P_
 
 Si el criterio de falla del material está dado por: $\tau = \sigma + 2.0 \;\; (kgf/cm^2)$ y  la carga externa $P$ es aumentada mediante la relación $P = Kt + 6.0$, con $K > 0$ y $P$ es dado en $ (kgf/cm^2)$   . Determine: 
 
-
 \begin{enumerate}
 \item El valor máximo de la carga  $P$ que puede ser aplicada antes que se produzca la  falla en el elemento.
 \item El tiempo $t$ en el que se presenta la falla.
@@ -1841,8 +1815,7 @@ de un medio continuo:
 		\item Encuentre las direcciones principales del tensor.
 		\item Encontrar el valor cortante máximo.
 		\item Encontrar las direcciones en las cuales se presenta el cortante máximo.
-		\item ¿Cuál es el valor del cortante mínimo?.
-		\item Encontrar la direcciones en las cuales se presenta el cortante mínimo.
+		\item Determinar el valor del cortante mínimo y direcciones en las cuales se presenta el cortante mínimo.
 	\end{enumerate}
 % **************** %
  \item \label{punto25} El estado de tensión en un punto $P$ del Medio Continuo
@@ -1850,7 +1823,7 @@ se da en la \cref{cubo}. \footnote{Tomado del ejemplo 3.5 en Olivella, X; Sarac�
 %
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=9cm]{Ejer4_8.pdf}
+	\includegraphics[width=8cm]{Ejer4_8.pdf}
 	\caption{Estado de tensiones en el punto.}
 	\label{cubo}
 \end{figure}
@@ -1899,6 +1872,3 @@ para un mismo punto de un medio continuo en los sistemas de referencia $x-y-z$ y
 \end{enumerate}
 
 \end{document}
-% ***** End *****
-
-

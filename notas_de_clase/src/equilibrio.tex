@@ -6,7 +6,7 @@
 \graphicspath{{img/Cap4/}} 	% Specifies the directory where pictures are stored
 \section{Introducción}
 
-En esta sección se formularán las ecuaciones de equilibrio para un medio continuo, haciendo uso del principio de conservación de moméntum y de momento de moméntum. Estas darán como resultado un sistema de ecuaciones diferenciales parciales en las componentes del tensor de tensiones y demostrarán la simetría del tensor de tensiones. Una vez planteadas las ecuaciones, la sección concluye con el estudio de algunas soluciones\footnote{Por soluciones nos referimos a funciones de las componentes del tensor de esfuerzos que satisfacen las ecuaciones de equilibrio y las condiciones de frontera.} clásicas para el caso de sólidos.
+En esta sección se formularán las ecuaciones de equilibrio para un medio continuo, haciendo uso del principio de conservación de momentum y de momento de momentum. Estas darán como resultado un sistema de ecuaciones diferenciales parciales en las componentes del tensor de tensiones y demostrarán la simetría del tensor de tensiones. Una vez planteadas las ecuaciones, la sección concluye con el estudio de algunas soluciones\footnote{Por soluciones nos referimos a funciones de las componentes del tensor de esfuerzos que satisfacen las ecuaciones de equilibrio y las condiciones de frontera.} clásicas para el caso de sólidos.
 
 Al final de esta sección el estudiante deberá estar en la capacidad de:
 
@@ -43,7 +43,7 @@ Denotemos las áreas superficiales de las caras de dicho elemento y su volumen c
 En lo que sigue nos proponemos plantear las condiciones de equilibrio del elemento como si se tratara de un cuerpo rígido. Para esto supondremos además que el elemento se encuentra sometido a la acción de fuerzas de cuerpo $\vec B = B_x \hat\imath + B_y \hat\jmath + {B_z}\hat k$.
 \begin{figure}[h]
 \centering
-	\includegraphics[width=4.0 in]{diffblock.pdf}
+	\includegraphics[width=3.0 in]{diffblock.pdf}
 	\caption{Tensiones en un elemento diferencial de tamaño $dx\, dy\, dz$.}
 	\label{diff}
 \end{figure}
@@ -64,12 +64,10 @@ cancelando los términos iguales y opuestos y eliminando el diferencial de volum
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=3.0 in]{Eqx.pdf}
-	\caption{Variación de las tensiones que producen fuerzas en la dirección $x$ sobre un elemento diferanecial de dimensiones $dx$, $dy$, $dz$.}
+	\includegraphics[width=2.8 in]{Eqx.pdf}
+	\caption{Variación de las tensiones que producen fuerzas en la dirección $x$ sobre un elemento diferencial de dimensiones $dx$, $dy$, $dz$.}
 	\label{EQx}
 \end{figure}
-
-
 
 
 \begin{equation}
@@ -90,9 +88,9 @@ Usando las condiciones de equilibrio en las direcciones $y$ y $z$ (dadas por $\s
 
 \begin{figure}[H]
      \centering
-     \subfloat[Fuerzas en $y$]{\includegraphics[width=2.8 in]{Eqy.pdf}\label{EQy}}
+     \subfloat[Fuerzas en $y$]{\includegraphics[width=2.5 in]{Eqy.pdf}\label{EQy}}
      \hspace{0.5cm}
-     \subfloat[Fuerzas en $z$]{\includegraphics[width=2.8 in]{Eqz.pdf}\label{EQz}}
+     \subfloat[Fuerzas en $z$]{\includegraphics[width=2.5 in]{Eqz.pdf}\label{EQz}}
      \caption{Variación de las tensiones que producen fuerzas en la dirección $y$ y $z$ sobre un elemento diferencial de dimensiones $dx \times dy \times dz$.}
      \label{steady_state}
 \end{figure}
@@ -523,15 +521,9 @@ El tensor solución se da en la \cref{slnf}
 
 \subsection*{Ejemplo 4: Aplicación de soluciones}
 En el enlace
+\small{\url{https://github.com/AppliedMechanics-EAFIT/Notas-MMC/blob/master/notebooks/PROBLEMA_4_16.ipynb}}
 
-\begin{enumerate} 
-\item \small{\url{http://nbviewer.ipython.org/github/casierraa/Notebooks_MMC/blob/master/Ej5_Parcial2015.ipynb}}
-\end{enumerate}
-
-\newpage
 \section{Ejercicios}
-
-%\graphicspath{{imgTen/}} 	% Specifies the directory where pictures are
 
 \begin{enumerate}
   
@@ -723,7 +715,7 @@ representado por: \\
 \item \label{punto13} En la figura \ref{continuo} se muestra un cuerpo cuyo
 tensor de esfuerzos  $[\sigma]$  en el sistema de referencia $xy$ est\'a dado  por:\\\\
 	%
-	$\sigma_{xx} = \dfrac{q}{8c^3} (2x^3y - 4xy^3 + \dfrac{12}{5}c^2xy) - px$ \hspace{30mm} $\sigma_{yy} = - \dfrac{q}{8c^3} (4c^3x - 2xy^3 + 6c^2xy)$ \\\\
+	$\sigma_{xx} = \dfrac{q}{8c^3} (2x^3y - 4xy^3 + \dfrac{12}{5}c^2xy) - px$ \hspace{10mm} $\sigma_{yy} = - \dfrac{q}{8c^3} (4c^3x - 2xy^3 + 6c^2xy)$ \\\\
 	$\tau_{xy} = \tau_{yx} = \dfrac{q}{8c^3} [3x^2(c^2 - y^2)- (c^4 - y^4) + \dfrac{6}{5}c^2(c^2 - y^2)] $\\\\
 	%
 	Donde $q$, $p$ y $c$ son constantes.
@@ -846,20 +838,18 @@ Donde $I$ es el momento de inecia de la secci\'on respecto a el eje Z y P es la 
 \item \label{punto15} En la \cref{cargaP_a} se muestra una estructura
 especial actuando sobre un cuerpo de concreto de gran dimensi\'on. El estado de esfuerzos al interior del cuerpo debidos a la acci\'on de la estructura, en un sistema coordenado cil\'indrico $(r,{\theta},z)$, est\'an dados por:\\\\
 %
-\begin{large}
-	\hspace*{10mm}$\sigma_{rr}= -\dfrac{2Q}{\pi r} Cos \theta$; \hspace*{5mm}
+{10mm}$\sigma_{rr}= -\dfrac{2Q}{\pi r} Cos \theta$; \hspace*{5mm}
 	$\sigma_{\theta\theta} = \sigma_{zz} = 0$; \hspace*{5mm}
 	$\tau_{r\theta}= \tau_{rz}= 0 $; \hspace*{5mm}
 	$\tau_{\theta{z}} = \dfrac{Q}{\pi r} \sqrt{3}$ \\\\
-\end{large}
 %
 $Q$ es una constante positiva, $r$ es la distancia desde la ubicaci\'on de la estructura al punto de evaluaci\'on y $\theta$ es el \'angulo medido desde la horizontal en sentido antihorario. 
 %
 \begin{figure}[H]
 	\centering
-		\subfloat [Solución fundamental ]{ \includegraphics[width=2.6in]{Ejer4_15_1.pdf}\label{cargaP_a}}
+		\subfloat [Solución fundamental ]{ \includegraphics[width=2.5in]{Ejer4_15_1.pdf}\label{cargaP_a}}
 		\hspace{1.0cm}
-		\subfloat [Estructuras y cable]{ \includegraphics[width=2.6in]{Ejer4_15_2.pdf}\label{cargaP_b}}		
+		\subfloat [Estructuras y cable]{ \includegraphics[width=2.5in]{Ejer4_15_2.pdf}\label{cargaP_b}}		
 	%\caption{Estructuras sobre la superficie}
 	\label{cargaP_concreto} 
 \end{figure}
@@ -881,29 +871,26 @@ Si se desea instalar un cable (de d\'iametro despreciable) perpendicular al plan
 \end{enumerate}
 
 \item  \label{punto16}   En las \cref{SolucionP} y \cref{Solucionw} se muestra las soluciones para una masa de suelo sometido a una carga superficial $P$ y una carga distribuida uniforme superficial $w$ .  Los esfuerzos al interior del suelo debidos a la carga $P$ y $w$, en un sistema  coordenado cilíndrico $\left(r,{\theta},z \right)$, est\'an dados: \\\\
-%
-%\begin{large}
-%\centering
+
 $[\sigma]_P = -\dfrac{2P}{\pi r} \left[ \begin{array}{ccc}
 \cos\theta & 0 & 0\\ 
 0 & 0 & 0\\
 0 & 0 & 0\\
 \end{array}  \right] $
-\hspace*{5mm}
+\hspace*{3mm}
 $[\sigma]_w = -\dfrac{w}{\pi} \left[ \begin{array}{ccc}
 \pi + 2\theta - \sin \left(2\theta \right)  & 1 -\cos \left(2\theta\right) & 0\\ 
 1 - \cos \left(2\theta \right)  & \pi + 2\theta + \sin \left(2\theta \right) & 0\\
 0 & 0 & 0\\
 \end{array}  \right] $
-%\end{large}
 
 Donde $P$ y $w$ son las cargas, $\theta$ es el ángulo medido desde la vertical y positivo en sentido antihorario. 
 %
 \begin{figure}[H]
 	\centering
-		\subfloat [Soluci\'on carga vertical $P$]{ \includegraphics[width=3.0in]{Ejer4_16_1.pdf}\label{SolucionP}}
+		\subfloat [Soluci\'on carga vertical $P$]{ \includegraphics[width=2.5in]{Ejer4_16_1.pdf}\label{SolucionP}}
 		\hspace{1.0cm}
-		\subfloat [carga uniforme superficial $w$]{ \includegraphics[width=3.0in]{Ejer4_16_2.pdf}\label{Solucionw}}		
+		\subfloat [carga uniforme superficial $w$]{ \includegraphics[width=2.5in]{Ejer4_16_2.pdf}\label{Solucionw}}		
 	\caption{Soluciones fundamentales}
 	\label{solucionpw} 
 \end{figure}
@@ -920,7 +907,6 @@ Si a la masa de suelo se transmiten de manera simúltanea las cargas $P=100$ $To
 \begin{enumerate}
 	\item  Determine cuál tubería falla primero y en que tiempo se produce la falla, si se sabe que el material de la tubería A es infinitamente resistente a esfuerzos cortantes pero no soporta esfuerzos axiales mayores o iguales a $210,5\dfrac{Ton}{m^2}$  y el material de la tubería B es infinitamente resistente a esfuerzos axiales pero no sorporta esfuerzos cortantes mayores o iguales a $100,25\dfrac{Ton}{m^2}$. 
 \end{enumerate}
-\newpage
 \item \label{punto17}  En la \cref{barra} se presenta una barra de radio $C$ y longitud $L$. El estado de esfuerzos del  medio continuo en el sistema cartesiano $x,y,z$ est\'a dado por el tensor: \\\\
 %
 \begin{equation}
@@ -980,7 +966,8 @@ Adem\'as dicho esfuerzo es descrito por una funci\'on lineal en z.
 	\hspace*{10mm} $ \sigma_{xx} (t)= K(t)$; \hspace*{5mm} $\sigma_{yy} (t) = -6K(t)$;\hspace*{5mm} $ \sigma_{zz} (t)= -K(t)$; \\\\
 	\hspace*{10mm} $ \tau_{xy} (t) = 0$; \hspace*{5mm} $\tau_{xz} (t) = 0$; \hspace*{5mm} $\tau_{yz} (t) = 0$ \\
 \\	
-Donde, $K(t)$ es un par\'ametro que var\'ia en funci\'on del tiempo $t$, tal como se muestra en la gráfica y tabla presentadas en la \cref{fig:esfuerzo_dependiente_tiempo}.
+Donde, $K(t)$ es un par\'ametro que var\'ia en funci\'on del tiempo $t$, tal como se muestra en la gráfica y tabla presentadas en la \cref{fig:esfuerzo_dependiente_tiempo}. \\
+
 \begin{minipage}{0.3\textwidth}
 \begin{tabular}{cc}
 $t$ (s) & $K(t)$ (kgf/cm$^2$) \\ 
@@ -996,12 +983,11 @@ $t$ (s) & $K(t)$ (kgf/cm$^2$) \\
 \begin{minipage}{0.6\textwidth}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=3 in]{esfuerzo_dependiente_tiempo.pdf} 	
+  \includegraphics[width=2.5 in]{esfuerzo_dependiente_tiempo.pdf} 	
   \caption{Variación del parámetro $K$}
   \label{fig:esfuerzo_dependiente_tiempo}
 \end{figure}
 \end{minipage}
-
 
 \begin{enumerate}
 	\item Si el material es infinitamente resistente ante esfuerzos normales (axiales), pero no soporta esfuerzos cortantes mayores o iguales a $13\dfrac{kgf}{cm^2}$ determine el instante en que se presenta la falla en caso de que se presente. Si no hay falla ind\'iquelo claramente.
@@ -1009,8 +995,8 @@ $t$ (s) & $K(t)$ (kgf/cm$^2$) \\
 \item \label{punto20} En la figura \ref{dona} se presenta la secci\'on
 transversal de un cilindro. Los esfuerzos en el dominio est\'an representados por:\\\\
 	\\
-	$\sigma_{r} = \dfrac{a^2 b^2 (p_o-p_i)}{(b^2-a^2)r^2} + \dfrac{p_i a^2 - p_o b^2}{b^2-a^2}$ \hspace{10mm}
-	$\sigma_{\theta} = -\dfrac{a^2 b^2 (p_o-p_i)}{(b^2-a^2)r^2} + \dfrac{p_i a^2 - p_o b^2}{b^2-a^2}$\hspace{10mm}
+	$\sigma_{r} = \dfrac{a^2 b^2 (p_o-p_i)}{(b^2-a^2)r^2} + \dfrac{p_i a^2 - p_o b^2}{b^2-a^2}$ \hspace{5mm}
+	$\sigma_{\theta} = -\dfrac{a^2 b^2 (p_o-p_i)}{(b^2-a^2)r^2} + \dfrac{p_i a^2 - p_o b^2}{b^2-a^2}$\hspace{5mm}
 	$\tau_{r \theta} = 0$ 
 	%
 	\begin{figure}[H]
@@ -1048,7 +1034,7 @@ transversal de un cilindro. Los esfuerzos en el dominio est\'an representados po
      	-\dfrac{2P\cos\theta}{(2\alpha + \sin(2\alpha)) r} & 0 \;\;\;\\
      	0 & 0 \;\;\;
  	\end{bmatrix}
- 	\hspace{2cm}
+ 	\hspace{1cm}
 	[\sigma(r,{\theta})]_Q
  	= 
   	\begin{bmatrix}
@@ -1057,26 +1043,21 @@ transversal de un cilindro. Los esfuerzos en el dominio est\'an representados po
  	\end{bmatrix}\]
  	
 representan el estado de tensiones en un punto de coordenadas $(r, \theta)$ al interior de las cuñas de semi-ángulo interno $\alpha$ (medido en radianes) mostradas en las \cref{CargaP} y \cref{CargaQ}, resultantes de la aplicación de cargas puntuales $P$ y $Q$ respectivamente. 
-
-
 \begin{figure}[H]
 	\centering	
-	\subfloat[Cuña de semi-ángulo interno $\alpha$ sometida a una carga vertical P.]{\includegraphics[width=3.0in]{figure_1b_T1.pdf}\label{CargaP}}	
-	\hspace{1.5cm}
-	\subfloat[Cuña de semi-ángulo interno $\alpha$ sometida a una carga vertical Q.]{\includegraphics[width=3.0in]{figure_1c_T1.pdf}\label{CargaQ}}
+	\subfloat[Cuña de semi-ángulo interno $\alpha$ sometida a una carga vertical P.]{\includegraphics[width=2.50in]{figure_1b_T1.pdf}\label{CargaP}}	
+	\hspace{0.5cm}
+	\subfloat[Cuña de semi-ángulo interno $\alpha$ sometida a una carga vertical Q.]{\includegraphics[width=2.5in]{figure_1c_T1.pdf}\label{CargaQ}}
 	\caption{Cuña de semi-ángulo interno $\alpha$. }
-%	\label{figure2}
 \end{figure}
 
 Usando dichas soluciones se pide determinar el estado de tensiones para un punto P de coordenadas $(r, \theta)$ localizado al interior de un depósito de suelo sometido a una carga puntual de magnitud $F$ como se muestra en la \cref{figure1}. 
 %
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=4.0in]{figure_1a_T1.pdf} 		
+		\includegraphics[width=2.5in]{figure_1a_T1.pdf} 		
 	\caption{Depósito de suelo sometido a una carga puntual $F$.}
 	\label{figure1}
 \end{figure}
 \end{enumerate}
 \end{document}
-
-
