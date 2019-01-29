@@ -22,12 +22,11 @@
 \usepackage{bookmark} %% Para poder organizar las etiquetas en pdf
 \usepackage{cleveref}
 \usepackage{parskip}
-
+\usepackage[left=3cm,right=3cm,top=4.0cm,bottom=3cm]{geometry}
 
 %% Configuracion paquetes
 
 \patchcmd\btxselectlanguage{\csname}{\csname TEMPPATCH}{}{} % Para hacer a babelbib funcionar
-
 
 
 \hypersetup{
@@ -62,7 +61,6 @@
 \renewcommand{\listfigurename}{Lista de figuras}
 \newcommand{\urlbib}[1]{{\footnotesize{\url{#1}}}} % para incluir urls en las referencias
 \newcommand{\fullref}[1]{\ref{#1} de la página \pageref{#1}}
-
 
 %% Ajustes
 \decimalpoint
