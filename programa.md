@@ -56,7 +56,7 @@ la mecánica aplicada.
 
 Exposiciones magistrales, Elaboración de Ejemplos, Lecturas asignadas.
 El curso se divide en 2 partes. En la parte I se revisan las hipótesis
-básicas que sustentan el modelo yse hace un breve repaso de algebra
+básicas que sustentan el modelo y se hace un breve repaso de algebra
 vectorial. En la parte II se presentan los contenidos teóricos del
 modelo. En esta se parte de una revisión de los conceptos de tensión y
 deformación y obteniendo como resultado final las ecuaciones gobernantes
@@ -73,60 +73,60 @@ entendimiento de la solución misma.
 
 1.   Introducción
 
-    -   Presentación del problema (1.5 semanas)
+-   Presentación del problema (1.5 semanas)
 
-        -   Motivación del modelo del continuo
+    *   Motivación del modelo del continuo
 
-        -   Repaso algebra vectorial
+    *   Repaso álgebra vectorial
 
-        -   Introducción del modelo del medio continuo
+    *   Introducción del modelo del medio continuo
 
 2.   Fundamentos Teóricos
 
-    -   Análisis de tensiones. Parte 1 (4.5 semanas)
+-   Análisis de tensiones. Parte 1 (4.5 semanas)
 
-        -   Concepto de tensión (Definición, Primer postulado de Cauchy,
-            Definición de tensor)
+    *   Concepto de tensión (Definición, Primer postulado de Cauchy,
+        Definición de tensor)
 
-        -   Ecuaciones de transformación en 3D y 2D
+    *   Ecuaciones de transformación en 3D y 2D
 
-        -   Círculo de Mohr 2D y valores de las tensiones extremas
+    *   Círculo de Mohr 2D y valores de las tensiones extremas
 
-        -   Parcial 01 (Semana 06)
+    *   Parcial 01 (Semana 06)
 
-    -   Análisis de tensiones. Parte 2 (4.0 semanas)
+-   Análisis de tensiones. Parte 2 (4.0 semanas)
 
-        -   Solución del problema de valores propios en 3D
-            (ecuación característica)
+    *   Solución del problema de valores propios en 3D
+        (ecuación característica)
 
-        -   Ecuaciones de equilibrio en un medio continuo
+    *   Ecuaciones de equilibrio en un medio continuo
 
-        -   Estudio e interpretación de soluciones de tensiones
+    *   Estudio e interpretación de soluciones de tensiones
 
-        -   Parcial 02 (Semana 10)
+    *   Parcial 02 (Semana 10)
 
-    -   Analísis de Deformaciones (4 semanas)
+-   Análisis de Deformaciones (4 semanas)
 
-        -   Transformaciones lineales
+    *   Transformaciones lineales
 
-        -   Definición de concepto de deformación.
+    *   Definición de concepto de deformación.
 
-        -   Tensor de deformaciones
+    *   Tensor de deformaciones
 
-        -   Problemas
+    *   Problemas
 
-        -   Parcial 03 (Semana 14)
+    *   Parcial 03 (Semana 14)
 
-    -   Teoría de la Elasticidad (2 semanas)
+-   Teoría de la Elasticidad (2 semanas)
 
-        -   Ley de Hooke
+    *   Ley de Hooke
 
-        -   Problema de valores en la frontera. (Deformación plana,
-            tensión plana)
+    *   Problema de valores en la frontera. (Deformación plana,
+        tensión plana)
 
-        -   Problemas
+    *   Problemas
 
-        -   Final
+    *   Final
 
 
 ## Prerequisitos Recomendados
@@ -134,10 +134,3 @@ entendimiento de la solución misma.
 -   Álgebra Lineal
 -   Ecuaciones Diferenciales
 -   Física I
-
-## Política De Asistencia A Clases
-
-En la Universidad EAFIT la atención a clases no es obligatoria. Sin
-embargo, para el presente curso las evaluaciones escritas son de
-carácter presencial y por lo tanto sólo durante estas reuniones se
-controlará la asistencia.
