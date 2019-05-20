@@ -6,7 +6,11 @@
 \graphicspath{{img/Cap1/}}
 
 \section{Introducción}
-En esta sección se presentan las hipótesis básicas que permiten construir el modelo del medio continuo. Dicho modelo debe entenderse como una propuesta ingenieril para abordar problemas de mecánica de sistemas de infinitas partículas usando como herramienta matemática las ideas de continuidad matemática propuestas en el cálculo diferencial.
+En esta sección se presentan las hipótesis básicas que permiten construir el 
+modelo del medio continuo. Dicho modelo debe entenderse como una propuesta  
+para abordar problemas de mecánica de sistemas de infinitas partículas usando 
+como herramienta matemática las ideas de continuidad propuestas en 
+el cálculo diferencial.
 
 Al final de esta sección el estudiante debe estar en la capacidad de:
 \begin{itemize}
@@ -17,7 +21,11 @@ Al final de esta sección el estudiante debe estar en la capacidad de:
 \end{itemize}
 
 \section{Concepto de densidad generalizada}
-A una escala de tamaño lo suficientemente pequeña la materia goza de una composición molecular/atómica/microestructural o, en general, de carácter discreto. Lo anterior significa que un volumen finito de material no es otra cosa que una gran colección de partículas, sean estas moléculas, átomos, partículas subatómicas o cualquier otro ente discreto.
+A una escala de tamaño lo suficientemente pequeña la materia goza de una 
+composición molecular/atómica/microestructural o, en general, de carácter 
+discreto. Lo anterior implica que un volumen finito de material no es otra cosa 
+que una gran colección de partículas, sean estas: moléculas, átomos, partículas 
+subatómicas o cualquier otro ente discreto.
 
 Si para esta colección se desea calcular la distribución en el tiempo de alguna función {\bf respuesta} o {\bf efecto} $\beta$ resultante de la consideración de alguna función {\bf causa} $\alpha$, será entonces necesario resolver un sistema acoplado de ecuaciones diferenciales ordinarias tan grande (en número de ecuaciones) como partículas posea la colección. Este sistema de ecuaciones es obtenido a partir de algún principio físico fundamental, conectando las funciones $\alpha$ y $\beta$, y postulado a partir de observación experimental. En términos generales es posible escribir este principio como en la \cref{ca_ef},
 \begin{equation}
@@ -57,25 +65,65 @@ cálculo diferencial.
 \end{itemize}
 
 Por ejemplo, en el caso de la mecánica de los medios continuos no tendrá sentido
-hablar términos como ``la fuerza aplicada a una partícula” en el sentido discreto. 
-Más aún, en las ecuaciones gobernantes a nivel del continuo este concepto mismo de fuerza discreta desaparece matemáticamente y es necesario utilizar representaciones equivalentes que tengan significado dentro del contexto de los medios continuos, es decir funciones, como en este caso la función tensorial de tensiones.
+hablar términos como ``la fuerza aplicada a una partícula” en el sentido 
+discreto. Más aún, en las ecuaciones gobernantes a nivel del continuo este 
+concepto mismo de fuerza discreta desaparece matemáticamente y es necesario 
+utilizar representaciones equivalentes que tengan significado dentro del 
+contexto de los medios continuos, es decir funciones, como en este caso la 
+función tensorial de tensiones.
 
-La hipótesis de continuidad genera entonces un modelo que producirá resultados correspondientes a una aproximación con respecto a una solución discreta \footnote{Si se asume que el resultado que se obtendría de un modelo discreto en caso de ser este.}. El orden del error en la aproximación, será siempre relativo y estará fuertemente ligado a la relación entre el tamaño característico del espécimen en cuestión y el tamaño característico de la micro-estructura que se ha despreciado.  Por ejemplo, considere el caso de una viga de concreto.  En ésta, la menor dimensión característica del espécimen correspondería al espesor $h$ mientras que la mayor dimensión característica de la micro-estructura seria el diámetro del agregado grueso $\phi$.  La aproximación introducida al asumir el medio como un continuo físico dará errores despreciables siempre que $h \gg \phi$.  En la medida en que $h \to \phi$   la contribución del agregado a la interacción mecánica es relevante y el modelo del continuo se vuelve impreciso.
+La hipótesis de continuidad genera entonces un modelo que producirá resultados 
+correspondientes a una aproximación con respecto a una solución 
+discreta\footnote{Si se asume que el resultado que se obtendría de un modelo 
+discreto  en caso de ser este.}. El orden del error en la aproximación, será 
+siempre relativo y estará fuertemente ligado a la relación entre el tamaño 
+característico del espécimen en cuestión y el tamaño característico de la 
+micro-estructura que se ha despreciado.  Por ejemplo, considere el caso de una 
+viga de concreto.  En ésta, la menor dimensión característica del espécimen 
+correspondería al espesor $h$ mientras que la mayor dimensión característica de 
+la micro-estructura seria el diámetro del agregado grueso $\phi$.  La 
+aproximación introducida al asumir el medio como un continuo físico dará 
+errores despreciables siempre que $h \gg \phi$.  En la medida en que $h \to 
+\phi$   la contribución del agregado a la interacción mecánica es relevante y 
+el modelo del continuo se vuelve impreciso.
 
-El hecho de renunciar al concepto de partícula y de apelar al continuo matemático implica que toda variable de tipo discreto o asociada al concepto de partícula es tratada ahora como una distribución o función.  Replanteando en estos términos y por segunda vez el objetivo fundamental de un modelo de los {\bf Medios Continuos} este se debería reescribir como sigue:
+El hecho de renunciar al concepto de partícula y de apelar al continuo 
+matemático implica que toda variable de tipo discreto o asociada al concepto de 
+partícula es tratada ahora como una distribución o función.  Replanteando en 
+estos términos y por segunda vez el objetivo fundamental de un modelo de los 
+{\bf Medios Continuos} este se debería reescribir como sigue:
 \begin{quote}
 Un modelo de los medios continuos pretende estudiar la variación espacio-temporal de las distribuciones o funciones de {\bf respuesta} (o efecto) debidas a una distribución espacio-temporal de funciones {\bf fuente} (o causa).
 \end{quote}
 
-En el caso particular del problema {\bf Mecánico} el interés es describir la
-respuesta del sistema en términos de {\bf cantidad de movimiento}.  En este escenario las fuentes corresponden a fuerzas o mejor aún, a distribuciones de fuerzas.  Más concretamente, una vez introducida la hipótesis de continuidad, el objetivo será el de determinar funciones continuas representativas de la cantidad de movimiento en respuesta a funciones representativas de las fuentes o fuerzas.
+En el caso particular del problema {\bf mecánico} el interés es describir la
+respuesta del sistema en términos de {\bf cantidad de movimiento}. En este 
+escenario las fuentes corresponden a fuerzas o mejor aún, a distribuciones de 
+fuerzas. Más concretamente, una vez introducida la hipótesis de continuidad, 
+el objetivo será el de determinar funciones continuas representativas de la 
+cantidad de movimiento en respuesta a funciones representativas de las fuentes 
+o fuerzas.
 
-Se puede afirmar entonces que el carácter infinito del sistema de partículas genera la necesidad de un modelo matemático para describir ahora la interacción \footnote{En el caso mecánico una fuerza no es otra cosa que la representación equivalente de una interacción entre dos sistemas.} entre 2 sistemas.  Uno de los sistemas es el medio continuo en cuestión (sistema de muchas partículas) que interactúa o en el caso mecánico intercambia cantidad de movimiento con otro sistema externo.  Denominaremos este (otro medio continuo) como el medio ambiente \footnote{Cadavid, J (2009).  Mecánica del Medio Continuo Una Iniciación.  Fondo Editorial Universidad EAFIT.}.
+Se puede afirmar entonces que el carácter infinito del sistema de partículas 
+genera la necesidad de un modelo matemático para describir ahora la 
+interacción\footnote{En el caso mecánico una fuerza no es otra cosa que la 
+representación equivalente de una interacción entre dos sistemas.} entre 2 
+sistemas.  Uno de los sistemas es el medio continuo en cuestión (sistema de 
+muchas partículas) que interactúa o en el caso mecánico intercambia cantidad de 
+movimiento con otro sistema externo.  Denominaremos este (otro medio continuo) 
+como el medio ambiente \cite{cadavid2009}.
 
 \section{Características generales de un modelo del medio continuo}
 Para apoyar el análisis considérese un medio infinito ocupando un volumen $B(t)$
 y que representa en este caso el medio ambiente, \cref{infinite}. Este medio se
-encuentra acotado por una superficie ${S_\infty }$ localizada a una distancia infinita de cualquier punto del medio.  Consideramos además un medio continuo ({\bf el sistema}) ocupando un volumen $V(t)$ y localizado al interior de este espacio infinito.  La interfase entre el sistema y el medio ambiente corresponde a una superficie $S(t)$ \footnote{En la \cref{infinite} la frontera del medio continuo representada por $S$ podría ser por ejemplo la de una viga, una presa o si se quiere tan solo una frontera matemática.}. Las preguntas que nos proponemos responder son:
+encuentra acotado por una superficie ${S_\infty }$ localizada a una distancia 
+infinita de cualquier punto del medio.  Consideramos además un medio continuo 
+({\bf el sistema}) ocupando un volumen $V(t)$ y localizado al interior de este 
+espacio infinito.  La interfase entre el sistema y el medio ambiente 
+corresponde a una superficie $S(t)$\footnote{En la \cref{infinite} la frontera 
+del medio continuo representada por $S$ podría ser por ejemplo la de una viga, 
+una presa o si se quiere tan solo una frontera matemática.}. Las preguntas que 
+nos proponemos responder son:
 
 \begin{itemize}
 \item ¿Cómo describir la interacción o intercambio de cualquier variable física
@@ -166,11 +214,19 @@ uni-dimensional de tamaño $L$.  La escala de tamaño del espécimen se denomina
 
 A través del concepto del límite establecido en \cref{material} lo que se hace entonces es asignar al volumen o punto material matemático el valor promedio acomodado sobre el punto o volumen material físico.  En estos términos es claro que la distribución de la función $\Phi$ a nivel macro representa una aproximación con respecto a la distribución a nivel micro.  Las predicciones a nivel del continuo basado en la \cref{material} serán válidas mientras se de la condición $L \gg \ell $.
 
-Más aún, nos referiremos al volumen o punto material físico (como el de la parte superior de la \cref{macromicro}) como Volumen Representativo del Material (VRM).  De acuerdo con esto se tiene entonces que un continuo clásico puede entenderse como una variedad \footnote{Variedad o en Ingles la denominada Manifold.  Correspondiente a una estructura topológica} de puntos materiales abstractos o Volúmenes Representativos del Material.
+Más aún, nos referiremos al volumen o punto material físico (como el de la 
+parte superior de la \cref{macromicro}) como Volumen Representativo del 
+Material (VRM).  De acuerdo con esto se tiene entonces que un continuo clásico 
+puede entenderse como una variedad diferenciable\footnote{Variedad 
+diferenciable o, en inglés, \emph{manifold}.  Correspondiente a una 
+estructura topológica} de puntos materiales abstractos o Volúmenes 
+Representativos del Material.
 
 De acuerdo con la hipótesis de continuidad matemática estos puntos materiales a la vez están conformados por un número infinito de puntos materiales de manera que matemáticamente o por abstracción siempre será posible seguir descendiendo en tamaño sin nunca encontrar los entes micro-estructurales o de tipo discreto.  Sin embargo en otros modelos del continuo (denominados como no-clásicos) el VRM puede ser dotado de alguna capacidad de describir (aunque aún en términos del continuo) cierto tipo de fluctuaciones micro-estructurales.  Más adelante se hará referencia a este tipo de propuestas.
 
-\section*{Volumen Representativo del Material \footnote{Algunos casos de determinación del VRM se presentan en las referencias \cite{bonda1996effect,bonda1992deformation}.}}
+\section*{Volumen Representativo del Material\footnote{Algunos casos de 
+determinación del VRM se presentan en las referencias 
+\cite{bonda1996effect,bonda1992deformation}.}}
 
 
 Habiendo identificado el VRM como el bloque constitutivo fundamental de un
@@ -196,10 +252,42 @@ vacíos, impurezas, defectos o en general heterogeneidades.  Supongamos que en e
 	\label{solder}
 \end{figure}
 
-La respuesta depende claramente del tipo de micro-estructura inherente en cada material.  En los desarrollos tempranos de la mecánica del medio continuo el problema fue evadido asumiendo que se estaba a escalas varias veces por encima de las distancias intra-moleculares despreciando la existencia de entes fundamentales de tamaño superior.  Aunque para la ingeniería clásica este modelo del medio continuo ha resultado ser lo suficientemente preciso, el desarrollo de tecnologías e industrias emergentes \footnote{Como por ejemplo la micro-electrónica y la nano-tecnología} ha empezado a llevar al modelo al límite de su precisión.  En esta presentación se llama la atención sobre la existencia de esta escala inferior por debajo de la cual no sería válido proceder vía el continuo y se introduce el concepto de volumen representativo del material como una propiedad mecánica adicional cuyo valor depende de cada material.  Claramente esta propiedad $\ell$ tiene dimensiones de longitud y varía de material a material y de microestructura a microestructura.
+La respuesta depende claramente del tipo de micro-estructura inherente en cada 
+material.  En los desarrollos tempranos de la mecánica del medio continuo el 
+problema fue evadido asumiendo que se estaba a escalas varias veces por encima 
+de las distancias inter-moleculares despreciando la existencia de entes 
+fundamentales de tamaño superior.  Aunque para la ingeniería clásica este 
+modelo del medio continuo ha resultado ser lo suficientemente preciso, el 
+desarrollo de tecnologías e industrias emergentes\footnote{Como la 
+micro-electrónica y la nano-tecnología} ha empezado a llevar al modelo al 
+límite de su precisión.  En esta presentación se llama la atención sobre la 
+existencia de esta escala inferior por debajo de la cual no sería válido 
+proceder vía el continuo y se introduce el concepto de volumen representativo 
+del material como una propiedad mecánica adicional cuyo valor depende de cada 
+material.  Claramente esta propiedad $\ell$ tiene dimensiones de longitud y 
+varía de material a material y de microestructura a microestructura.
 
 En lo que sigue asumiremos que el sistema de infinitas partículas (no
-necesariamente todas iguales) estará ocupando un espacio físico de manera continua (en el sentido físico y matemático), o equivalentemente se asumirá continuidad de puntos y de partículas; \textbf{\textit{entre dos partículas del sistema, sin importar que tan cercanas se encuentren siempre será posible asignar otra partícula.}} En otras palabras se le está confiriendo acá a la partícula el carácter de punto material.  Este espacio se subdividirá en volúmenes infinitesimales $\Delta V$ a cada uno de los cuales se les conferirán propiedades (mecánicas) constantes.  Nos referiremos a este volumen como \textbf{Volumen Representativo del Material  (VRM)} \footnote{VRM: Mínimo volumen sobre el cual el material es estadísticamente homogéneo,$F(x)=x$}.  Asumiremos además que siempre estaremos operando en especímenes con tamaños superiores a este VRM y que estaremos haciendo mediciones a escalas igualmente superiores.  La presencia de la microestructura y de un punto material físico o VRM se esquematiza en la \cref{VRM}.  Cabe anotar que la ingeniería moderna ha reconocido la potencia práctica de la hipótesis del medio continuo como herramienta de solución de problemas y ha planteado modelos que intentan ampliar las capacidades del mismo a escalas bastante cercanas a las del VRM.  Estas se han denominado como teorías no-locales, de cinemática enriquecida o simplemente teorías no-clásicas de la mecánica de los medios continuos. \footnote{Algunas de estas son las propuestas por Voigt, W(1887).  Theoretische Studien uber die Elastizitatsverhaltnisse der Krystalle.  Abh. Koniglichen Gesellschaft Wiss.  Gottingen., Cosserat, E., and Cosserat, F(1909).  Theorie des Corps Deformables.  Paris: A Hermann \& Fils., Aero, E., Kuvshinsky, E(1961).  Fundamental equations of the heory of elastic media with rotationally interacting particles.  Soviet Physics Solid State.  Vol 2.  pp 1272., Eringen, A.C(1968).  Theory of Micropolar Elasticity.  In Fracture, and advanced treatise.  Eds Leibowitz, H.  Academic Press, New York, pp 621-729., Mindlin, R(1964).  Micro-structure in Linear Elasticity.  Arch. Ration. Mech. Anala.  Vol 16, pp 51-78., Toupin, R(1962).  Elastic Materials with Couple-Stresses.  Arch.Rational Mech.Anal.  Vol 11, pp385-414.}.
+necesariamente todas iguales) estará ocupando un espacio físico de manera 
+continua (en el sentido físico y matemático), o equivalentemente se asumirá 
+continuidad de puntos y de partículas; \emph{entre dos partículas del 
+sistema, sin importar que tan cercanas se encuentren siempre será posible 
+asignar otra partícula.} En otras palabras se le está confiriendo acá a la 
+partícula el carácter de punto material.  Este espacio se subdividirá en 
+volúmenes infinitesimales $\Delta V$ a cada uno de los cuales se les conferirán 
+propiedades (mecánicas) constantes.  Nos referiremos a este volumen como 
+\textbf{Volumen Representativo del Material  (VRM)}\footnote{VRM: Mínimo 
+volumen sobre el cual el material es estadísticamente homogéneo, $F(x)=x$}.  
+Asumiremos además que siempre estaremos operando en especímenes con tamaños 
+superiores a este VRM y que estaremos haciendo mediciones a escalas igualmente 
+superiores.  La presencia de la microestructura y de un punto material físico o 
+VRM se esquematiza en la \cref{VRM}.  Cabe anotar que la ingeniería moderna ha 
+reconocido la potencia práctica de la hipótesis del medio continuo como 
+herramienta de solución de problemas y ha planteado modelos que intentan 
+ampliar las capacidades del mismo a escalas bastante cercanas a las del VRM.  
+Estas se han denominado como teorías no-locales, de cinemática enriquecida o 
+simplemente teorías no-clásicas de la mecánica de los medios continuos 
+\cite{voigt1887, toupin1962, mindlin1964, eringen1966, cosserat1909, aero1961}.
 
 \begin{figure}[H]
 \centering
@@ -230,15 +318,45 @@ La hipótesis básica de continuidad desde el punto de vista físico consiste en
 
 
 \subsection{Partícula o Punto Material}
-En el contexto de la mecánica de los medios continuos por partícula o punto material se estará haciendo referencia a cantidad de materia o porción infinitesimal de un cuerpo pero sin conceder a esta geometría alguna tal y como se estipula en el límite dado en la \cref{material}.  Tampoco se detalla ésta es un átomo, molécula o que tipo de ente fundamental.  A pesar de la carencia de geometría la partícula tendrá siempre asociado un volumen y una densidad de masa.  Esta contradicción aparente es una consecuencia del uso del concepto matemático de límite.  El punto material podrá experimentar desplazamiento, velocidad, aceleración, cambios de momentum o en general flujos e interacciones.  El punto material se considerará como el elemento constitutivo primario o elemental de un modelo de los medios continuos.
+En el contexto de la mecánica de los medios continuos por partícula o punto 
+material se estará haciendo referencia a cantidad de materia o porción 
+infinitesimal de un cuerpo pero sin conceder a esta geometría alguna tal y como 
+se estipula en el límite dado en la \cref{material}.  Tampoco se detalla ésta 
+es un átomo, molécula o que tipo de ente fundamental.  A pesar de la carencia 
+de geometría la partícula tendrá siempre asociado un volumen y una densidad de 
+masa.  Esta contradicción aparente es una consecuencia del uso del concepto 
+matemático de límite.  El punto material podrá experimentar desplazamiento, 
+velocidad, aceleración, cambios de moméntum o en general flujos e 
+interacciones.  El punto material se considerará como el elemento constitutivo 
+primario o elemental de un modelo de los medios continuos.
 
 \subsection{Punto}
 Por punto se hará referencia a una localización geométrica fija con respecto a un sistema de referencia.  El punto como tal tampoco posee geometría alguna y mucho menos tendrá asociadas cantidades físicas.  Sin embargo, en un instante dado, un punto puede estar siendo ocupado por un punto material con propiedades físicas asociadas.  En este caso hablaremos de la propiedad en el punto pero teniendo en cuenta que en realidad esta será debida a la contribución del punto material.  Más aún, pueden existir interacciones del punto con el medio externo de manera tal que cuando una partícula ocupa este punto, está siente una contribución adicional o agente modificador de sus propiedades.
 
 \subsection{Cuerpo}
-Nos referimos a un cuerpo como un sistema de infinitas partículas (ahora puntos materiales) lo cual no constituye ninguna novedad ya que en cursos básicos de física se había trabajado con el caso de cuerpos rígidos.  Se trataba precisamente de un sistema de infinitas partículas pero en este caso el apelativo de cuerpo rígido hacía referencia al hecho de que las distancias intra-particulares antes y después de la consideración de las fuerzas permanecían constantes.  Claramente esta hipótesis permitía abordar el problema sin la necesidad de hacer referencia alguna al material constitutivo y permitía tratarlo como una partícula con la adición de la interacción rotacional.
+Nos referimos a un cuerpo como un sistema de infinitas partículas (ahora puntos 
+materiales) lo cual no constituye ninguna novedad ya que en cursos básicos de 
+física se había trabajado con el caso de cuerpos rígidos.  Se trataba 
+precisamente de un sistema de infinitas partículas pero en este caso el 
+apelativo de cuerpo rígido hacía referencia al hecho de que las distancias 
+inter-particulares antes y después de la consideración de las fuerzas 
+permanecían constantes.  Claramente esta hipótesis permitía abordar el problema 
+sin la necesidad de hacer referencia alguna al material constitutivo y permitía 
+tratarlo como una partícula con la adición de la interacción rotacional.
 
-En lo que sigue se liberará la hipótesis anterior y se asumirá que como resultado de las interacciones del sistema con el medio ambiente este puede exhibir cambios en las distancias intra-particulares.  La magnitud de estos cambios dependerá en cada caso de la naturaleza de las fuerzas inherentes que le dan el carácter denso al sistema, es decir enlaces electroquímicos, electromagnéticos, etc.  En otras palabras a igual intensidad de fuerzas aplicadas a cuerpos de igual geometría pero de materiales diferentes los cambios en distancias entre partículas dependerán del material del cuerpo.  Los cambios en las distancias intra-partícula se reflejarán posiblemente no solo en cambios de posición sino también de forma y de tamaño del cuerpo.  Uno de los propósitos del modelo de la mecánica del medio continuo es caracterizar o describir estos cambios a nivel local o del punto material definido este en el sentido de la \cref{lim_point} en la sección introductoria.
+En lo que sigue se liberará la hipótesis anterior y se asumirá que como 
+resultado de las interacciones del sistema con el medio ambiente este puede 
+exhibir cambios en las distancias intra-particulares.  La magnitud de estos 
+cambios dependerá en cada caso de la naturaleza de las fuerzas inherentes que 
+le dan el carácter denso al sistema, es decir enlaces electroquímicos, 
+electromagnéticos, etc.  En otras palabras a igual intensidad de fuerzas 
+aplicadas a cuerpos de igual geometría pero de materiales diferentes los 
+cambios en distancias entre partículas dependerán del material del cuerpo.  Los 
+cambios en las distancias intra-partícula se reflejarán posiblemente no solo en 
+cambios de posición sino también de forma y de tamaño del cuerpo.  Uno de los 
+propósitos del modelo de la mecánica del medio continuo es caracterizar o 
+describir estos cambios a nivel local o del punto material definido este en el 
+sentido de la \cref{lim_point} en la sección introductoria.
 
 \end{document}
 
