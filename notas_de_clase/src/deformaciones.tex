@@ -16,7 +16,12 @@ Al final de esta sección el estudiante deberá estar en la capacidad de:
 \item[•] Reconocer la diferencia entre la configuración deformada de un medio continuo y la deformada del punto material
 \end{itemize}
 
-Del análisis de las fuerzas ``internas'' se concluyó --usando las 3 leyes de Newton sobre un volumen arbitrario de un medio continuo-- que estas corresponden a nivel local a una función (continua) de carácter tensorial y que satisface el problema de valores en la frontera especificado por las ecuaciones de equilibrio (leyes generalizadas de Newton) y la asignación de las tracciones en la superficie del medio (\cref{equtr_5}, \cref{equrot_5}):
+Del análisis de las fuerzas ``internas'' se concluyó ---usando las 3 leyes de 
+Newton sobre un volumen arbitrario de un medio continuo--- que estas 
+corresponden a nivel local a una función (continua) de carácter tensorial y que 
+satisface el problema de valores en la frontera especificado por las ecuaciones 
+de equilibrio (leyes generalizadas de Newton) y la asignación de las tracciones 
+en la superficie del medio (\cref{equtr_5}, \cref{equrot_5}):
 \begin{equation} \label{equtr_5}
 \begin{split}
 & \frac{\partial \sigma_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z} + B_x = 0 \\
@@ -44,7 +49,12 @@ Aunque es claro que las nuevas configuraciones aparecen debidas a los desplazami
 \subsection{Concepto intuitivo de deformación}
 La \cref{viga1} muestra, en sombreado gris, una viga en voladizo en su configuración original (antes de aplicar las cargas externas) y en línea punteada su configuración final (o deformada)\footnote{En la configuración deformada los puntos materiales o elementos constitutivos de la viga estarán sometidos a un estado de tensiones que satisface las ecuaciones de equilibrio local ( a nivel diferencial) y global.} resultante tras aplicar alguna distribución de cargas externas en forma de tracciones.
 
-Como resultado de la aplicación de las cargas externas los puntos materiales que conforman la viga experimentan desplazamientos. En lo que sigue denominaremos campo de desplazamientos a la variación espacial de estos, y lo denotaremos como $\vec u(\vec x)$. Tal y como se aprecia de manera intutitiva, los desplazamientos varían para los diferentes puntos de la viga generándose \textbf{desplazamientos relativos}.
+Como resultado de la aplicación de las cargas externas los puntos materiales 
+que conforman la viga experimentan desplazamientos. En lo que sigue 
+denominaremos campo de desplazamientos a la variación espacial de estos, y lo 
+denotaremos como $\vec u(\vec x)$. Tal y como se aprecia de manera intuitiva, 
+los desplazamientos varían para los diferentes puntos de la viga generándose 
+\textbf{desplazamientos relativos}.
 
 \begin{figure}[H]
 \centering
@@ -67,7 +77,13 @@ Para aclarar, nuevamente de manera intuitiva, el carácter local de los cambios 
      \label{steady_state}
 \end{figure}
 
-La \cref{viga3} muestra nuevamente ambas configuraciones y sobre estas se han seleccionado para efectos ilustrativos dos elementos localizados sobre el empotramiento y sobre el extremo libre del voladizo. En la configuración original ambos elementos son identicos y corresponden a cuadrados de lado $h$. En la configuración deformada, mostrada con líneas punteadas, se resaltan nuevamente estos 2 elementos de donde se pueden hacer las siguientes observaciones:
+La \cref{viga3} muestra nuevamente ambas configuraciones y sobre estas se han 
+seleccionado para efectos ilustrativos dos elementos localizados sobre el 
+empotramiento y sobre el extremo libre del voladizo. En la configuración 
+original ambos elementos son idénticos y corresponden a cuadrados de lado $h$. 
+En la configuración deformada, mostrada con líneas punteadas, se resaltan 
+nuevamente estos 2 elementos de donde se pueden hacer las siguientes 
+observaciones:
 
 El elemento sobre la parte superior del empotramiento experimenta cambios de tamaño y de forma a través de alargamientos en la dirección longitudinal, mientras que el elemento sobre la parte inferior experimenta acortamientos igualmente en la dirección longitudinal. Estos cambios suceden a pesar de que dichos elementos se encuentran sobre el empotramiento donde los desplazamientos como tal son nulos. De otro lado, el elemento sobre el extremo libre de la viga experimenta pequeños cambios de forma  (no apreciables en el dibujo) y experimentan las mayores rotaciones como si fuera un cuerpo rígido. Los pequeños cambios de forma son equivalentes a pequeños desplazamientos relativos aunque estos puntos experimentan los mayores desplazamientos absolutos.
 
@@ -128,7 +144,7 @@ La relación \cref{amat} entre $\vec{r}$ y $\vec{\rho}$ puede escribirse en form
 
 La \cref{roaere} indica que la matriz $A$ transforma el vector $\vec{r}$ en el vector $\vec{\rho}$ y por ende ésta contiene toda la información referente a los cambios de magnitud y dirección que experimentan las infinitas direcciones que emanan del punto $O$. Una transformación como la descrita en la \cref{roaere} se denomina lineal si satisface la condición dada por:
 \begin{equation}
-A \cdot \left( {{{\vec r}_1} + {{\vec r}_2}} \right) = A \cdot {{\vec r}_1} + A \cdot {{\vec r}_2}
+A \cdot (\vec{r}_1 + \vec{r}_2) = A \cdot \vec{r}_1 + A \cdot \vec{r}_2
 \label{lineal}
 \end{equation}
 
@@ -136,11 +152,13 @@ la cual implica que lineas rectas y paralelas antes de la transformación perman
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{paralelo.pdf}
-	\caption{Definición de línealidad.}
+	\caption{Definición de linealidad.}
 	\label{paralelo}
 \end{figure}
 
-Alternativamente, es posible escribir la transformación en términos del vector de desplazamientos ${\vec \Delta }$  que experimenta la cabeza del vector $\vec{r}$ como sigue:  
+Alternativamente, es posible escribir la transformación en términos del vector 
+de desplazamientos $\vec {\Delta}$  que experimenta la cabeza del vector 
+$\vec{r}$ como sigue:  
 \begin{align*}
 &\vec \Delta  = \vec \rho  - \vec r\\
 &\vec \Delta  = A \cdot \vec r - \vec r\\
@@ -149,16 +167,18 @@ Alternativamente, es posible escribir la transformación en términos del vector
 \end{align*}
 y de manera explícita escribimos
 \begin{equation}
-\left\{ {\begin{array}{*{20}{c}}
-{{\Delta _x}}\\
-{{\Delta _y}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{{d_{xx}}}&{{d_{xy}}}\\
-{{d_{yx}}}&{{d_{yy}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{{r_x}}\\
-{{r_y}}
-\end{array}} \right\}
+\begin{Bmatrix}
+\Delta_x\\
+\Delta_y
+\end{Bmatrix}= 
+\begin{bmatrix}
+d_{xx} &d_{xy}\\
+d_{yx} &d_{yy}
+\end{bmatrix}
+\begin{bmatrix}
+r_x\\
+r_y
+\end{bmatrix}
 \label{disp}
 \end{equation}
 
@@ -170,62 +190,77 @@ A continuación nos disponemos a estudiar el efecto de los diferentes términos 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{rota.pdf}
-	\caption{Rotación a través de un angulo $\alpha$ del vector $\vec{r}$ en el vector $\vec{\rho}$.}
+	\caption{Rotación a través de un ángulo $\alpha$ del vector $\vec{r}$ en el 
+	vector $\vec{\rho}$.}
 	\label{rota}
 \end{figure}
 
 
 Relacionando las componentes rectangulares de ambos vectores se tiene que:
-
-\[{\rho _x} = {r_x} + \alpha {r_y}\]
+\[\rho_x = r_x + \alpha r_y\]
 y
-\[{\rho _y} = {r_y} - \alpha {r_x}.\]
+\[\rho_y = r_y - \alpha r_x\, .\]
 
 De manera explicita, pero en términos de los desplazamientos de la cabeza del vector posición $\vec{r}$ lo anterior resulta en:
 
 \begin{equation}
-\left\{ {\begin{array}{*{20}{c}}
-{{\Delta _x}}\\
-{{\Delta _y}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-0&\alpha \\
-{ - \alpha }&0
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{{r_x}}\\
-{{r_y}}
-\end{array}} \right\}
+\begin{Bmatrix}
+\Delta_x\\
+\Delta_y
+\end{Bmatrix}=
+\begin{bmatrix}
+0 &\alpha \\
+-\alpha &0
+\end{bmatrix}
+\begin{Bmatrix}
+r_x\\
+r_y
+\end{Bmatrix}
 \label{asym}
 \end{equation}
 
-De la \cref{asym} se concluye que la componente rotacional del tensor de transformación de desplazamientos $D$ es una matriz con $0s$ en la diagonal y términos iguales pero con signo opuesto a uno y otro lado de la diagonal. En el lenguaje del análisis tensorial, extendido en este caso a matrices, a estos tensores se les conoce como tensores anti-simétricos. En conclusión \textbf{\textit{la componente rotacional de la transformación lineal corresponde a un tensor anti-simétrico.}}
+De la \cref{asym} se concluye que la componente rotacional del tensor de 
+transformación de desplazamientos $D$ es una matriz con ceros en la diagonal y 
+términos iguales pero con signo opuesto a uno y otro lado de la diagonal. En el 
+lenguaje del análisis tensorial, extendido en este caso a matrices, a estos 
+tensores se les conoce como tensores anti-simétricos. En conclusión \emph{la 
+componente rotacional de la transformación lineal corresponde a un tensor 
+anti-simétrico.}
 
 
 \subsection{Componente simétrica}
-Como ya ha sido identificado en los planteamientos anteriores, la matriz de transformación de desplazamientos $D$ imparte en las diferentes direcciones cambios de dirección y de magnitud. El haber identificado el efecto rotacional como la componente anti-simétrica de $D$ permite concluir que el término restante, y simétrico por demás, contendrá los efectos asociados a los cambios de tamaño o magnitud de los diferentes vectores. De dicha conclusión resulta natural resolver el tensor $D$ precisamente en una componente simétrica y en una componente anti-simétrica como:
-
-
+Como ya ha sido identificado en los planteamientos anteriores, la matriz de 
+transformación de desplazamientos $D$ imparte en las diferentes direcciones 
+cambios de dirección y de magnitud. El haber identificado el efecto rotacional 
+como la componente anti-simétrica de $D$ permite concluir que el término 
+restante, y simétrico por demás, contendrá los efectos asociados a los cambios 
+de tamaño o magnitud de los diferentes vectores. De dicha conclusión resulta 
+natural resolver el tensor $D$ precisamente en una componente simétrica y en 
+una componente anti-simétrica como:
 \begin{equation}
-\left[ {\begin{array}{*{20}{c}}
-{{d_{xx}}}&{{d_{xy}}}\\
-{{d_{yx}}}&{{d_{yy}}}
-\end{array}} \right] = \left[ {\begin{array}{*{20}{c}}
-{{d_{xx}}}&{\frac{{{d_{xy}} + {d_{yx}}}}{2}}\\
-{\frac{{{d_{yx}} + {d_{xy}}}}{2}}&{{d_{yy}}}
-\end{array}} \right] + \left[ {\begin{array}{*{20}{c}}
-0&{\frac{{{d_{xy}} - {d_{yx}}}}{2}}\\
-{\frac{{{d_{yx}} - {d_{xy}}}}{2}}&0
-\end{array}} \right].
+\begin{bmatrix}
+d_{xx} &d_{xy}\\
+d_{yx} &d_{yy}
+\end{bmatrix} = \begin{bmatrix}
+d_{xx} &\frac{d_{xy} + d_{yx}}{2}\\
+\frac{d_{yx} + d_{xy}}{2} &d_{yy}
+\end{bmatrix} + \begin{bmatrix}
+0 &\frac{d_{xy} - d_{yx}}{2}\\
+\frac{d_{yx} - d_{xy}}{2} &0
+\end{bmatrix}\, .
 \label{descomp}
 \end{equation}
 
-En esta partición es evidente que el segundo término del lado derecho corresponde efectivamente a la componente rotacional del tensor (componente anti-simétrica), mientras que el primer término necesariamente contendrá la información relativa a los cambios de tamaño. Nótese además que este primer término es simétrico con respecto a la diagonal. De forma general escribimos esta partición de la matriz de transformación de desplazamientos $D$ como:
-
-
+En esta partición es evidente que el segundo término del lado derecho 
+corresponde efectivamente a la componente rotacional del tensor (componente 
+anti-simétrica), mientras que el primer término necesariamente contendrá la 
+información relativa a los cambios de tamaño. Nótese además que este primer 
+término es simétrico con respecto a la diagonal. De forma general escribimos 
+esta partición de la matriz de transformación de desplazamientos $D$ como:
 \begin{equation}
 D = \varepsilon  + \omega
 \label{parti}
 \end{equation}
-
 donde $\varepsilon$ contiene los efectos de cambio de tamaño y $\omega$ contiene los efectos de cambio de orientación.
 
 Para estudiar los efectos de las diferentes componentes del tensor de transformación de desplazamientos $D$ usaremos el cuadrado unitario de la \cref{unitario}.
@@ -237,43 +272,41 @@ Para estudiar los efectos de las diferentes componentes del tensor de transforma
 	\label{unitario}
 \end{figure}
 
-Como método de análisis aplicaremos las diferentes componentes del tensor $D$ sobre los vectores posición de los puntos $A$, $B$ y $C$ dados por:
-
+Como método de análisis aplicaremos las diferentes componentes del tensor $D$ 
+sobre los vectores posición de los puntos $A$, $B$ y $C$ dados por:
 \[{{\vec r}_A} = 1.0\hat i\]
 \[{{\vec r}_B} = 1.0\hat j\]
 \[{{\vec r}_C} = 1.0\hat i + 1.0\hat j\]
-
 y asumiremos que los puntos $O$, $A$, $B$ y $C$ permanecen unidos por líneas rectas de acuerdo con la propiedad de linealidad. Posteriormente compararemos la configuración original y deformada del elemento.
 
-
-Consideremos inicialmente la componente simétrica de la \cref{parti}. Por razones que se harán evidentes más adelante denotemos los elementos de esta componete como:
-
-\[\varepsilon  = \left[ {\begin{array}{*{20}{c}}
-{{\varepsilon _{xx}}}&\bar{\gamma} \\
-\bar{\gamma} &{{\varepsilon _{yy}}}
-\end{array}} \right]\]
+Consideremos inicialmente la componente simétrica de la \cref{parti}. Por 
+razones que se harán evidentes más adelante denotemos los elementos de esta 
+componente como:
+\[\varepsilon  = \begin{bmatrix}
+\varepsilon_{xx} &\bar{\gamma} \\
+\bar{\gamma} &\varepsilon_{yy}
+\end{bmatrix}\]
 
 Para determinar la configuración deformada aplicamos la expresión:
-
-\[\left\{ {\begin{array}{*{20}{c}}
-{\Delta x}\\
-{\Delta y}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{{\varepsilon _{xx}}}&\bar{\gamma} \\
-\bar{\gamma} &{{\varepsilon _{yy}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{{r_x}}\\
-{{r_y}}
-\end{array}} \right\}\]
-
-a los vectores posición $\vec{r}_A$, $\vec{r}_B$ y $\vec{r}_C$. Esto da como resultado los vectores de desplazamiento:
-
-\[{{\vec \Delta }_A} = {\varepsilon _{xx}}\hat i + \bar{\gamma} \hat j\]
-\[{{\vec \Delta }_B} = \bar{\gamma} \hat i + {\varepsilon _{yy}}\hat j\]
-\[{{\vec \Delta }_C} = ({\varepsilon _{xx}} +\bar{\gamma}  )\hat i + ({\varepsilon _{yy}} + \bar{\gamma} )\hat j\]
-
+\[\begin{Bmatrix}
+\Delta x\\
+\Delta y
+\end{Bmatrix} = \begin{bmatrix}
+\varepsilon_{xx} &\bar{\gamma} \\
+\bar{\gamma} & \varepsilon_{yy}
+\end{bmatrix} \begin{Bmatrix}
+r_x\\
+r_y
+\end{Bmatrix}\]
+a los vectores posición $\vec{r}_A$, $\vec{r}_B$ y $\vec{r}_C$. Esto da como 
+resultado los vectores de desplazamiento:
+\begin{align*}
+&\vec{\Delta}_A = \varepsilon_{xx} \hat \imath + \bar{\gamma} \hat \jmath\\
+&\vec{\Delta}_B = \bar{\gamma} \hat \imath + \varepsilon_{yy}\hat \jmath\\
+&\vec{\Delta}_C = (\varepsilon_{xx} + \bar{\gamma})\hat \imath + 
+(\varepsilon_{yy} + \bar{\gamma} )\hat \jmath
+\end{align*}
 y la configuración deformada mostrada en línea punteada en la \cref{sime}.
-
 
 \begin{figure}[H]
 \centering
@@ -283,64 +316,64 @@ y la configuración deformada mostrada en línea punteada en la \cref{sime}.
 \end{figure}
 
 \subsection{Componentes escalar y distorsional}
-La componente simétrica del tensor de transformación de desplazamientos es análoga al tensor de tensiones estudiado en secciones anteriores. De hecho, dado su caracter simétrico este puede ser estudiado en términos del circulo de Mohr. Identificando esta conexión es posible resolver esta componente en términos adicionales que permiten ahondar en el entendimiento físico del analísis de deformaciones. En particular considere la siguiente descomposición:
+La componente simétrica del tensor de transformación de desplazamientos es 
+análoga al tensor de tensiones estudiado en secciones anteriores. De hecho, 
+dado su carácter simétrico este puede ser estudiado en términos del circulo de 
+Mohr. Identificando esta conexión es posible resolver esta componente en 
+términos adicionales que permiten ahondar en el entendimiento físico del 
+análisis de deformaciones. En particular considere la siguiente descomposición:
 \begin{equation}
-\left[ {\begin{array}{*{20}{c}}
-{{\varepsilon _{xx}}}&\bar{\gamma} \\
-\bar{\gamma} &{{\varepsilon _{yy}}}
-\end{array}} \right] = \left[ {\begin{array}{*{20}{c}}
-{\frac{{{\varepsilon _{xx}} + {\varepsilon _{yy}}}}{2}}&0\\
-0&{\frac{{{\varepsilon _{xx}} + {\varepsilon _{yy}}}}{2}}
-\end{array}} \right] + \left[ {\begin{array}{*{20}{c}}
-{\frac{{{\varepsilon _{xx}} - {\varepsilon _{yy}}}}{2}}&0\\
-0&{\frac{{{\varepsilon _{yy}} - {\varepsilon _{xx}}}}{2}}
-\end{array}} \right] + \left[ {\begin{array}{*{20}{c}}
-0&\bar{\gamma} \\
+\begin{bmatrix}
+\varepsilon_{xx} &\bar{\gamma} \\
+\bar{\gamma} &\varepsilon_{yy}
+\end{bmatrix} = \begin{bmatrix}
+\frac{\varepsilon_{xx} + \varepsilon_{yy}}{2} &0\\
+0 &\frac{\varepsilon_{xx} + \varepsilon_{yy}}{2}
+\end{bmatrix} + \begin{bmatrix}
+\frac{\varepsilon_{xx} - \varepsilon_{yy}}{2} &0\\
+0 &\frac{\varepsilon_{yy} - \varepsilon_{xx}}{2}
+\end{bmatrix} + \begin{bmatrix}
+0 &\bar{\gamma} \\
 \bar{\gamma} &0
-\end{array}} \right]
+\end{bmatrix}
 \label{otras}
 \end{equation}
-
-
-
-en la cual se ha separado la componente simétrica en un término escalar (correspondiente al centro del círculo de Mohr) y en 2 términos con información distorsional controlando el radio del círculo. Escribamos la descomposición de $\epsilon$ como:
-
+en la cual se ha separado la componente simétrica en un término escalar 
+(correspondiente al centro del círculo de Mohr) y en 2 términos con información 
+distorsional controlando el radio del círculo. Escribamos la descomposición de 
+$\varepsilon$ como:
 \[\varepsilon  = pI + S + C\]
+donde se reconoce $p=\frac{\varepsilon_{xx} + \varepsilon_{yy}}{2}$ 
+con lo que el primer término se escribe como:
+\[pI = \begin{bmatrix}
+\frac{\varepsilon_{xx} + \varepsilon_{yy}}{2} &0\\
+0 &\frac{\varepsilon_{xx} + \varepsilon_{yy}}{2}
+\end{bmatrix}\, .\]
 
-donde se reconoce $p={\frac{{{\varepsilon _{xx}} + {\varepsilon _{yy}}}}{2}}$ con lo que el primer término se escribe como:
-
-
-\[pI = \left[ {\begin{array}{*{20}{c}}
-{\frac{{{\varepsilon _{xx}} + {\varepsilon _{yy}}}}{2}}&0\\
-0&{\frac{{{\varepsilon _{xx}} + {\varepsilon _{yy}}}}{2}}
-\end{array}} \right].\]
-
-Similarmente, haciendo $s = \frac{{{\varepsilon _{xx}} - {\varepsilon _{yy}}}}{2}$ escribimos:
-
-
-\[S = \left[ {\begin{array}{*{20}{c}}
-{\frac{{{\varepsilon _{xx}} - {\varepsilon _{yy}}}}{2}}&0\\
-0&{\frac{{{\varepsilon _{yy}} - {\varepsilon _{xx}}}}{2}}
-\end{array}} \right] \equiv \left[ {\begin{array}{*{20}{c}}
-s&0\\
-0&{ - s}
-\end{array}} \right]\]
-
+Similarmente, haciendo $s = \frac{\varepsilon_{xx} - \varepsilon_{yy}}{2}$ 
+escribimos:
+\[S = \begin{bmatrix}
+\frac{\varepsilon_{xx} - \varepsilon_{yy}}{2} &0\\
+0 &\frac{\varepsilon_{yy} - \varepsilon_{xx}}{2}
+\end{bmatrix} \equiv \begin{bmatrix}
+s &0\\
+0 &-s
+\end{bmatrix}\]
 y finalmente
-
-\[C = \left[ {\begin{array}{*{20}{c}}
-0&\bar{\gamma} \\
+\[C = \begin{bmatrix}
+0 &\bar{\gamma} \\
 \bar{\gamma} &0
-\end{array}} \right].\]
+\end{bmatrix}\, .\]
 
 Para entender el efecto físico de cada uno de estos términos aplicaremos nuevamente la transformación al cuadrado unitario previamente definido.
 
-La componente escalar $pI$ genera los siguientes vectores de desplazamientos tras aplicar la \cref{disp}:
-
-\[{{\vec \Delta }_A} = p\hat i\]
-\[{{\vec \Delta }_B} = p\hat j\]
-\[{{\vec \Delta }_C} = p\hat i + p\hat j\]
-
+La componente escalar $pI$ genera los siguientes vectores de desplazamientos 
+tras aplicar la \cref{disp}:
+\begin{align*}
+&\vec{\Delta}_A = p\hat \imath\\
+&\vec{\Delta}_B = p\hat \jmath\\
+&\vec{\Delta}_C = p\hat \imath + p\hat \jmath
+\end{align*}
 resultando en el cambio de forma mostrado en la \cref{scala}
 
 \begin{figure}[H]
@@ -350,14 +383,13 @@ resultando en el cambio de forma mostrado en la \cref{scala}
 	\label{escalar}
 \end{figure}
 
-De manera similar, la primera componente distorsional $S$ genera los siguientes vectores de desplazamientos:
-
-\[{{\vec \Delta }_A} = s\hat i\]
-
-\[{{\vec \Delta }_B} =  - s\hat j\]
-
-\[{{\vec \Delta }_C} = s\hat i - s\hat j\]
-
+De manera similar, la primera componente distorsional $S$ genera los siguientes 
+vectores de desplazamientos:
+\begin{align*}
+&\vec{\Delta}_A = s\hat \imath\\
+&\vec{\Delta}_B =  - s\hat \jmath\\
+&\vec{\Delta}_C = s\hat \imath - s\hat \jmath
+\end{align*}
 resultando en el cambio de forma mostrado en la \cref{disto1}.
 
 \begin{figure}[H]
@@ -368,15 +400,12 @@ resultando en el cambio de forma mostrado en la \cref{disto1}.
 \end{figure}
 
 Luego, aplicando la segunda componente distrosional $C$ da como resultado los siguientes vectores de desplazamientos:
-
-\[{{\vec \Delta }_A} = \gamma \hat j\]
-
-\[{{\vec \Delta }_B} = \gamma \hat i\]
-
-\[{{\vec \Delta }_C} = \gamma \hat i + \gamma \hat j\]
-
+\begin{align*}
+&\vec{\Delta}_A = \gamma \hat \jmath\\
+&\vec{\Delta}_B = \gamma \hat \imath\\
+&\vec{\Delta}_C = \gamma \hat \imath + \gamma \hat \jmath
+\end{align*}
 y en los cambios de configuración mostrados en la \cref{disto2}
-
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.5 in]{disto2.pdf}
@@ -384,14 +413,14 @@ y en los cambios de configuración mostrados en la \cref{disto2}
 	\label{disto2}
 \end{figure}
 
-Finalmente, y en aras de la consistencia apliquemos la componente rotacional $\omega$ (ver \cref{parti}) al cuadrado unitario obteniendo como resultado los siguientes vectors de desplazamientos:
-
-\[{{\vec \Delta }_A} =  - \alpha \hat j\]
-
-\[{{\vec \Delta }_B} = \alpha \hat i\]
-
-\[{{\vec \Delta }_C} = \alpha \hat i - \alpha \hat j\]
-
+Finalmente, y en aras de la consistencia apliquemos la componente rotacional 
+$\omega$ (ver \cref{parti}) al cuadrado unitario obteniendo como resultado los 
+siguientes vectores de desplazamiento:
+\begin{align*}
+&\vec{\Delta}_A =  - \alpha \hat \jmath\\
+&\vec{\Delta}_B = \alpha \hat \imath\\
+&\vec{\Delta}_C = \alpha \hat \imath - \alpha \hat \jmath
+\end{align*}
 y el cambio de configuración mostrado en la \cref{rotarota}
 
 \begin{figure}[H]
@@ -403,9 +432,10 @@ y el cambio de configuración mostrado en la \cref{rotarota}
 
 
 \subsection*{Ejemplo}
-Un tensor dado $D$ permite calcular los desplazamientos $\Delta$   de los puntos en un espacio (en 2-dimensiones) y cuya posición original se encuentra dada por el vector posición ${\vec r}$   de acuerdo con;
-
-\[\vec \Delta  = D \cdot \vec r\]
+Un tensor dado $D$ permite calcular los desplazamientos $\Delta$   de los 
+puntos en un espacio (en 2-dimensiones) y cuya posición original se encuentra 
+dada por el vector posición ${\vec r}$   de acuerdo con
+\[\vec \Delta  = D \cdot \vec r\, .\]
 
 El este tensor resulta de superponer (o sumar) los 2 efectos mostrados en la \cref{eje1a} y \cref{eje1b} en la cual las líneas continuas representan la configuración original y las líneas punteadas la configuración final.
 
@@ -426,74 +456,68 @@ Se pide:
 \item (iii) Determinar las direcciones y valores principales de la componente simétrica $\varepsilon$.
 \end{itemize}
 
-En la primera transformación se tienen los siguientes vectores de posición originales;
-
-\[{\vec r_B} = 1.0\hat j\]
-\[{\vec r_C} = 1.0\hat i\]
-
-y los siguientes vectores de desplazamientos para los puntos $B$ y $C$ respectivamente;
-
-\[{\vec \Delta _B} = 1.0\hat j\]
-\[{\vec \Delta _C} = 1.0\hat i\]
-
+En la primera transformación se tienen los siguientes vectores de posición 
+originales
+\begin{align*}
+&\vec{r}_B = 1.0\hat \jmath\\
+&\vec{r}_C = 1.0\hat \imath
+\end{align*}
+y los siguientes vectores de desplazamientos para los puntos $B$ y $C$ 
+respectivamente;
+\begin{align*}
+&\vec \Delta_B = 1.0\hat \jmath\\
+&\vec \Delta_C = 1.0\hat \imath
+\end{align*}
 planteando para cada punto la ecuación:
-
-\[\left\{ {\begin{array}{*{20}{c}}
-{{\Delta _x}}\\
-{{\Delta _y}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{{\varepsilon _{xx}}}&\bar{\gamma} \\
-\bar{\gamma} &{{\varepsilon _{yy}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{{r_x}}\\
-{{r_y}}
-\end{array}} \right\}\]
-
+\[\begin{Bmatrix}
+\Delta_x\\
+\Delta_y
+\end{Bmatrix} = \begin{bmatrix}
+\varepsilon_{xx} &\bar{\gamma} \\
+\bar{\gamma} &\varepsilon_{yy}
+\end{bmatrix}\begin{Bmatrix}
+r_x\\
+r_y
+\end{Bmatrix}\]
 permite determinar;
+\[\varepsilon \equiv \begin{bmatrix}
+\varepsilon_{xx} &\bar{\gamma}\\
+\bar{\gamma} &\varepsilon_{yy}
+\end{bmatrix} = \begin{bmatrix}
+1.0 &0.0\\
+0.0 &1.0
+\end{bmatrix}\, .\]
 
-\[\varepsilon \equiv \left[ {\begin{array}{*{20}{c}}
-{{\varepsilon _{xx}}}&\bar{\gamma}\\
-\bar{\gamma} &{{\varepsilon _{yy}}}
-\end{array}} \right] = \left[ {\begin{array}{*{20}{c}}
-{1.0}&{0.0}\\
-{0.0}&{1.0}
-\end{array}} \right].\]
-
-Procediendo de manera análoga en el caso de la segunda transformación se tiene que;
-
-\[\omega  \equiv \left[ {\begin{array}{*{20}{c}}
-0&\alpha \\
-{ - \alpha }&0
-\end{array}} \right] = \left[ {\begin{array}{*{20}{c}}
-{0.0}&{0.5}\\
-{ - 0.5}&{0.0}
-\end{array}} \right]\]
-
+De manera análoga, en el caso de la segunda transformación se tiene que
+\[\omega  \equiv \begin{bmatrix}
+0 &\alpha \\
+-\alpha &0
+\end{bmatrix} = \begin{bmatrix}
+0.0 &0.5\\
+-0.5 &0.0
+\end{bmatrix}\]
 por lo que el tensor resultante corresponde a:
-
-\[\varepsilon  + \omega  \equiv \left[ {\begin{array}{*{20}{c}}
-{1.0}&{0.0}\\
-{0.0}&{1.0}
-\end{array}} \right] + \left[ {\begin{array}{*{20}{c}}
-{0.0}&{0.5}\\
-{ - 0.5}&{0.0}
-\end{array}} \right] \equiv \left[ {\begin{array}{*{20}{c}}
-{1.0}&{0.5}\\
-{ - 0.5}&{1.0}
-\end{array}} \right].\]
+\[\varepsilon  + \omega  \equiv \begin{bmatrix}
+1.0 &0.0\\
+0.0 &1.0
+\end{bmatrix} + \begin{bmatrix}
+0.0 &0.5\\
+-0.5 &0.0
+\end{bmatrix} \equiv \begin{bmatrix}
+1.0 &0.5\\
+-0.5 &1.0
+\end{bmatrix}\, .\]
 
 \subsection*{Problema propuesto}
 
 La \cref{problem} corresponde a la configuración original de un medio continuo. Si sobre este se aplica el tensor de transformación de desplazamientos:
-\[D = \left[ {\begin{array}{*{20}{c}}
-{{d_{xx}}}&{{d_{xy}}}\\
-{{d_{yx}}}&{{d_{yy}}}
-\end{array}} \right]\]
-
-
-determinar la configuración deformada del medio indicando claramente el efecto de cada una de las componentes definidas de acuerdo con:
+\[D = \begin{bmatrix}
+d_{xx} &d_{xy}\\
+d_{yx} &d_{yy}
+\end{bmatrix}\]
+determinar la configuración deformada del medio indicando claramente el efecto 
+de cada una de las componentes definidas de acuerdo con:
 \[D = \varepsilon  + \omega  \equiv pI + S + C + \omega \]
-
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.5 in]{problemCap5.pdf}
@@ -503,10 +527,15 @@ determinar la configuración deformada del medio indicando claramente el efecto 
 
 
 \section{Tensor de deformaciones unitarias}
-Procedamos ahora a comparar lo que sucede con una fibra materiales infinitesimal tras haber sido sometida al proceso de deformación. Ésta se muestra en la \cref{pelos} conectando los puntos materiales que ocupan las posiciones $P$ y $Q$ antes de la deformación y las posiciones $p$ y $q$ en la configuración deformada. En la configuración original la fibra $PQ$ esta dada por el vector $d\vec{r}$ expresado en términos de magnitud y dirección como:
-\[d\vec r = \hat ndS\]
+Procedamos ahora a comparar lo que sucede con una fibra materiales 
+infinitesimal tras haber sido sometida al proceso de deformación. Ésta se 
+muestra en la \cref{pelos} conectando los puntos materiales que ocupan las 
+posiciones $P$ y $Q$ antes de la deformación y las posiciones $p$ y $q$ en la 
+configuración deformada. En la configuración original la fibra $PQ$ esta dada 
+por el vector $d\vec{r}$ expresado en términos de magnitud y dirección como:
+\[\dd{\vec r} = \hat n\dd{S}\]
 donde
-\[\hat n = \frac{{dx}}{{dS}}\hat i + \frac{{dy}}{{dS}}\hat j.\]
+\[\hat n = \dv{x}{S}\hat \imath + \dv{y}{S}\hat \jmath\, .\]
 
 \begin{figure}[H]
 \centering
@@ -515,7 +544,10 @@ donde
 	\label{pelos}
 \end{figure}
 
-En la configuración deformada la fibra $PQ$ se convierte en la fibra $pq$ dada por el vector $d\vec{x}$. Ambas se comparan en la \cref{relative} en la que también se identifica el desplazamiento ${{\vec u}_P}$ del punto material $P$ y el desplazamiento ${{\vec u}_Q}$  del punto material $Q$.
+En la configuración deformada la fibra $PQ$ se convierte en la fibra $pq$ dada 
+por el vector $d\vec{x}$. Ambas se comparan en la \cref{relative} en la que 
+también se identifica el desplazamiento $\vec{u}_P$ del punto material $P$ y el 
+desplazamiento $\vec{u}_Q$  del punto material $Q$.
 
 \begin{figure}[H]
 \centering
@@ -524,83 +556,99 @@ En la configuración deformada la fibra $PQ$ se convierte en la fibra $pq$ dada 
 	\label{relative}
 \end{figure}
 
-Escribiendo el desplazamiento relativo $d\vec u$  en términos de los vectores fibra original y deformado $d\vec{r}$ y $d\vec{x}$  se tiene:
-\[d\vec u = d\vec x - d\vec r\]
+Escribiendo el desplazamiento relativo $\dd{\vec u}$  en términos de los 
+vectores fibra original y deformado $\dd{\vec{r}}$ y $\dd{\vec{x}}$  se tiene:
+\[\dd{\vec u} = \dd{\vec x} - \dd{\vec r}\]
 o usando una relación como:
-\[d\vec x = A \cdot d\vec r\]
-donde $A$ transforma $d\vec{r}$ en $d\vec{x}$ se tiene:
-\[d\vec u = \left[ {A - I} \right] \cdot d\vec r\]
-o finalmente:
+\[\dd{\vec x} = A \cdot \dd{\vec r}\]
+donde $A$ transforma $\dd{\vec{r}}$ en $\dd{\vec{x}}$ se tiene:
+\[\dd{\vec u} = [A - I] \cdot \dd{\vec r}\]
+o, finalmente,
 \begin{equation}
-d\vec u = J \cdot d\vec r.
+\dd{\vec u} = J \cdot \dd{\vec r}.
 \label{jacobian}
 \end{equation}
 
-En la expresión \cref{jacobian} el tensor $J$ \footnote{El tensor $J$ es el análogo al tensor $D$ visto en la sección de trasformaciónes lineales} permite obtener el desplazamiento relativo $d\vec{u}$ del punto material $Q$ con respecto a $P$. Escribiendo $d\vec{u}$ en términos de sus componentes rectangulares como
-\[d\vec u = du\hat i + dv\hat j\]
+En la expresión \cref{jacobian} el tensor $J$ \footnote{El tensor $J$ es el 
+análogo al tensor $D$ visto en la sección de trasformaciones lineales} permite 
+obtener el desplazamiento relativo $d\vec{u}$ del punto material $Q$ con 
+respecto a $P$. Escribiendo $d\vec{u}$ en términos de sus componentes 
+rectangulares como
+\[\dd{\vec u} = \dd{u}\hat \imath + \dd{v}\hat \jmath\]
 permite escribir la \cref{jacobian} en forma explicita de acuerdo con:
-\[\left\{ {\begin{array}{*{20}{c}}
-{du}\\
-{dv}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{{J_{xx}}}&{{J_{xy}}}\\
-{{J_{yx}}}&{{J_{yy}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\
-{dy}
-\end{array}} \right\}.\]
+\[\begin{Bmatrix}
+\dd{u}\\
+\dd{v}
+\end{Bmatrix} = \begin{bmatrix}
+J_{xx} &J_{xy}\\
+J_{yx} &J_{yy}
+\end{bmatrix}\begin{Bmatrix}
+\dd{x}\\
+\dd{y}
+\end{Bmatrix}\, .\]
 
-Reconociendo los términos del tensor $J$ como las variaciones de las componentes rectangulares $du$ y $dv$ a lo largo de distancias diferenciales $dx$ y $dy$ permite escribir:
-\[du = {J_{xx}}dx + {J_{xy}}dy \equiv \frac{{\partial u}}{{\partial x}}dx + \frac{{\partial u}}{{\partial y}}dy\]
-\[dv = {J_{yx}}dx + {J_{yy}}dy \equiv \frac{{\partial v}}{{\partial x}}dx + \frac{{\partial v}}{{\partial y}}dy\]
+Reconociendo los términos del tensor $J$ como las variaciones de las 
+componentes rectangulares $\dd{u}$ y $\dd{v}$ a lo largo de distancias 
+diferenciales $\dd{x}$ y $\dd{y}$ permite escribir:
+\begin{align*}
+&\dd{u} = J_{xx} \dd{x} + J_{xy}\dd{y} \equiv \pdv{u}{x}\dd{x} + 
+\pdv{u}{y}\dd{y}\\
+&\dd{v} = J_{yx}\dd{x} + J_{yy}\dd{y} \equiv \pdv{v}{x}\dd{x} + 
+\pdv{v}{x}\dd{y}
+\end{align*}
 o en forma explicita:
-\[\left\{ {\begin{array}{*{20}{c}}
-{du}\\
-{dv}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}}&{\frac{{\partial u}}{{\partial y}}}\\\\
-{\frac{{\partial v}}{{\partial x}}}&{\frac{{\partial v}}{{\partial y}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\
-{dy}
-\end{array}} \right\}\]
-y en donde el tensor $J$ corresponde al gradiente de desplazamientos. Normalizando el vector de desplazamientos relativos por la magnitud original $dS$ de la fibra, permite obtener el desplazamiento relativo unitario como una transformación
-\[\left\{ {\begin{array}{*{20}{c}}
-{\frac{{du}}{{dS}}}\\\\
-{\frac{{dv}}{{dS}}}
-\end{array}} \right\} = \left[ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}}&{\frac{{\partial u}}{{\partial y}}}\\\\
-{\frac{{\partial v}}{{\partial x}}}&{\frac{{\partial v}}{{\partial y}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{\frac{{dx}}{{dS}}}\\\\
-{\frac{{dy}}{{dS}}}
-\end{array}} \right\}\]
+\[\begin{Bmatrix}
+\dd{u}\\
+\dd{v}
+\end{Bmatrix} = \begin{bmatrix}[1.5]
+\pdv{u}{x} &\pdv{u}{y}\\
+\pdv{v}{x} &\pdv{v}{y}
+\end{bmatrix}\begin{Bmatrix}
+\dd{x}\\
+\dd{y}
+\end{Bmatrix}\]
+y en donde el tensor $J$ corresponde al gradiente de desplazamientos. 
+Normalizando el vector de desplazamientos relativos por la magnitud original 
+$\dd{S}$ de la fibra, permite obtener el desplazamiento relativo unitario como 
+una transformación
+\[\begin{Bmatrix}[1.5]
+\dv{u}{S}\\
+\dv{v}{S}
+\end{Bmatrix} = \begin{bmatrix}[1.5]
+\pdv{u}{x} &\pdv{u}{y}\\
+\pdv{v}{x} &\pdv{v}{y}
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dv{x}{S}\\
+\dv{y}{S}
+\end{Bmatrix}\]
 o
 \begin{equation}
-\left\{ {\frac{{d\vec u}}{{dS}}} \right\} = J \cdot \hat n.
+\left\{\dv{\vec u}{S}\right\}  = J \cdot \hat n.
 \label{trans}
 \end{equation}
 
-Para identificar los diferentes efectos contenidos en el gradiente de desplazamientos este se descompone en términos de sus componentes simétrica y anti-simétrica como:
+Para identificar los diferentes efectos contenidos en el gradiente de 
+desplazamientos este se descompone en términos de sus componentes simétrica y 
+anti-simétrica como:
 \[J = \varepsilon  + \omega \]
 o en forma explicita:
-\[\left[ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}}&{\frac{{\partial u}}{{\partial y}}}\\\\
-{\frac{{\partial v}}{{\partial x}}}&{\frac{{\partial v}}{{\partial y}}}
-\end{array}} \right] = \left[ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}}&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}&{\frac{{\partial v}}{{\partial y}}}
-\end{array}} \right] + \left[ {\begin{array}{*{20}{c}}
-0&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)}\\\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)}&0
-\end{array}} \right]\]
-
+\[\begin{bmatrix}[1.5]
+\pdv{u}{x} &\pdv{u}{y}\\
+\pdv{v}{x} &\pdv{v}{y}
+\end{bmatrix} = \begin{bmatrix}[1.5]
+\pdv{u}{x} &\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) &\pdv{v}{y}
+\end{bmatrix} + \begin{bmatrix}[1.5]
+0 &\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\\
+-\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right) &0
+\end{bmatrix}\]
 
 Los efectos físicos de las diferentes componentes del tensor $J$ serán estudiados analizando los cambios impuestos por este sobre el elemento diferencial mostrado en la \cref{diferencial}. En particular, se calcularán los desplazamientos de los puntos $A$, $B$ y $C$ con vectores posición:
-\[{\vec r_A} = dx\hat i\]
-\[{\vec r_B} = dy\hat j\]
-\[{\vec r_C} = dy\hat i + dx\hat j. \]
-
+\begin{align*}
+\vec{r}_A = \dd{x}\hat \imath\\
+\vec{r}_B = \dd{y}\hat \jmath\\
+\vec{r}_C = \dd{y}\hat \imath + \dd{x}\hat \jmath\, .
+\end{align*}
 
 \begin{figure}[H]
 \centering
@@ -609,43 +657,44 @@ Los efectos físicos de las diferentes componentes del tensor $J$ serán estudia
 	\label{diferencial}
 \end{figure}
 
-
 \subsection{Rotación de cuerpo rígido}
 Estudiando inicialmente la componente anti-simétrica $\omega$ del tensor $J$ aplicando la transformación sobre el elemento diferencial se tiene respectivamente para los desplazamientos relativos de los puntos $A$, $B$ y $C$:
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_A} = \left[ {\begin{array}{*{20}{c}}
-0&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)}\\\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)}&0
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\
+\begin{align*}
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_A = \begin{bmatrix}[1.5]
+0 &\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\\
+-\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right) &0
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dd{x}\\
 0
-\end{array}} \right\} \equiv \left\{ {\begin{array}{*{20}{c}}
+\end{Bmatrix} \equiv \begin{Bmatrix}[1.5]
 0\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)dx}
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_B} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
+-\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\dd{x}
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_B = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\dd{y}\\
 0
-\end{array}} \right\}\]
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_C = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\dd{y}\\
+-\frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\dd{x}\\
+\end{Bmatrix}
+\end{align*}
+dando como resultado la configuración deformada de la \cref{crigido}.
 
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_C} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}} \right)dx}
-\end{array}} \right\}\]
-
-dando como resultado la configuración deformada de la \cref{crigido}. Rigurosamente, el elemento experimenta un pequeño cambio de volumen (área) considerado como de segundo orden. Claramente esta componente no involucra fuerzas internas o tensiones. De otro lado se debe identificar que la rotación del elemento esta dada por:
-
-\[\omega = \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} - \frac{{\partial v}}{{\partial x}}}\right)\]
-
+Rigurosamente, el elemento experimenta un pequeño cambio de volumen (área) 
+considerado como de segundo orden. Claramente esta componente no involucra 
+fuerzas internas o tensiones. De otro lado se debe identificar que la rotación 
+del elemento esta dada por:
+\[\omega = \frac{1}{2}\left(\pdv{u}{y} - \pdv{v}{x}\right)\, .\]
 \begin{figure}[H]
 \centering
 	\includegraphics[width=4.0 in]{crigido.pdf}
@@ -655,41 +704,36 @@ dando como resultado la configuración deformada de la \cref{crigido}. Rigurosam
 
 \subsection{Componente simétrica $\varepsilon$}
 Para el punto A
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_A} = \left[ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}}&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}&{\frac{{\partial v}}{{\partial y}}}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\\\
+\[\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_A = \begin{bmatrix}[1.5]
+\pdv{u}{x} &\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) &\pdv{v}{y}
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dd{x}\\
 0
-\end{array}} \right\} \equiv \left\{ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}dx}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dy}
-\end{array}} \right\}\]
+\end{Bmatrix} \equiv \begin{Bmatrix}[1.5]
+\pdv{u}{x}\dd{x}\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\dd{y}
+\end{Bmatrix}\, .\]
 
-Similarmente para los puntos $B$ y $C$;
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_B} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
-{\frac{{\partial v}}{{\partial y}}dy}
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_C} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{{\partial u}}{{\partial x}}dx + \frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dx + \frac{{\partial v}}{{\partial y}}dy}
-\end{array}} \right\}\]
-
+Similarmente, para los puntos $B$ y $C$,
+\[\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_B = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\dd{y}\\
+\pdv{v}{y}\dd{y}
+\end{Bmatrix}\, ,\quad
+\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_C = \begin{Bmatrix}[1.5]
+\pdv{u}{x}\dd{x} + \frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\dd{y}\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\dd{x} + \pdv{v}{y}\dd{y}
+\end{Bmatrix}\, ,\]
 resultando en la configuración mostrada en la \cref{strain}.
-
-
 \begin{figure}[H]
 \centering
 	\includegraphics[width=2.5 in]{strain.pdf}
@@ -697,9 +741,10 @@ resultando en la configuración mostrada en la \cref{strain}.
 	\label{strain}
 \end{figure}
 
-Ahora estudiemos de manera individual los efectos de los distintos compenentes del tensor simétrico $\varepsilon$.
-\subsection{Componente escalar, volumétrica o isotrópica}
+Ahora, estudiemos de manera individual los efectos de los distintos componentes 
+del tensor simétrico $\varepsilon$.
 
+\subsection{Componente escalar, volumétrica o isotrópica}
 \[{\left\{ {\begin{array}{*{20}{c}}
 {du}\\\\
 {dv}
@@ -914,9 +959,12 @@ Luego, las rotaciones de cuerpo rígido son nulas
 
 Nótese que el tensor $\varepsilon $ ya está escrito en sus valores principales, lo que quiere decir que las deformaciones axiales máximas están dadas por: $\frac{S}{E}{K_1}\left( {\nu ,\phi }\right) $ como el estiramiento máximo. y $ \frac{S}{E} {K_2}\ \left({\nu ,\phi } \right)$  como el acortamiento máximo.
 
-\subsection{Ejemplo: Barra apoyada sometida a su peso propio}
+\subsection{Ejemplo: Barra colgante sometida a su peso propio}
 
-En la  \cref{BarApo} se muestra un elemento de sección circular de radio $R$, altura $H$, apoyado en su extremo inferior y que está sometido solamente a la acción de su propio peso. Se indica el campo de desplazamientos en el sistema coordenado $xyz$.
+En la  \cref{BarApo} se muestra una barra de sección circular de radio $R$, 
+altura $H$, fija en su extremo superior y que está sometida solamente a la 
+acción de su propio peso. Se indica el campo de desplazamientos en el sistema 
+coordenado $xyz$.
 \begin{equation*}	
 	u= \nu \dfrac{\gamma}{E} z x 
 	\hspace{2cm}
@@ -987,7 +1035,8 @@ En la figura \cref{ConDef} aparecen la configuración inicial (línea punteada) 
      	- \nu x & - \nu  y &  0\\
  	\end{bmatrix} \]
 	%
-	\item[•]¿Cuáles son los valores m\'aximos y m\'inimos de las deformaciones axiales y en que puntos se presentan? \\
+	\item[•]¿Cuáles son los valores máximos y mínimos de las deformaciones 
+	axiales y en que puntos se presentan? \\
 		
 	\textbf{Solución:} \\
 	
@@ -995,7 +1044,8 @@ $\varepsilon_{xx} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \vareps
 $\varepsilon_{yy} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \varepsilon_{min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{max} = \nu \dfrac{\gamma}{E} H \;\;\; (z=H)$ \\\\
 $\varepsilon_{zz} =  - \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \varepsilon_{min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{max} = - \dfrac{\gamma}{E} H \;\;\; (z=H)$ \\
 	%
-	\item[•] ¿Cuáles son los valores m\'aximos y m\'inimos de los desplazamientos $u$, $v$ y $w$ y en que puntos se presentan?
+	\item[•] ¿Cuáles son los valores máximos y mínimos de los desplazamientos 
+	$u$, $v$ y $w$ y en que puntos se presentan?
 		
 
 $u =  \nu \dfrac{\gamma}{E} zx  \;\; \Longrightarrow  \;\; u_{min} = 0  \;\;\; (x=0),  \;\;\;\;  u_{max} =\abs{ \nu \dfrac{\gamma}{E} HR} \;\;\; (z=H, x=\abs{R})$ \\\\
@@ -1118,7 +1168,8 @@ donde $E$, $\gamma$ y $\nu$ son constantes del material (posititivas).
 	\item Cuáles son los valores máximos y mínimos de las deformaciones axiales, $\varepsilon_{xx}$, $\varepsilon_{yy}$, $\varepsilon_{zz}$, y en que puntos se presentan.
 	\item Cuáles son los valores máximos y mínimos de los desplazamientos: $u$, $v$, $w$ y en que puntos se presentan.
 	\item ¿ Existen puntos exentos de rotaci\'on de cuerpo r\'igido?, responda s\'i o no y justifique su respuesta.	
-	\item ¿ Es posible encontrar puntos sometidos a distorsi\'on angular?, responda s\'i o no y justifique su respuesta.
+	\item ¿ Es posible encontrar puntos sometidos a distorsión angular?, 
+	responda s\'i o no y justifique su respuesta.
 %
 \end{enumerate}
 %
@@ -1131,7 +1182,9 @@ donde $E$, $\gamma$ y $\nu$ son constantes del material (posititivas).
 	$w= \dfrac{\nu M}{EI} Y Z  $\\
 
 
-Donde $u,v,w$ son los desplazamientos asociados a los ejes $X,Y,Z$ respectivamente. $E$ y $\nu$ son constantes  (positivas) del material e $I$ es el momento de inercia alrededor del eje Z de la secci\'on tranversal. \\ 
+Donde $u,v,w$ son los desplazamientos asociados a los ejes $X,Y,Z$ 
+respectivamente. $E$ y $\nu$ son constantes  (positivas) del material e $I$ es 
+el momento de inercia alrededor del eje Z de la sección transversal. \\ 
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=6cm]{VigaMomento.pdf}
@@ -1140,32 +1193,39 @@ Donde $u,v,w$ son los desplazamientos asociados a los ejes $X,Y,Z$ respectivamen
 \end{figure}
 %
 \begin{enumerate}
-\item En la figura \cref{ConfiguraFlector} se muestran esbozos de posibles configuraciones deformadas (secci\'on achurada) de la viga mostrada en la figura \label{VigaMomento}. Determine en cada caso cual es la configuración correcta. 
+\item En la figura \cref{ConfiguraFlector} se muestran esbozos de posibles 
+configuraciones deformadas (sección achurada) de la viga mostrada en la figura 
+\label{VigaMomento}. Determine en cada caso cual es la configuración correcta. 
 %
 \begin{enumerate}
 %
-	\item[•] Para la secci\'on transversal en $X = L$. 
-	\item[•] Para una secci\'on longitudinal cuando $Y > 0$.
-	\item[•]  Para una secci\'on longitudinal asociada al plano ($Y = -H/2$)
-	\item[•]  Para una secci\'on longitudinal asociada al plano ($Z = 0$) 
+	\item[•] Para la sección transversal en $X = L$. 
+	\item[•] Para una sección longitudinal cuando $Y > 0$.
+	\item[•]  Para una sección longitudinal asociada al plano ($Y = -H/2$)
+	\item[•]  Para una sección longitudinal asociada al plano ($Z = 0$) 
 %
 \end{enumerate}
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=12.00cm]{Configuracion.pdf}
-	\caption{Posibles configuraciones deformadas de secci\'on transversal}
+	\caption{Posibles configuraciones deformadas de sección transversal}
 	\label{ConfiguraFlector}
 \end{figure}
 %
 \item Calcule el tensor de deformaciones  $[\varepsilon]$ y el de rotación $[\omega]$ 
-\item Si el valor de la distorsi\'on angular m\'axima es $\gamma$ = $\gamma_{max}$ determine cual es el momento m\'aximo posible, $M_{max}$ que podría ser aplicado. 
+\item Si el valor de la distorsión angular máxima es $\gamma$ = $\gamma_{max}$ 
+determine cual es el momento máximo posible, $M_{max}$ que podría ser aplicado. 
 \item¿Cu\'ales son las coordenadas $x,y,z$ de los puntos que experimentan mayores rotaciones de cuerpo r\'igido?
 \item ¿Cu\'ales son los puntos que experimentan la menor rotaci\'on de cuerpo r\'igido? 
-\item Cuales son los valores m\'aximos y m\'inimos de las deformaciones axiales, $\varepsilon_{xx}$, $\varepsilon_{yx}$, $\varepsilon_{zz}$ y en que puntos se presentan.
-\item Cu\'ales son los valores m\'aximos y m\'inimos de los desplazamientos, $u$, $v$, $w$, y en que puntos se presentan.
+\item Cuales son los valores máximos y mínimos de las deformaciones axiales, 
+$\varepsilon_{xx}$, $\varepsilon_{yx}$, $\varepsilon_{zz}$ y en que puntos se 
+presentan.
+\item Cu\'ales son los valores máximos y mínimos de los desplazamientos, $u$, 
+$v$, $w$, y en que puntos se presentan.
 \item ¿Existen puntos exentos de rotaci\'on de cuerpo r\'igido?, responda s\'i o no y justifique su respuesta.
-\item ¿Es posible encontrar puntos sometidos a distorsi\'on angular?, responda s\'i o no y justifique su respuesta.
+\item ¿Es posible encontrar puntos sometidos a distorsión angular?, responda 
+s\'i o no y justifique su respuesta.
 %
 \end{enumerate}
 
@@ -1198,7 +1258,10 @@ Si en un suelo sometido a la acción de dos estructuras que le transmiten  una c
 \begin{enumerate}
 %
 	\item Determine cuál es el valor de la deformación axial máxima.
-	\item  Si la m\'axima deformaci\'on angular a la que puede ser sometida la tuberia sin fallar, es igual a: $\gamma_{max}$. ¿Cu\'al es el m\'aximo valor de la carga distribuida $P$ que pueden transmitir las estructuras para que la tuber\'ia no falle?. 
+	\item  Si la máxima deformaci\'on angular a la que puede ser sometida la 
+	tuberia sin fallar, es igual a: $\gamma_{max}$. ¿Cu\'al es el máximo valor 
+	de la carga distribuida $P$ que pueden transmitir las estructuras para que 
+	la tuber\'ia no falle?. 
 	\item Esboce la configuraci\'on deformada de la part\'icula correspondiente al punto donde se ubica la tuber\'ia. Solo considere el plano $xy$. 
 \end{enumerate}
 \item \label{punto08_d} En la figura \cref{BarraApoya} se muestra una barra de radio $R$ y longitud $L$. El campo de desplazamientos   en el sistema coordenado $xyz$, est\'a dado por:\\
@@ -1221,8 +1284,10 @@ Donde $u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamen
 \item Calcule el tensor de deformaciones, $[D]$, y determine: tensor de deformaci\'on $[\varepsilon]$ (sim\'etrico) y tensor de rotaci\'on $[\omega]$ (asim\'etrico).
 \item Ilustre la deformaci\'on de la part\'icula en el punto de coordenadas $y = R$ y $x = 0$. Para la ilustraci\'on use cuadrados de tama\~no diferencial contenidos en los planos $xy$, $xz$, $yz$ de forma independiente. En la ilustraci\'on debe incluirse los efectos de cuerpo r\'igido.
 \item ¿ Cu\'ales son los puntos que experimentan mayores rotaciones de cuerpo r\'igido?
-\item Cu\'ales son los valores m\'aximos y m\'inimos de los desplazamientos, $u$, $v$, $w$ y en que puntos se presentan:
-\item  \textquestiondown Es posible encontrar puntos sometidos a distorsi\'on angular?, responda s\'i o no y justifique su respuesta.
+\item Cu\'ales son los valores máximos y mínimos de los desplazamientos, $u$, 
+$v$, $w$ y en que puntos se presentan:
+\item  \textquestiondown Es posible encontrar puntos sometidos a distorsión 
+angular?, responda s\'i o no y justifique su respuesta.
 \end{enumerate}
 
 \item  \label{punto09_d} En la figura \cref{cuna} se presenta una cu\~na de espesor $t$ sometida a la acci\'on de una carga (en el plano $XY$) distribuida sobre su per\'imetro.
@@ -1256,9 +1321,11 @@ Adem\'as, se sabe que:\\\\
 	%
 \end{enumerate}
 
-\item  \label{punto10_d} Si el campo de desplazamientos para la barra mostrada en la \ref{def:Mario} est\'a dado por:\\\\
+\item  \label{punto10_d} Si el campo de desplazamientos para la barra mostrada 
+en la \ref{def:Mario} está dado por:
 %
-	$u\left( x \right) = -\dfrac{1-\nu^2}{E} \sigma_0 x$, \hspace*{10mm} $v=0$, \hspace*{10mm} $w\left( z \right) = \nu \dfrac{1+\nu}{E} \sigma_0 z$
+\[u\left( x \right) = -\dfrac{1-\nu^2}{E} \sigma_0 x\, ,\quad v=0\, ,\quad 
+w\left( z \right) = \nu \dfrac{1+\nu}{E} \sigma_0 z\]
 
 \begin{figure}[H]
 	\centering
@@ -1270,30 +1337,43 @@ Adem\'as, se sabe que:\\\\
 \begin{enumerate}
 %
 	\item Explique a que acciones externas está sometida la barra
-	\item Dibuje la configuracio\'on deformada de la barra
-	\item \textquestiondown Hay partículas sometidas a rotaciones de cuerpo rigido? (responda s\'i o no y justifique su respuesta).
-	\item \textquestiondown Hay partículas que {\textbf{NO}} experimenten distorsiones angulares? (responda si o no y justifique su respuesta).
-	\item En que coordenadas está la part\'icula que sufre mayor deformaci\'on axial y cu\'al es el valor de esta deformaci\'on.
-	\item En que coordenadas est\'a la part\'icula que sufre mayor distorsi\'on angular y cu\'al es el valor de esta deformaci\'on.
-	\item Encuentre los desplazamientos y deformaciones del punto de coordenadas $\left( 0,0,0 \right)$.
+	\item Dibuje la configuración deformada de la barra
+	\item \textquestiondown Hay partículas sometidas a rotaciones de cuerpo 
+	rígido? (responda sí o no y justifique su respuesta).
+	\item \textquestiondown Hay partículas que {\textbf{NO}} experimenten 
+	distorsiones angulares? (responda sí o no y justifique su respuesta).
+	\item En que coordenadas está la partícula que sufre mayor deformación 
+	axial y cuál es el valor de esta deformación.
+	\item En que coordenadas está la partícula que sufre mayor distorsión 
+	angular y cuál es el valor de esta deformación.
+	\item Encuentre los desplazamientos y deformaciones del punto de 
+	coordenadas $(0,0,0)$.
 %
 \end{enumerate}
 %
 % **** Punto 11
 % ***** Empieza modelos constitutivos
 \item   \label{punto11_d} Para un campo de desplazamientos dado por:
-\[\mathbf{u} = a(x^2 - 5y^2)\hat{\mathbf{i}} + (2ax y)\hat{\mathbf{j}} \]
+\[\mathbf{u} = a(x^2 - 5y^2)\hat{\imath} + (2ax y)\hat{\jmath} \]
 
 \begin{enumerate}
 \item Determinar el tensor de deformaci\'on;
 \item Obtener las deformaciones principales.
 \end{enumerate}
 
-\item \label{punto12_d} En la figura \cref{fig:barra} se presenta una barra sobre la cual se aplica una fuerza en dirección $x$ $F_{x}$, que genera  un esfuerzo constante $\sigma_x$ sobre la sección transversal donde está aplicada. La barra inicialmente está  separada de una lámina delgada de acero una distancia $d$ tal y como se muetra en \cref{sfig:barra2D}. El campo de desplazamientos para la barra mostrada está dado por:\\\\
+\item \label{punto12_d} En la figura \cref{fig:barra} se presenta una barra 
+sobre la cual se aplica una fuerza en dirección $x$ $F_{x}$, que genera  un 
+esfuerzo constante $\sigma_x$ sobre la sección transversal donde está aplicada. 
+La barra inicialmente está  separada de una lámina delgada de acero una 
+distancia $d$ tal y como se muestra en \cref{sfig:barra2D}. El campo de 
+desplazamientos para la barra mostrada está dado por:\\\\
 %
  $u\left( x \right) = \dfrac{1}{E_1}  x \sigma_x$, \hspace*{10mm} $v=0$, \hspace*{10mm} $w\left( z \right) = - \dfrac{1}{E_2}  z (H^2 - y^2) \sigma_x$ \\
 
-Donde $E_1 = 200000 kgf/cm^2$,   y $E_2 = 1000000$ $kgf/cm^4$, $L = 1000 cm$, $H= 10 cm$.   $\sigma_x$ es el esfuerzo en dirección $x$ el cual tiene una variación en el tiempo deacuerdo a como lo muestra la  \cref{sfig:stress}.  
+Donde $E_1 = 200000 \text{ kgf/cm}^2$,   y $E_2 = 1000000 \text{ kgf/cm}^4$, $L 
+= 1000 \text{ cm}$, $H = 10 \text{ cm}$. $\sigma_x$ es el esfuerzo en dirección 
+$x$ el cual tiene una variación en el tiempo de acuerdo a como lo muestra la  
+\cref{sfig:stress}.  
 
 \begin{figure}[H]
 	\centering
@@ -1311,7 +1391,10 @@ Donde $E_1 = 200000 kgf/cm^2$,   y $E_2 = 1000000$ $kgf/cm^4$, $L = 1000 cm$, $H
 	%
 	\item Para el punto A de la barra con coordenadas  $(x,y,z) = (L, 0, B)$ grafique los desplazamientos $u$ y $w$ en función de tiempo. 
 	\item Dibuje la configuración deformada de la partícula para el punto de coordenadas $(x,y,z)=$ $(0,0,0)$ 
-	\item  Si el valor de $\sigma_x = 50  kgf/cm^2$ y se estudian solo los puntos de la cara $ z = 1.0 cm$ determinar el valor de la distorsión angular máxima y las coordenadas $x,y,z$ de los puntos  en que se presenta. 	
+	\item  Si el valor de $\sigma_x = 50 \text{ kgf/cm}^2$ y se estudian solo 
+	los puntos de la cara $ z = 1.0 cm$ determinar el valor de la distorsión 
+	angular máxima y las coordenadas $x,y,z$ de los puntos  en que se 
+	presenta. 	
 	\item Si el esfuerzo  $\sigma_x$ se incrementa  hasta que el punto  $A$ con coordenadas  $(x,y,z) = (L, 0, B)$ toque la lámina, determine el tiempo $t$  en el que la barra toca la lámina. ¿Cuáles serían las coordenas finales $x$, $z$ del punto A en ese instante?
 
 \end{enumerate}

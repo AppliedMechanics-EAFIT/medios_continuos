@@ -23,6 +23,7 @@
 \usepackage{cleveref}
 \usepackage{parskip}
 \usepackage[left=3cm,right=3cm,top=4.0cm,bottom=3cm]{geometry}
+\usepackage{physics}
 
 %% Configuracion paquetes
 
@@ -53,7 +54,6 @@
 }
 
 % Nuevos Comandos
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\figurename}{Figura}
 \renewcommand{\contentsname}{Tabla de Contenido}
@@ -61,6 +61,16 @@
 \renewcommand{\listfigurename}{Lista de figuras}
 \newcommand{\urlbib}[1]{{\footnotesize{\url{#1}}}} % para incluir urls en las referencias
 \newcommand{\fullref}[1]{\ref{#1} de la página \pageref{#1}}
+
+% Matrices con separacion ajustable
+% Tomado de: https://tex.stackexchange.com/a/14072/60473
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+    \edef\arraystretch{#1}%
+    \hskip -\arraycolsep
+    \let\@ifnextchar\new@ifnextchar
+    \array{*\c@MaxMatrixCols c}}
+\makeatother
 
 %% Ajustes
 \decimalpoint
