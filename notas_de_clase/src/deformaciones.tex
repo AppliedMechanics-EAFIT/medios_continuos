@@ -3,7 +3,7 @@
 
 \chapter{Análisis de Deformaciones}
 
-\graphicspath{{img/Cap5/}}
+\graphicspath{{img/deformaciones/}}
 \section{Introducción}
 
 Al final de esta sección el estudiante deberá estar en la capacidad de:
@@ -745,35 +745,36 @@ Ahora, estudiemos de manera individual los efectos de los distintos componentes
 del tensor simétrico $\varepsilon$.
 
 \subsection{Componente escalar, volumétrica o isotrópica}
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_A} = \left[ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)}&0\\\\
-0&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\\\
-0
-\end{array}} \right\} \equiv \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)dx}\\\\
-0
-\end{array}} \right\}\]
 
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_B} = \left\{ {\begin{array}{*{20}{c}}
-0\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)dy}
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_C} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)dx}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} + \frac{{\partial v}}{{\partial y}}} \right)dy}
-\end{array}} \right\}\]
+\begin{align*}
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_A = \begin{bmatrix}[1.5]
+\frac{1}{2}\left( \pdv{u}{x} + \pdv{v}{y}\right) & 0\\
+0 & \frac{1}{2}\left(\pdv{u}{x} + \pdv{v}{y}\right)
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dd{x}\\
+0
+\end{Bmatrix} \equiv \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{x} + \pdv{v}{y}\right)\dd{x}\\
+0
+\end{Bmatrix}\\
+&\begin{Bmatrix}
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_B = \begin{Bmatrix}[1.5]
+0\\
+\frac{1}{2}\left(\pdv{u}{x} + \pdv{v}{y}\right) \dd{y}
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_C = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{x} + \pdv{v}{y}\right)\dd{x}\\
+\frac{1}{2}\left(\pdv{u}{x} + \pdv{v}{y}\right)\dd{y}
+\end{Bmatrix}
+\end{align*}
 
 \begin{figure}[H]
 \centering
@@ -784,35 +785,35 @@ del tensor simétrico $\varepsilon$.
 
 \subsection{Componente distorsional}
 
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_A} = \left[ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)}&0\\\\
-0&{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)}
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\\\
+\begin{align*}
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_A = \begin{bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right) &0\\
+0 &-\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right)
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dd{x}\\
 0
-\end{array}} \right\} \equiv \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)dx}\\\\
+\end{Bmatrix} \equiv \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right)\dd{x}\\
 0
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_B} = \left\{ {\begin{array}{*{20}{c}}
-0\\\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)dy}
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_C} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)dx}\\\\
-{ - \frac{1}{2}\left( {\frac{{\partial u}}{{\partial x}} - \frac{{\partial v}}{{\partial y}}} \right)dy}
-\end{array}} \right\}\]
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_B = \begin{Bmatrix}[1.5]
+0\\
+-\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right) \dd{y}
+\end{Bmatrix} \\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_C = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right) \dd{x}\\
+-\frac{1}{2}\left(\pdv{u}{x} - \pdv{v}{y}\right)\dd{y}
+\end{Bmatrix}
+\end{align*}
 
 \begin{figure}[H]
 \centering
@@ -821,35 +822,35 @@ del tensor simétrico $\varepsilon$.
 	\label{1dist}
 \end{figure}
 
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_A} = \left[ {\begin{array}{*{20}{c}}
-0&{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)}&0
-\end{array}} \right]\left\{ {\begin{array}{*{20}{c}}
-{dx}\\\\
+\begin{align*}
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_A = \begin{bmatrix}[1.5]
+0 &\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) &0
+\end{bmatrix} \begin{Bmatrix}[1.5]
+\dd{x}\\
 0
-\end{array}} \right\} \equiv \left\{ {\begin{array}{*{20}{c}}
+\end{Bmatrix} \equiv \begin{Bmatrix}[1.5]
 0\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dx}
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_B} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) \dd{x}
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_B = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) \dd{y}\\
 0
-\end{array}} \right\}\]
-
-\[{\left\{ {\begin{array}{*{20}{c}}
-{du}\\\\
-{dv}
-\end{array}} \right\}_C} = \left\{ {\begin{array}{*{20}{c}}
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dy}\\\\
-{\frac{1}{2}\left( {\frac{{\partial u}}{{\partial y}} + \frac{{\partial v}}{{\partial x}}} \right)dx}
-\end{array}} \right\}\]
+\end{Bmatrix}\\
+&\begin{Bmatrix}[1.5]
+\dd{u}\\
+\dd{v}
+\end{Bmatrix}_C = \begin{Bmatrix}[1.5]
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) \dd{y}\\
+\frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right) \dd{x}
+\end{Bmatrix}
+\end{align*}
 
 \begin{figure}[H]
 \centering
@@ -858,65 +859,64 @@ del tensor simétrico $\varepsilon$.
 	\label{2dist}
 \end{figure}
 
-Ahora, en el argot ingenieril es común a cada término de la componente simétrica del tensor gradiente de desplazamientos asignarle una nomenclatura particular. Para generalizar la definición consideremos el tensor $\varepsilon$ expresado en coordenadas cartesianas. 
+Ahora, en el argot ingenieril es común a cada término de la componente 
+simétrica del tensor gradiente de desplazamientos asignarle una nomenclatura 
+particular. Para generalizar la definición consideremos el tensor $\varepsilon$ 
+expresado en coordenadas cartesianas.
 \[	
 [\varepsilon] =
-\begin{bmatrix}
-	\dfrac{\partial u}{\partial x} & \dfrac{1}{2} \left(\dfrac{\partial u}{\partial y} + \dfrac{\partial v}{\partial x}\right)  & \dfrac{1}{2} \left(\dfrac{\partial u}{\partial z} + \dfrac{\partial w}{\partial x}\right) \\\\
-	\dfrac{1}{2} \left( \dfrac{\partial v}{\partial x} + \dfrac{\partial u}{\partial y} \right)  & \dfrac{\partial v}{\partial y} & \dfrac{1}{2} \left(\dfrac{\partial v}{\partial z}+\dfrac{\partial w}{\partial y}\right) \\\\
-	 \dfrac{1}{2} \left(\dfrac{\partial w}{\partial x} + \dfrac{\partial u}{\partial z} \right) & \dfrac{1}{2} \left(\dfrac{\partial w}{\partial y} + \dfrac{\partial v}{\partial z}\right)  & \dfrac{\partial w}{\partial z}
-\end{bmatrix}\]\\
-
-o escrito de otra forma: 
+\begin{bmatrix}[2]
+  \pdv{u}{x} & \frac{1}{2} \left(\pdv{u}{y} + \pdv{v}{x}\right)
+  & \frac{1}{2} \left(\pdv{u}{z} + \pdv{w}{x}\right) \\
+  \frac{1}{2} \left(\pdv{v}{x} + \pdv{u}{y}\right)  & \pdv{v}{y}
+  & \frac{1}{2}	\left(\pdv{v}{z} + \pdv{w}{y}\right) \\
+  \frac{1}{2} \left(\pdv{w}{x} + \pdv{u}{z}\right) & \frac{1}{2} 
+  \left(\pdv{w}{y} + \pdv{v}{z}\right)  & \pdv{w}{z}
+\end{bmatrix}\, ,\]
+o, escrito de otra forma: 
 \[	
 [\varepsilon] =
-\begin{bmatrix}
-	\varepsilon_{xx} & \dfrac{1}{2} \gamma_{xy} & \dfrac{1}{2} \gamma_{xz}  \\\\
-	\dfrac{1}{2} \gamma_{xy}  & \varepsilon_{yy} & \dfrac{1}{2}  \gamma_{yz}  \\\\
-	 \dfrac{1}{2} \gamma_{xz} & \dfrac{1}{2} \gamma_{yz}  &  \varepsilon_{zz}
+\begin{bmatrix}[2]
+  \varepsilon_{xx} & \dfrac{1}{2} \gamma_{xy} & \dfrac{1}{2} \gamma_{xz}  \\
+  \dfrac{1}{2} \gamma_{xy}  & \varepsilon_{yy} & \dfrac{1}{2}  \gamma_{yz}  \\
+  \dfrac{1}{2} \gamma_{xz} & \dfrac{1}{2} \gamma_{yz}  &  \varepsilon_{zz}
 \end{bmatrix}\]\\
 
 En donde $\varepsilon_{xx}$, $\varepsilon_{yy}$ y $\varepsilon_{zz}$ son conocidas como deformaciones axiales o normales y  $\gamma_{xy}$ ,$ \gamma_{xz}$  y $\gamma_{yz}$  como deformaciones angulares o deformaciones por cortante. 
 
-Por otro lado, la componente rotacional podría escribirse 
-
+Por otro lado, la componente rotacional podría escribirse
 \[	
 [\omega] =
 \begin{bmatrix}
-	0 & \omega_{xy}  &  \omega_{xz} \\\\
-	 -\omega_{xy}  & 0 &  \omega_{yz} \\\\ 
-	 -\omega_{xz}  & -\omega_{yz}  &  0
-\end{bmatrix}\] 
+  0 & \omega_{xy}  &  \omega_{xz} \\
+  -\omega_{xy}  & 0 &  \omega_{yz} \\
+  -\omega_{xz}  & -\omega_{yz}  &  0
+\end{bmatrix}\, ,\]
+en donde $\omega_{xy}$, $\omega_{xz}$ y  $\omega_{yz}$ representan la rotación 
+de cuerpo rígido respecto a los ejes $z$, $y$ y $x$ respectivamente.
 
-en donde $\omega_{xy}$, $\omega_{xz}$ y  $\omega_{yz}$ representan la rotación de cuerpo rígido respecto a los ejes $z$, $y$ y $x$ respectivamente. 
-
-
-Para terminar, el tensor $\varepsilon$ en coordenadas cilíndricas está definido como:  
-
+Para terminar, el tensor $\varepsilon$ en coordenadas cilíndricas está definido 
+como: 
 \[	
 [\varepsilon] =
-\begin{bmatrix}
-	\varepsilon_{rr} & \dfrac{1}{2} \gamma_{r\theta} & \dfrac{1}{2} \gamma_{rz}  \\\\
-	\dfrac{1}{2} \gamma_{r\theta}  & \varepsilon_{{\theta}{\theta}} & \dfrac{1}{2}  \gamma_{{\theta}z}  \\\\
-	 \dfrac{1}{2} \gamma_{rz} & \dfrac{1}{2} \gamma_{{\theta}z}  &  \varepsilon_{zz}
-\end{bmatrix}\]
-
-
-\begin{equation*}	
-	\varepsilon_{rr} = \dfrac{\partial u}{\partial r}
-	\hspace{1cm}
-	\varepsilon_{\theta \theta} = \dfrac{u}{r} + \dfrac{1}{r} \dfrac{\partial v}{\partial \theta}
-	\hspace{1cm}
-	\varepsilon_{zz} = \dfrac{\partial w}{\partial z} 
-\end{equation*}
-
-\begin{equation*}	
-	\gamma_{r \theta} = \dfrac{1}{r} \dfrac{\partial u}{\partial \theta} + \dfrac{\partial v}{\partial r} - \dfrac{v}{r} 
-	\hspace{1cm}
-	\gamma_{\theta z} = \dfrac{\partial v}{\partial z} + \dfrac{1}{r} \dfrac{\partial w}{\partial \theta} 
-	\hspace{1cm}
-	\gamma_{rz}	 = \dfrac{\partial u}{\partial z} + \dfrac{\partial w}{\partial r}
-\end{equation*}
+\begin{bmatrix}[2]
+  \varepsilon_{rr} & \dfrac{1}{2} \gamma_{r\theta} & \dfrac{1}{2} \gamma_{rz}  
+  \\
+  \dfrac{1}{2} \gamma_{r\theta}  & \varepsilon_{\theta\theta} & 
+  \dfrac{1}{2}  \gamma_{\theta z}  \\
+  \dfrac{1}{2} \gamma_{rz} & \dfrac{1}{2} \gamma_{\theta z}  &  
+  \varepsilon_{zz}
+\end{bmatrix}\, ,\]
+en donde
+\begin{align*}	
+    &\varepsilon_{rr} = \pdv{u}{r}\, ,\qquad
+    \varepsilon_{\theta \theta} = \frac{u}{r} + \frac{1}{r}\pdv{v}{\theta}\, ,
+    \quad \varepsilon_{zz} = \pdv{w}{z}\, ,\\
+    &\gamma_{r \theta} = \frac{1}{r} \pdv{u}{\theta} + \pdv{v}{r} - 
+    \frac{v}{r}\, ,\quad
+    \gamma_{\theta z} = \pdv{v}{z} + \frac{1}{r}\pdv{w}{\theta}\, ,\quad
+    \gamma_{rz}	 = \pdv{u}{z} + \pdv{w}{r}\, .
+\end{align*}
 
 \section*{Ejemplo}
 
@@ -939,41 +939,58 @@ donde $u$ y $v$ corresponden a los desplazamientos en las direcciones horizontal
 \item[•] Determinar las direcciones de máximo cambio de tamaño y máxima rotación.
 \end{itemize}
 
-Para esbozar la configuración deformada de la cuña es preciso evaluar el campo de desplazamientos en puntos de la misma. Por la linealidad de las funciones del campo de desplazamientos $u$ y $v$ y por la simetría del problema, en este caso reviremos lo que pasa en cada una de las esquinas \footnote{para funciones de desplazamiento más complejas puede ser preciso usar métodos más elaborados para la evaluación de dichas funciones}. Es decir, evaluamos los desplazamientos en los puntos $A = (0,0)$,  $B = (\ell \cos\phi, \ell \sin\phi)$, $C = (\ell \cos\phi, -\ell \sin\phi)$ y $D = (2\ell \cos\phi,0)$. En la \cref{wedgedef} se muestra esquemáticamente en linea punteada la configuración deformada de la cuña. Nótese  como los puntos ubicados en el eje de simetría $A-D$ solo tienen desplazamiento en $x$, $u$, mientras que los puntos en el eje de simetría $B-C$ solo en $y$, $v$. El punto central del medio continuo no se desplaza. 
+Para esbozar la configuración deformada de la cuña es preciso evaluar el campo 
+de desplazamientos en puntos de la misma. Debido a la linealidad de las 
+funciones del campo de desplazamientos $u$ y $v$ y por la simetría del 
+problema miramos lo que pasa en cada una de las esquinas
+\footnote{Para funciones de desplazamiento más complejas puede ser preciso usar 
+métodos más elaborados para la evaluación de dichas funciones.}. Es decir, 
+evaluamos los desplazamientos en los puntos $A = (0,0)$,  $B = (\ell \cos\phi, 
+\ell \sin\phi)$, $C = (\ell \cos\phi, -\ell \sin\phi)$ y $D = (2\ell 
+\cos\phi,0)$. En la \cref{wedgedef} se muestra esquemáticamente en linea 
+punteada la configuración deformada de la cuña. Nótese  como los puntos 
+ubicados en el eje de simetría $A-D$ solo tienen desplazamiento en $x$, $u$, 
+mientras que los puntos en el eje de simetría $B-C$ solo en $y$, $v$. El punto 
+central del medio continuo no se desplaza. 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=3.0 in]{wedgedef.pdf}
-	\caption{Configuación final Cuña auto-soportada.}
+	\caption{Configuración final Cuña auto-soportada.}
 	\label{wedgedef}
 \end{figure}
 
 Por otro lado, el tensor gradiente de desplazamientos está dado por: 
-\[J = \frac{S}{E}\left[ {\begin{array}{*{20}{c}}
-{{K_1}\left( {\nu ,\phi } \right)}&0\\
-0&{ - {K_2}\left( {\nu ,\phi } \right)}
-\end{array}} \right]\]
+\[J = \frac{S}{E}\begin{bmatrix}[1.5]
+K_1(\nu, \phi) &0\\
+0 &-K_2(\nu, \phi)
+\end{bmatrix}\]
 y, en este caso, se tiene que \(\varepsilon  \equiv J\).
 
 Luego, las rotaciones de cuerpo rígido son nulas
 \[\omega  = 0\, .\]
 
-Nótese que el tensor $\varepsilon $ ya está escrito en sus valores principales, lo que quiere decir que las deformaciones axiales máximas están dadas por: $\frac{S}{E}{K_1}\left( {\nu ,\phi }\right) $ como el estiramiento máximo. y $ \frac{S}{E} {K_2}\ \left({\nu ,\phi } \right)$  como el acortamiento máximo.
+Nótese que el tensor $\varepsilon$ ya está escrito en sus valores principales, 
+lo que quiere decir que las deformaciones axiales máximas están dadas por: 
+$\frac{S}{E} K_1(\nu, \phi)$ como el estiramiento máximo, y $\frac{S}{E} 
+K_2(\nu, \phi)$ como el acortamiento máximo.
 
-\subsection{Ejemplo: Barra colgante sometida a su peso propio}
+\subsection{Ejemplo: Barra sometida a su peso propio}
 
 En la  \cref{BarApo} se muestra una barra de sección circular de radio $R$, 
-altura $H$, fija en su extremo superior y que está sometida solamente a la 
+altura $H$, fija en su extremo inferior y que está sometida solamente a la 
 acción de su propio peso. Se indica el campo de desplazamientos en el sistema 
 coordenado $xyz$.
 \begin{equation*}	
-	u= \nu \dfrac{\gamma}{E} z x 
-	\hspace{2cm}
-	v= \nu \dfrac{\gamma}{E} z y 
-	\hspace{2cm}
-	w= -\dfrac{\gamma}{2E} z^2 - \dfrac{\gamma \nu}{2E} (x^2+y^2)+\dfrac{\gamma}{2E} H^2  
+	u = \nu \dfrac{\gamma}{E} z x\, ,
+	\hspace{1cm}
+	v = \nu \dfrac{\gamma}{E} z y\, ,
+	\hspace{1cm}
+	w = -\dfrac{\gamma}{2E} z^2 - \dfrac{\gamma \nu}{2E} 
+	(x^2+y^2)+\dfrac{\gamma}{2E} H^2\, , 
 \end{equation*}
-
-Donde 	$u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamente. $E$, $\gamma$ y $\nu$ son constantes del material. \\ 		\begin{figure}[h]
+donde $u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$,  
+respectivamente. $E$, $\gamma$ y $\nu$ son constantes del material.	
+\begin{figure}[h]
 	\centering
 	\includegraphics[height=6cm]{barraapoyada.pdf}
 	\caption{Barra apoyada}
@@ -982,21 +999,35 @@ Donde 	$u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivame
 
 \begin{enumerate}
 
-	\item[•] Esboce la configuración deformada de la barra.\\
+\item[•] Esboce la configuración deformada de la barra.
 	
-	\textbf{Solución:}\\
+\subsubsection{Solución:}
 	
-	Para esbozar una configuración deformada lo hacemos a partir del campo de desplazamientos $u$, $v$, $w$. Para realizarla  hagamos un corte transversal (plano $xy$) y un corte longitudinal (plano $xz$) y evaluemos que pasa con los desplazamientos en algunos puntos de la frontera. \\
-	
-$x = 0,  \;\;  y = 0,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  \;\;\;   v = 0, \;\;\;   w = \dfrac{\gamma}{2E} H $\\\\
-$x =\pm R,  \;\;  y = 0,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  \;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2 +  \dfrac{\gamma}{2E} H^2$  \\\\
-$x =0,  \;\;  y = \pm R,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  \;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2 +  \dfrac{\gamma}{2E} H^2$  \\\\
-$x = 0,  \;\;  y = 0,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u = 0,  \;\;\;   v = 0, \;\;\;   w = 0$  \\\\
-$x = \pm R,  \;\;  y = 0,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u =\pm \nu \dfrac{\gamma}{E} H R,   \;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2$  \\\\
-$x = 0,  \;\;  y = \pm R,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u =0,   \;\;\;   v = \pm \nu \dfrac{\gamma}{E} H R, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2$  \\
+Para esbozar una configuración deformada lo hacemos a partir del campo de 
+desplazamientos $u$, $v$, $w$. Para realizarla  hagamos un corte transversal 
+(plano $xy$) y un corte longitudinal (plano $xz$) y evaluemos que pasa con los 
+desplazamientos en algunos puntos de la frontera.
+\begin{align*}
+&x = 0,  \;\;  y = 0,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  
+\;\;\;   v = 0, \;\;\;   w = \dfrac{\gamma}{2E} H \\
+&x =\pm R,  \;\;  y = 0,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  
+\;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2 +  \dfrac{\gamma}{2E} 
+H^2\\
+&x =0,  \;\;  y = \pm R,  \;\; z = 0.  \;\;   \Longrightarrow  \;\; u = 0,  
+\;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} R^2 +  \dfrac{\gamma}{2E} 
+H^2\\
+&x = 0,  \;\;  y = 0,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u = 0,  
+\;\;\;   v = 0, \;\;\;   w = 0  \\
+&x = \pm R,  \;\;  y = 0,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u =\pm \nu 
+\dfrac{\gamma}{E} H R,   \;\;\;   v = 0, \;\;\;   w = - \dfrac{\gamma \nu}{2E} 
+R^2\\
+&x = 0,  \;\;  y = \pm R,  \;\; z = H.  \;\;   \Longrightarrow  \;\; u =0,   
+\;\;\;   v = \pm \nu \dfrac{\gamma}{E} H R, \;\;\;   w = - \dfrac{\gamma 
+\nu}{2E} R^2
+\end{align*}
 
-En la figura \cref{ConDef} aparecen la configuración inicial (línea punteada) y final del elemento. 
-
+En la figura \cref{ConDef} aparecen la configuración inicial (línea punteada) y 
+final del elemento. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=4.5cm]{Configura.pdf}
@@ -1004,100 +1035,130 @@ En la figura \cref{ConDef} aparecen la configuración inicial (línea punteada) 
 	 \label{ConDef}
 \end{figure}
 %	
-	\item[•] Calcule el tensor de deformaciones y descompóngalo en $[\varepsilon]$ (sim\'etrico) y $[\omega]$ (asim\'etrico).
-		
-	\textbf{Solución:}\\
+\item[•] Calcule el tensor gradiente de desplazamientos y descompóngalo en 
+$[\varepsilon]$ (simétrico) y $[\omega]$ (asimétrico).
 	
-	El tensor gradiente de desplazamientos está dado por: 
-	
-	\[[D]
- 	=   \dfrac{\gamma}{E}
- 	\begin{bmatrix}
-     	 \nu  z & 0 &  \nu  x\\
-     	0 &  \nu  z &  \nu  y\\
-     	- \nu x & - \nu  y &  - z\\
- 	\end{bmatrix} \]
- 	
- 	El tensor  $\varepsilon$ y $\omega$ está dado por: 
- 		\[[\varepsilon]
- 	= \dfrac{\gamma}{E}
- 	\begin{bmatrix}
-     	 \nu  z & 0 &  0\\
-     	0 &  \nu  z &  0\\
-     	0 & 0 &  -  z\\
- 	\end{bmatrix} 
- 	\hspace{2cm}
- 	[\omega]
- 	= \dfrac{\gamma}{E}
- 	\begin{bmatrix}
-     	 0 & 0 &  \nu x\\
-     	0 & 0 &  \nu y\\
-     	- \nu x & - \nu  y &  0\\
- 	\end{bmatrix} \]
-	%
-	\item[•]¿Cuáles son los valores máximos y mínimos de las deformaciones 
-	axiales y en que puntos se presentan? \\
-		
-	\textbf{Solución:} \\
-	
-$\varepsilon_{xx} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \varepsilon_{min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{max} = \nu \dfrac{\gamma}{E} H \;\;\; (z=H) $\\\\
-$\varepsilon_{yy} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \varepsilon_{min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{max} = \nu \dfrac{\gamma}{E} H \;\;\; (z=H)$ \\\\
-$\varepsilon_{zz} =  - \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; \varepsilon_{min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{max} = - \dfrac{\gamma}{E} H \;\;\; (z=H)$ \\
-	%
-	\item[•] ¿Cuáles son los valores máximos y mínimos de los desplazamientos 
-	$u$, $v$ y $w$ y en que puntos se presentan?
-		
+\subsubsection{Solución:}
 
-$u =  \nu \dfrac{\gamma}{E} zx  \;\; \Longrightarrow  \;\; u_{min} = 0  \;\;\; (x=0),  \;\;\;\;  u_{max} =\abs{ \nu \dfrac{\gamma}{E} HR} \;\;\; (z=H, x=\abs{R})$ \\\\
-$v =  \nu \dfrac{\gamma}{E} zy  \;\; \Longrightarrow  \;\; v_{min} = 0  \;\;\; (y=0),  \;\;\;\;  v_{max} =\abs{ \nu \dfrac{\gamma}{E} HR} \;\;\; (z=H, y=\abs{R})$ \\
+El tensor gradiente de desplazamientos está dado por: 
+\[[D]	=   \dfrac{\gamma}{E}
+\begin{bmatrix}
+ \nu  z & 0 &  \nu  x\\
+ 0 &  \nu  z &  \nu  y\\
+ - \nu x & - \nu  y &  - z
+\end{bmatrix}\, . \]
+	
+El tensor  $\varepsilon$ y $\omega$ están dados por: 
+\[[\varepsilon] = \dfrac{\gamma}{E}
+\begin{bmatrix}
+  \nu  z & 0 &  0\\
+  0 &  \nu  z &  0\\
+  0 & 0 &  -  z
+\end{bmatrix}\, ,
+\hspace{2cm}
+[\omega]
+= \dfrac{\gamma}{E}
+\begin{bmatrix}
+  0 & 0 &  \nu x\\
+  0 & 0 &  \nu y\\
+ -\nu x & -\nu  y &  0
+\end{bmatrix}\, . \]
 
-	Para el caso del desplazamiento en $z$ los máximos dependen de la relación entre $H^2$ y $R^2=x^2 + y^2$. Supongamos $H>R$. 
+\item[•] ¿Cuáles son los valores máximos y mínimos de las deformaciones 
+axiales y en que puntos se presentan? 
+	
+\subsubsection{Solución:}
+\begin{align*}	
+&\varepsilon_{xx} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; 
+\varepsilon_{\min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{\max} = \nu 
+\dfrac{\gamma}{E} H \;\;\; (z=H) \\
+&\varepsilon_{yy} =  \nu \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; 
+\varepsilon_{\min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{\max} = \nu 
+\dfrac{\gamma}{E} H \;\;\; (z=H)\\
+&\varepsilon_{zz} =  - \dfrac{\gamma}{E} z  \;\; \Longrightarrow  \;\; 
+\varepsilon_{\min} = 0  \;\;\; (z=0),  \;\;\;\;  \varepsilon_{\max} = - 
+\dfrac{\gamma}{E} H \;\;\; (z=H)
+\end{align*}
+
+\item[•] ¿Cuáles son los valores máximos y mínimos de los desplazamientos 
+$u$, $v$ y $w$ y en que puntos se presentan?
+
+\subsubsection{Solución:}
+\begin{align*}
+&u =  \nu \dfrac{\gamma}{E} zx  \;\; \Longrightarrow  \;\; u_{\min} = 0  \;\;\; 
+(x=0),  \;\;\;\;  u_{\max} =\abs{ \nu \dfrac{\gamma}{E} HR} \;\;\; (z=H, 
+x=\abs{R}) \\
+&v =  \nu \dfrac{\gamma}{E} zy  \;\; \Longrightarrow  \;\; v_{\min} = 0  \;\;\; 
+(y=0),  \;\;\;\;  v_{\max} =\abs{ \nu \dfrac{\gamma}{E} HR} \;\;\; (z=H, 
+y=\abs{R})
+\end{align*}
+
+Para el caso del desplazamiento en $z$ los máximos dependen de la relación 
+entre $H^2$ y $R^2=x^2 + y^2$. Supongamos $H>R$. 
 	
 
-$w_{min} = 0  \;\;\; ( x=y=0,z=H),  \;\;\;\;  w_{max} = \dfrac{\gamma}{2E} H^2  \;\;\; ( x=y=z=0)$ \\
+\[w_{\min} = 0  \;\;\; ( x=y=0,z=H),  \;\;\;\;  w_{\max} = \dfrac{\gamma}{2E} 
+H^2  \;\;\; (x=y=z=0)\]
 
+\item[•]¿Existen puntos exentos de rotación de cuerpo rígido?, responda 
+sí o no y justifique su respuesta.
 
-	\item[•]¿Existen puntos exentos de rotaci\'on de cuerpo r\'igido?, responda s\'i o no y justifique su respuesta.\\
-	
-	\textbf{Solución:}\\
-	
-	Sí, si existen puntos exentos de rotación. La línea longitudinal cuando $x=y=0$ no experimenta rotación de cuerpo rígido. 
-	 
-	\item[•]¿Es posible encontrar puntos sometidos a deformación angular?, responda s\'i o no y justifique su respuesta. \\
-	
-		\textbf{Solución:}\\
-		
-		Sí es posible. Como puede verse en el tensor  $\varepsilon$ los valores principales son diferentes, por lo es posible encontrar alguna dirección sometida a deformación angular.
-%
+\subsubsection{Solución:}
+
+Sí, si existen puntos exentos de rotación. La línea longitudinal cuando $x=y=0$ 
+no experimenta rotación de cuerpo rígido. 
+
+\item[•]¿Es posible encontrar puntos sometidos a deformación angular?, responda 
+sí o no y justifique su respuesta.
+
+\subsubsection{Solución:}
+
+Sí es posible. Como puede verse en el tensor  $\varepsilon$ los valores 
+principales son diferentes, por lo es posible encontrar alguna dirección 
+sometida a deformación angular.
+
 \end{enumerate}
 
-\textbf{Tarea}
+\subsubsection{Tarea}
 
 Describa la configuración deformada de las partículas. 
 
+\section{Ejercicios propuestos}
 
 \begin{enumerate}
 
-\item \label{punto01_d} En la  figura \ref{fig1} se muestra la configuración inicial y final en donde las coordenadas puntos son A, B, C y D son A(1,1), B(-1,-1), C($-\sqrt{2}/2,\sqrt{2}/2$), D($\sqrt{2}/2,-\sqrt{2}/2$) . Sabiendo que $\vec{r}$ es el vector de posici\'on original, $\vec{\rho}$ es el vector de posición final y  $\vec{\vartriangle}$ es vector de desplazamiento 
+\item \label{ejer:trans_lineal} En la  figura \ref{fig:elipse} se muestra la 
+configuración inicial y final en donde las coordenadas puntos son A, B, C y D 
+son $A=(1,1)$, $B=(-1,-1)$, $C=(-\sqrt{2}/2,\sqrt{2}/2)$, 
+$D=(\sqrt{2}/2,-\sqrt{2}/2)$. Sabiendo que $\vec{r}$ es el vector de posici\'on 
+original, $\vec{\rho}$ es el vector de posición final y  $\vec{\vartriangle}$ 
+es vector de desplazamiento 
 
-	\begin{enumerate}
-	\item Determinar la matriz de desplazamientos lineales $[D]$ tal que	$\vec{\vartriangle}=  D  \centerdot  \vec{r}$. 
-	\item Derterminar la matriz de transformaci\'on lineal $[A]$ tal que $\vec{\rho}= A \centerdot \vec{r}$	
-	\item Descomponer $[D]$ en componente sim\'etrica y componente asim\'etrica. Mostrar graficamente lo efectos. 	
-	\item  Usando el circulo de Mohr, determinar las direcciones principales y los valores propios de la matriz de transformaci\'on lineal sim\'etrica.
-	\end{enumerate}
-	
-	\begin{figure}[H]
-		\centering	
-	\includegraphics[scale=0.4]{Elipse.pdf}\\
-		\caption{Transformaci\'on lineal}
-	\label{fig1}
-	\end{figure}
-	
-\newpage
+\begin{enumerate}
+\item Determinar la matriz de desplazamientos lineales $[D]$ tal que	
+$\vec{\vartriangle}=  D  \vec{r}$. 
+\item Determinar la matriz de transformación lineal $[A]$ tal que 
+$\vec{\rho}= A  \vec{r}$	
+\item Descomponer $[D]$ en componente simétrica y componente asimétrica. 
+Mostrar gráficamente lo efectos. 	
+\item  Usando el circulo de Mohr, determinar las direcciones principales y los 
+valores propios de la matriz de transformación lineal simétrica.
+\end{enumerate}
 
-	\item  \label{punto02_d} En la figura \cref{Triangulo} se muestra la configuraci\'on inicial y final (linea punteada) del un triángulo de lado unitario formado por los puntos A, B, C. Para pasar de la configuración inicial a la final se aplica una trasformación lineal de desplazamientos $[D]$, tal que $\lbrace{\Delta}\rbrace = [D]\cdot\lbrace{r}\rbrace$, donde $\Delta$ es el vector desplazamiento, y $r$ es el vector posici\'on inicial.
-%
+\begin{figure}[H]
+    \centering	
+    \includegraphics[scale=0.4]{Elipse.pdf}
+    \caption{Representación gráfica de una transformación lineal.}
+    \label{fig:elipse}
+\end{figure}
+	
+\item  \label{punto02_d} En la figura \cref{Triangulo} se muestra la 
+configuración inicial y final (linea punteada) del un triángulo de lado 
+unitario formado por los puntos A, B, C. Para pasar de la configuración inicial 
+a la final se aplica una trasformación lineal de desplazamientos $[D]$, tal que 
+$\lbrace{\Delta}\rbrace = [D]\cdot\lbrace{r}\rbrace$, donde $\Delta$ es el 
+vector desplazamiento, y $r$ es el vector posici\'on inicial.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=9cm]{Triangulo.pdf} 
@@ -1107,52 +1168,63 @@ Describa la configuración deformada de las partículas.
 
 \begin{enumerate}
 \item Determinar la transformación lineal $[D]$, y descomponerla en sus componente simétrica $[\varepsilon]$ y asimétrica $[\omega]$.
-\item Determinar las direcciones principales de la transformación $[D]$. Es posible usar circulo de Morh.
+\item Determinar las direcciones principales de la transformación $[D]$. Es 
+posible usar el círculo de Mohr.
 \item Mostrar matemática y gráficamente el efecto independiente de las diferentes componentes del tensor lineal de desplazamientos. Las componentes a considerar son la isotrópica, las distorsionales y la rotación de cuerpo rígido, tal que $[D] = p[I] + [S] +[C] + [\omega]$
 \item Escribir en sus direcciones principales la componente simétrica $[\varepsilon]$ de la transformación $[D]$.
 \end{enumerate}
 
-\newpage
-\item  \label{punto03_d} La figura \cref{Rectangulo} muestra un rectángulo infinitesimal de lado $b$ y altura $h$ en la configuraci\'on sin deformar el cual es deformado por alguna acci\'on externa y dicha deformaci\'on se describe como la superposici\'on lineal de varias deformaciones individuales, las cuales se dan a continuaci\'on: 
 
+\item  \label{punto03_d} La figura \cref{Rectangulo} muestra un rectángulo 
+infinitesimal de lado $b$ y altura $h$ en la configuración sin deformar el 
+cual es deformado por alguna acci\'on externa y dicha deformación se describe 
+como la superposición lineal de varias deformaciones individuales, las cuales 
+se dan a continuación: 
 \begin{enumerate}
-	\item $ {\varepsilon_1}=\left(\begin{array}{ccc}
+\item $ {\varepsilon_1}=\left(\begin{array}{ccc}
 d & 0 \\ 
 0 & d 
-\end{array}\right) \enspace $\\
-	\item $ {\varepsilon_2}=\left(\begin{array}{ccc}
+\end{array}\right) \enspace $
+
+\item $ {\varepsilon_2}=\left(\begin{array}{ccc}
 e & 0 \\ 
 0 & -e 
-\end{array}\right) \enspace $\\
-%$A=e \hat{i}$, $B=e\hat{i}-e\hat{j}$ y $C=-e\hat{j}$.
-	\item ${\varepsilon_3}=\left(\begin{array}{ccc}
+\end{array}\right) \enspace $
+
+\item ${\varepsilon_3}=\left(\begin{array}{ccc}
 0 & f \\ 
 f & 0 
-\end{array}\right) \enspace $\\
+\end{array}\right) \enspace $
 \end{enumerate}
 	
-	\begin{figure}[H]		
-		\centering	
-		\includegraphics[scale=0.25]{Rectangulo.pdf}
-		\caption{Rectangulo en la configuraci\'on no deformada}
-		\label{Rectangulo}
-	\end{figure}
+\begin{figure}[H]		
+	\centering	
+	\includegraphics[scale=0.25]{Rectangulo.pdf}
+	\caption{Rectángulo en la configuración no deformada.}
+	\label{Rectangulo}
+\end{figure}
 
 Se pide determinar lo siguiente:
 	
 \begin{enumerate}
-	\item Calcular los desplazamientos de los puntos $A$, $B$ y $C$ para cada uno de los estados de deformaci\'on y dibujar las configuraciones deformadas.
-	\item Si se sabe que las dimensiones del rect\'angulo $b=1.00$ y $h=1.00$ y los valores de las transformaciones son $d=0.01$, $e=0.005$ y $f=0.0025$. Calcular las direcciones principales y los valores propios para la superposici\'on lineal de las deformaciones. 	
+	\item Calcular los desplazamientos de los puntos $A$, $B$ y $C$ para cada 
+	uno de los estados de deformación y dibujar las configuraciones deformadas.
+	\item Si se sabe que las dimensiones del rectángulo $b=1.00$ y $h=1.00$ y 
+	los valores de las transformaciones son $d=0.01$, $e=0.005$ y $f=0.0025$. 
+	Calcular las direcciones principales y los valores propios para la 
+	superposición lineal de las deformaciones. 	
 \end{enumerate}
 
-\newpage
-\item  \label{punto04_d} En la figura \cref{BarraColgada} se muestra una barra de sección circular de radio $R$, altura H, soportada de su extremo superior y que está sometido solamente a la acción de su peso propio. El campo de desplazamientos $u,v,w$ en el sistema coordenado $xyz$ de para la barra está dado por: \\
-
-	$u= -\nu \dfrac{\gamma}{E} z x $ \hspace{1cm}	
-	$v= -\nu \dfrac{\gamma}{E} z y $ \hspace{1cm}	
-	$w= \dfrac{\gamma}{2E} z^2 +\dfrac{\gamma \nu}{2E} (x^2+y^2)-\dfrac{\gamma}{2E} H^2  $ \\
-	
-donde $E$, $\gamma$ y $\nu$ son constantes del material (posititivas). 
+\item  \label{punto04_d} En la figura \cref{BarraColgada} se muestra una barra 
+de sección circular de radio $R$, altura H, soportada de su extremo superior y 
+que está sometido solamente a la acción de su peso propio. El campo de 
+desplazamientos $u,v,w$ en el sistema coordenado $xyz$ de para la barra está 
+dado por:
+\[u = -\nu \dfrac{\gamma}{E} z x\, ,  \hspace{1cm}	
+v = -\nu \dfrac{\gamma}{E} z y\, ,  \hspace{1cm}	
+w = \dfrac{\gamma}{2E} z^2 +\dfrac{\gamma \nu}{2E} (x^2+y^2)-\dfrac{\gamma}{2E} 
+H^2\ ,\]
+donde $E$, $\gamma$ y $\nu$ son constantes del material (positivas). 
 	
 \begin{figure}[H]
 	\centering
@@ -1162,116 +1234,145 @@ donde $E$, $\gamma$ y $\nu$ son constantes del material (posititivas).
 \end{figure}
 %
 \begin{enumerate}
-% 
-	\item Esboce la configuraci\'on deformada de la barra.	
-	\item Calcule el tensor de deformaciones y descompóngalo en su componente simétrica: $[\varepsilon]$ y asimétrica  $[\omega]$
-	\item Cuáles son los valores máximos y mínimos de las deformaciones axiales, $\varepsilon_{xx}$, $\varepsilon_{yy}$, $\varepsilon_{zz}$, y en que puntos se presentan.
-	\item Cuáles son los valores máximos y mínimos de los desplazamientos: $u$, $v$, $w$ y en que puntos se presentan.
-	\item ¿ Existen puntos exentos de rotaci\'on de cuerpo r\'igido?, responda s\'i o no y justifique su respuesta.	
-	\item ¿ Es posible encontrar puntos sometidos a distorsión angular?, 
-	responda s\'i o no y justifique su respuesta.
-%
+
+\item Esboce la configuracióon deformada de la barra.	
+
+\item Calcule el tensor de deformaciones y descompóngalo en su componente 
+simétrica: $[\varepsilon]$ y asimétrica  $[\omega]$
+
+\item Cuáles son los valores máximos y mínimos de las deformaciones axiales, 
+$\varepsilon_{xx}$, $\varepsilon_{yy}$, $\varepsilon_{zz}$, y en que puntos se 
+presentan.
+
+\item Cuáles son los valores máximos y mínimos de los desplazamientos: $u$, 
+$v$, $w$ y en que puntos se presentan.
+
+\item ¿Existen puntos exentos de rotación de cuerpo rígido?, responda sí o no y 
+justifique su respuesta.
+	
+\item ¿Es posible encontrar puntos sometidos a distorsión angular?, 
+responda sí o no y justifique su respuesta.
 \end{enumerate}
-%
-\newpage
-
-\item  \label{punto05_d}  En la figura \cref{VigaMomentoflec} se muestra un medio continuo de sección rectangular de ancho unitario, altura $H$, soportado en un extremo ($X = 0$), y sometido en su otro extremo ($X = L$) a la acci\'on de un momento flector $M$ alrededor del eje $Z$. Si el campo de desplazamientos en el sistema coordenado $XYZ$ est\'a dado por: \\
-
-	$u= -\dfrac{M}{EI} X Y $ \hspace*{10mm}	
-	$v= \dfrac{M}{2EI}(X^2+ \nu (Y^2-Z^2)) $ \hspace*{10mm}	
-	$w= \dfrac{\nu M}{EI} Y Z  $\\
 
 
-Donde $u,v,w$ son los desplazamientos asociados a los ejes $X,Y,Z$ 
+\item  \label{punto05_d}  En la figura \cref{VigaMomentoflec} se muestra un 
+medio continuo de sección rectangular de ancho unitario, altura $H$, soportado 
+en un extremo ($X = 0$), y sometido en su otro extremo ($X = L$) a la acci\'on 
+de un momento flector $M$ alrededor del eje $Z$. Si el campo de desplazamientos 
+en el sistema coordenado $XYZ$ está dado por:
+\[u= -\dfrac{M}{EI} X Y\, ,  \hspace*{10mm}	
+v = \dfrac{M}{2EI}(X^2+ \nu (Y^2-Z^2))\, ,  \hspace*{10mm}	
+w = \dfrac{\nu M}{EI} Y Z\, ,  \]
+donde $u,v,w$ son los desplazamientos asociados a los ejes $X,Y,Z$ 
 respectivamente. $E$ y $\nu$ son constantes  (positivas) del material e $I$ es 
-el momento de inercia alrededor del eje Z de la sección transversal. \\ 
+el momento de inercia alrededor del eje Z de la sección transversal.
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=6cm]{VigaMomento.pdf}
 	\caption{Viga sometida a momento flector}
 	 \label{VigaMomentoflec}
 \end{figure}
-%
+
 \begin{enumerate}
 \item En la figura \cref{ConfiguraFlector} se muestran esbozos de posibles 
 configuraciones deformadas (sección achurada) de la viga mostrada en la figura 
 \label{VigaMomento}. Determine en cada caso cual es la configuración correcta. 
-%
+
 \begin{enumerate}
-%
-	\item[•] Para la sección transversal en $X = L$. 
-	\item[•] Para una sección longitudinal cuando $Y > 0$.
-	\item[•]  Para una sección longitudinal asociada al plano ($Y = -H/2$)
-	\item[•]  Para una sección longitudinal asociada al plano ($Z = 0$) 
-%
+
+\item[•] Para la sección transversal en $X = L$. 
+\item[•] Para una sección longitudinal cuando $Y > 0$.
+\item[•] Para una sección longitudinal asociada al plano ($Y = -H/2$)
+\item[•] Para una sección longitudinal asociada al plano ($Z = 0$) 
+
 \end{enumerate}
-%
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=12.00cm]{Configuracion.pdf}
 	\caption{Posibles configuraciones deformadas de sección transversal}
 	\label{ConfiguraFlector}
 \end{figure}
-%
-\item Calcule el tensor de deformaciones  $[\varepsilon]$ y el de rotación $[\omega]$ 
-\item Si el valor de la distorsión angular máxima es $\gamma$ = $\gamma_{max}$ 
-determine cual es el momento máximo posible, $M_{max}$ que podría ser aplicado. 
-\item¿Cu\'ales son las coordenadas $x,y,z$ de los puntos que experimentan mayores rotaciones de cuerpo r\'igido?
-\item ¿Cu\'ales son los puntos que experimentan la menor rotaci\'on de cuerpo r\'igido? 
+
+\item Calcule el tensor de deformaciones  $[\varepsilon]$ y el de rotación 
+$[\omega]$ 
+
+\item Si el valor de la distorsión angular máxima es $\gamma$ = $\gamma_{\max}$ 
+determine cual es el momento máximo posible, $M_{\max}$ que podría ser 
+aplicado. 
+
+\item¿Cuáles son las coordenadas $x,y,z$ de los puntos que experimentan 
+mayores rotaciones de cuerpo rígido?
+
+\item ¿Cuáles son los puntos que experimentan la menor rotación de cuerpo 
+rígido? 
+
 \item Cuales son los valores máximos y mínimos de las deformaciones axiales, 
 $\varepsilon_{xx}$, $\varepsilon_{yx}$, $\varepsilon_{zz}$ y en que puntos se 
 presentan.
-\item Cu\'ales son los valores máximos y mínimos de los desplazamientos, $u$, 
-$v$, $w$, y en que puntos se presentan.
-\item ¿Existen puntos exentos de rotaci\'on de cuerpo r\'igido?, responda s\'i o no y justifique su respuesta.
+
+\item ¿Cuáles son los valores máximos y mínimos de los desplazamientos, $u$, 
+$v$, $w$, y en qué puntos se presentan?
+
+\item ¿Existen puntos exentos de rotación de cuerpo rígido?, responda sí 
+o no y justifique su respuesta.
+
 \item ¿Es posible encontrar puntos sometidos a distorsión angular?, responda 
-s\'i o no y justifique su respuesta.
-%
+sí o no y justifique su respuesta.
+
 \end{enumerate}
 
-\item \label{punto07_d}  En la figura \cref{Solucion_Flamant} se  muestra la solución de un semi-espacio sometido a una carga lineal superficial $P$.  Los desplazamientos al interior del suelo debidos a la carga P est\'an dados por:  \\\\
-%
-%\begin{large}
- $ u_r (r,\theta) = -\dfrac{2P}{\pi{E}} \ln{r}$ ${\cos \theta} -\dfrac{(1 - \nu)P}{\pi{E}} {\theta}$ $ {\sin\theta} + B $ $ {\cos \theta} $ \\\\
-$ u_{\theta}(r,\theta) = \dfrac{2{\nu}P}{\pi{E}} \sin\theta + \dfrac{2P}{\pi{E}}\ln{r}$ $\sin\theta -\dfrac{(1 - \nu)P} {\pi{E}} 
-	{\theta}$ $ {\cos\theta} + \dfrac{(1 - \nu)P}{\pi{E}}$ ${\sin\theta} - B$ $ {\sin\theta}$	\\\\
-$ w (r,\theta) = 0$ \\\\
-%%\end{large}
-%
-\noindent Donde $E$ es el m\'odulo de elasticidad,  $\nu$ es la relaci\'on de Poisson del material y $B$ es una constante positiva.
-%
+\item \label{punto07_d}  En la figura \cref{Solucion_Flamant} se  muestra la 
+solución de un semi-espacio sometido a una carga lineal superficial $P$.  Los 
+desplazamientos al interior del suelo debidos a la carga $P$ están dados por:
+\begin{align*}
+&u_r (r,\theta) = -\dfrac{2P}{\pi E} \ln{r} \cos \theta -\dfrac{(1 - 
+\nu)P}{\pi E} \theta\, \sin\theta + B \cos \theta \\
+&u_{\theta}(r,\theta) = \dfrac{2 \nu P}{\pi E} \sin\theta + 
+\dfrac{2P}{\pi E}\ln{r}\sin\theta - \dfrac{(1 - \nu)P} {\pi E} 
+\theta \cos\theta + \dfrac{(1 - \nu)P}{\pi E} \sin\theta - B \sin\theta\\
+& w (r,\theta) = 0
+\end{align*}
+donde $E$ es el módulo de elasticidad,  $\nu$ es la relación de 
+Poisson del material y $B$ es una constante positiva.
 \begin{figure}[H]
 	\centering
 		\includegraphics[height=3.0cm]{Flamat.pdf} 
 		\caption{Soluci\'on carga vertical}
 		\label{Solucion_Flamant}
 \end{figure}
-%
-Si en un suelo sometido a la acción de dos estructuras que le transmiten  una carga lineal superficial, $P$ y $3P$, respectivamente tal como se muestra en la figura  \cref{figure3} se desea instalar una tuber\'ia, perpendicular al plano mostrado ($XY$), de di\'ametro despreciable, en el punto indicado  en la figura \cref{figure3}.
-%		
+
+Si en un suelo sometido a la acción de dos estructuras que le transmiten  una 
+carga lineal superficial, $P$ y $3P$, respectivamente tal como se muestra en la 
+figura  \cref{figure3} se desea instalar una tubería, perpendicular al plano 
+mostrado ($XY$), de diámetro despreciable, en el punto indicado  en la figura 
+\cref{figure3}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=3.5cm]{ProblemTub.pdf} 
-	\caption{Estructuras y tuber\'ia.}
+	\caption{Estructuras y tubería.}
 	\label{figure3}
 \end{figure} 
-\begin{enumerate}
-%
-	\item Determine cuál es el valor de la deformación axial máxima.
-	\item  Si la máxima deformaci\'on angular a la que puede ser sometida la 
-	tuberia sin fallar, es igual a: $\gamma_{max}$. ¿Cu\'al es el máximo valor 
-	de la carga distribuida $P$ que pueden transmitir las estructuras para que 
-	la tuber\'ia no falle?. 
-	\item Esboce la configuraci\'on deformada de la part\'icula correspondiente al punto donde se ubica la tuber\'ia. Solo considere el plano $xy$. 
-\end{enumerate}
-\item \label{punto08_d} En la figura \cref{BarraApoya} se muestra una barra de radio $R$ y longitud $L$. El campo de desplazamientos   en el sistema coordenado $xyz$, est\'a dado por:\\
-\\
-\begin{large}
-	$u= -\theta yz$, \hspace*{15mm} $v= \theta xz $, \hspace*{15mm}$w= 0  $\\
-\end{large}
 
-%
-Donde $u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamente. $\theta$ es una constante positiva. \\ 
+\begin{enumerate}
+\item Determine cuál es el valor de la deformación axial máxima.
+
+\item  Si la máxima deformación angular a la que puede ser sometida la 
+tubería sin fallar, es igual a: $\gamma_{\max}$. ¿Cuál es el máximo valor 
+de la carga distribuida $P$ que pueden transmitir las estructuras para que 
+la tubería no falle?
+
+\item Esboce la configuración deformada de la partícula correspondiente al 
+punto donde se ubica la tubería. Solo considere el plano $xy$. 
+\end{enumerate}
+
+
+\item \label{punto08_d} En la figura \cref{BarraApoya} se muestra una barra de 
+radio $R$ y longitud $L$. El campo de desplazamientos   en el sistema 
+coordenado $xyz$, está dado por:
+\[u= -\theta yz\, , \hspace{15mm} v= \theta xz\, , \hspace{15mm} w= 0\, .\]
+donde $u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ 
+respectivamente. $\theta$ es una constante positiva.
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=5cm]{barraapoyada.pdf} 
@@ -1280,53 +1381,61 @@ Donde $u,v,w$ son los desplazamientos asociados a los ejes $x,y,z$ respectivamen
 \end{figure}
 
 \begin{enumerate}
-\item Dibuje la configuraci\'on deformada de la barra. 
-\item Calcule el tensor de deformaciones, $[D]$, y determine: tensor de deformaci\'on $[\varepsilon]$ (sim\'etrico) y tensor de rotaci\'on $[\omega]$ (asim\'etrico).
-\item Ilustre la deformaci\'on de la part\'icula en el punto de coordenadas $y = R$ y $x = 0$. Para la ilustraci\'on use cuadrados de tama\~no diferencial contenidos en los planos $xy$, $xz$, $yz$ de forma independiente. En la ilustraci\'on debe incluirse los efectos de cuerpo r\'igido.
-\item ¿ Cu\'ales son los puntos que experimentan mayores rotaciones de cuerpo r\'igido?
-\item Cu\'ales son los valores máximos y mínimos de los desplazamientos, $u$, 
+\item Dibuje la configuración deformada de la barra. 
+\item Calcule el tensor de deformaciones, $[D]$, y determine: tensor de 
+deformación $[\varepsilon]$ (simétrico) y tensor de rotación $[\omega]$ 
+(asimétrico).
+\item Ilustre la deformación de la partícula en el punto de coordenadas $y = R$ 
+y $x = 0$. Para la ilustración use cuadrados de tamaño diferencial contenidos 
+en los planos $xy$, $xz$, $yz$ de forma independiente. En la ilustración debe 
+incluirse los efectos de cuerpo rígido.
+\item ¿Cuáles son los puntos que experimentan mayores rotaciones de cuerpo 
+rígido?
+\item ¿Cuáles son los valores máximos y mínimos de los desplazamientos, $u$, 
 $v$, $w$ y en que puntos se presentan:
-\item  \textquestiondown Es posible encontrar puntos sometidos a distorsión 
-angular?, responda s\'i o no y justifique su respuesta.
+\item  ¿Es posible encontrar puntos sometidos a distorsión 
+angular?, responda sí o no y justifique su respuesta.
 \end{enumerate}
 
-\item  \label{punto09_d} En la figura \cref{cuna} se presenta una cu\~na de espesor $t$ sometida a la acci\'on de una carga (en el plano $XY$) distribuida sobre su per\'imetro.
+\item  \label{punto09_d} En la figura \cref{cuna} se presenta una cuña de 
+espesor $t$ sometida a la acción de una carga (en el plano $XY$) distribuida 
+sobre su perímetro.
 %
 \begin{figure}[H]
 	\centering
 	{\includegraphics[width=7cm]{Cunasup.pdf}}\
 	\hspace{2 cm}
-	\caption{Cu\~na de espesor $t$}
+	\caption{Cuña de espesor $t$}
 	\label{cuna}
 \end{figure}
 %
-El campo de desplazamientos de la cu\~na  esta dado por:\\\\
-%
- $ u(x,y) = \dfrac{2B}{E} (\cot \phi + \nu \tan \phi) (x - l\cos \phi) $
-\hspace*{8mm} $ v(x,y) = - \dfrac{2B}{E} (\tan \phi + \nu \cot \phi) y$	
+El campo de desplazamientos de la cuña  esta dado por:
+\[u(x,y) = \dfrac{2B}{E} (\cot \phi + \nu \tan \phi) (x - l\cos \phi)\, ,
+\hspace{8mm}  v(x,y) = - \dfrac{2B}{E} (\tan \phi + \nu \cot \phi) y\, ,\]
+donde $B$, $E$ y $\nu$ son constantes positivas.
 
-Donde $B$, $E$ y $\nu$ son constantes positivas. \\\\
-%
-Adem\'as, se sabe que:\\\\
-%
- $\sigma_{xx} = \dfrac{E}{(1 - \nu^2)} (\varepsilon_{xx} + \nu \varepsilon_{yy}) $ 
-\hspace*{5mm} $\sigma_{yy} = \dfrac{E}{(1 - \nu^2)} (\varepsilon_{yy} + \nu \varepsilon_{xx}) $ 
-\hspace*{5mm} $\tau_{xy} = \dfrac{E}{2(1 + \nu)} \gamma_{xy} $\\\\
-%
+Además, se sabe que:
+\[ \sigma_{xx} = \dfrac{E}{(1 - \nu^2)} (\varepsilon_{xx} + \nu 
+\varepsilon_{yy})\, ,\hspace{5mm}
+\sigma_{yy} = \dfrac{E}{(1 - \nu^2)} (\varepsilon_{yy} + \nu \varepsilon_{xx}) 
+\hspace{5mm}\, ,
+\tau_{xy} = \dfrac{E}{2(1 + \nu)} \gamma_{xy}\, .\]
+
 \begin{enumerate}
-	%
-	\item Dibuje la configuraci\'on deformada de la cu\~na. 
-	\item Ilustre la deformaci\'on de la part\'icula en el punto de coordenadas $X = 0$ y $Y = 0$. En la ilustraci\'on deben incluirse los efectos de cuerpo r\'igido. 	
-    \item Si $\nu=0.25$ y $\phi=53.13^{\circ}$, determine la reacciones (Fuerzas) en el soporte .\\\\\\
-	%
+\item Dibuje la configuración deformada de la cuña. 
+
+\item Ilustre la deformación de la partícula en el punto de coordenadas $X 
+= 0$ y $Y = 0$. En la ilustración deben incluirse los efectos de cuerpo 
+rígido. 	
+
+\item Si $\nu=0.25$ y $\phi=53.13^{\circ}$, determine la reacciones (Fuerzas) 
+en el soporte .
 \end{enumerate}
 
 \item  \label{punto10_d} Si el campo de desplazamientos para la barra mostrada 
 en la \ref{def:Mario} está dado por:
-%
 \[u\left( x \right) = -\dfrac{1-\nu^2}{E} \sigma_0 x\, ,\quad v=0\, ,\quad 
-w\left( z \right) = \nu \dfrac{1+\nu}{E} \sigma_0 z\]
-
+w\left( z \right) = \nu \dfrac{1+\nu}{E} \sigma_0 z\, .\]
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=5cm]{Viga.pdf} 
@@ -1335,23 +1444,27 @@ w\left( z \right) = \nu \dfrac{1+\nu}{E} \sigma_0 z\]
 \end{figure}
 
 \begin{enumerate}
-%
-	\item Explique a que acciones externas está sometida la barra
-	\item Dibuje la configuración deformada de la barra
-	\item \textquestiondown Hay partículas sometidas a rotaciones de cuerpo 
-	rígido? (responda sí o no y justifique su respuesta).
-	\item \textquestiondown Hay partículas que {\textbf{NO}} experimenten 
-	distorsiones angulares? (responda sí o no y justifique su respuesta).
-	\item En que coordenadas está la partícula que sufre mayor deformación 
-	axial y cuál es el valor de esta deformación.
-	\item En que coordenadas está la partícula que sufre mayor distorsión 
-	angular y cuál es el valor de esta deformación.
-	\item Encuentre los desplazamientos y deformaciones del punto de 
-	coordenadas $(0,0,0)$.
-%
+\item Explique a que acciones externas está sometida la barra.
+
+\item Dibuje la configuración deformada de la barra.
+
+\item \textquestiondown Hay partículas sometidas a rotaciones de cuerpo 
+rígido? (responda sí o no y justifique su respuesta).
+
+\item \textquestiondown Hay partículas que {\textbf{NO}} experimenten 
+distorsiones angulares? (responda sí o no y justifique su respuesta).
+
+\item En que coordenadas está la partícula que sufre mayor deformación 
+axial y cuál es el valor de esta deformación.
+
+\item En que coordenadas está la partícula que sufre mayor distorsión 
+angular y cuál es el valor de esta deformación.
+
+\item Encuentre los desplazamientos y deformaciones del punto de 
+coordenadas $(0,0,0)$.
 \end{enumerate}
+
 %
-% **** Punto 11
 % ***** Empieza modelos constitutivos
 \item   \label{punto11_d} Para un campo de desplazamientos dado por:
 \[\mathbf{u} = a(x^2 - 5y^2)\hat{\imath} + (2ax y)\hat{\jmath} \]
@@ -1366,51 +1479,61 @@ sobre la cual se aplica una fuerza en dirección $x$ $F_{x}$, que genera  un
 esfuerzo constante $\sigma_x$ sobre la sección transversal donde está aplicada. 
 La barra inicialmente está  separada de una lámina delgada de acero una 
 distancia $d$ tal y como se muestra en \cref{sfig:barra2D}. El campo de 
-desplazamientos para la barra mostrada está dado por:\\\\
-%
- $u\left( x \right) = \dfrac{1}{E_1}  x \sigma_x$, \hspace*{10mm} $v=0$, \hspace*{10mm} $w\left( z \right) = - \dfrac{1}{E_2}  z (H^2 - y^2) \sigma_x$ \\
-
-Donde $E_1 = 200000 \text{ kgf/cm}^2$,   y $E_2 = 1000000 \text{ kgf/cm}^4$, $L 
+desplazamientos para la barra mostrada está dado por:
+\[u\left( x \right) = \dfrac{1}{E_1}  x \sigma_x, \hspace{10mm} v=0\, , 
+\hspace{10mm}
+w\left( z \right) = - \dfrac{1}{E_2}  z (H^2 - y^2) \sigma_x\, ,\]
+donde $E_1 = 200000 \text{ kgf/cm}^2$,   y $E_2 = 1000000 \text{ kgf/cm}^4$, $L 
 = 1000 \text{ cm}$, $H = 10 \text{ cm}$. $\sigma_x$ es el esfuerzo en dirección 
 $x$ el cual tiene una variación en el tiempo de acuerdo a como lo muestra la  
 \cref{sfig:stress}.  
 
 \begin{figure}[H]
 	\centering
-		\subfloat [Configuración inicial de la barra en 3D. Aplicación de la fuerza]{ \includegraphics[width=1.6in]{Barra.pdf}\label{sfig:barra3D}}
-		\hspace{0.7cm}
-		\subfloat [Vista plano $xz$. Separación inicial barra - lámina, d = 2.0 cm. $\phi = 45^\circ$.]{ \includegraphics[width=1.6in]{BarraPared.pdf}\label{sfig:barra2D}}
-		\hspace{0.7cm}
-		\subfloat [Curva de esfuerzo.]{ \includegraphics[width=1.9in]{CurvaEsf.pdf}\label{sfig:stress}}			
-	\caption{Barra sometida a fuerza axial $F_{x}$}
+	\subfloat [Configuración inicial de la barra en 3D. Aplicación de la 
+	fuerza]{ \includegraphics[width=1.6in]{Barra.pdf}\label{sfig:barra3D}}
+	\hspace{0.7cm}
+	\subfloat [Vista plano $xz$. Separación inicial barra - lámina, d = 2.0 cm. 
+	$\phi = 45^\circ$.]{ 
+	\includegraphics[width=1.6in]{BarraPared.pdf}\label{sfig:barra2D}}
+	\hspace{0.7cm}
+	\subfloat [Curva de esfuerzo.]{ 
+	\includegraphics[width=1.9in]{CurvaEsf.pdf}\label{sfig:stress}}			
+    \caption{Barra sometida a fuerza axial $F_{x}$}
 	\label{fig:barra}
 \end{figure}
 
 
 \begin{enumerate}
-	%
-	\item Para el punto A de la barra con coordenadas  $(x,y,z) = (L, 0, B)$ grafique los desplazamientos $u$ y $w$ en función de tiempo. 
-	\item Dibuje la configuración deformada de la partícula para el punto de coordenadas $(x,y,z)=$ $(0,0,0)$ 
-	\item  Si el valor de $\sigma_x = 50 \text{ kgf/cm}^2$ y se estudian solo 
-	los puntos de la cara $ z = 1.0 cm$ determinar el valor de la distorsión 
-	angular máxima y las coordenadas $x,y,z$ de los puntos  en que se 
-	presenta. 	
-	\item Si el esfuerzo  $\sigma_x$ se incrementa  hasta que el punto  $A$ con coordenadas  $(x,y,z) = (L, 0, B)$ toque la lámina, determine el tiempo $t$  en el que la barra toca la lámina. ¿Cuáles serían las coordenas finales $x$, $z$ del punto A en ese instante?
+\item Para el punto A de la barra con coordenadas  $(x,y,z) = (L, 0, B)$ 
+grafique los desplazamientos $u$ y $w$ en función de tiempo. 
 
+\item Dibuje la configuración deformada de la partícula para el punto de 
+coordenadas $(x,y,z)=$ $(0,0,0)$ 
+
+\item  Si el valor de $\sigma_x = 50 \text{ kgf/cm}^2$ y se estudian solo 
+los puntos de la cara $ z = 1.0 cm$ determinar el valor de la distorsión 
+angular máxima y las coordenadas $x,y,z$ de los puntos  en que se 
+presenta. 
+	
+\item Si el esfuerzo  $\sigma_x$ se incrementa  hasta que el punto  $A$ con 
+coordenadas  $(x,y,z) = (L, 0, B)$ toque la lámina, determine el tiempo $t$  en 
+el que la barra toca la lámina. ¿Cuáles serían las coordenadas finales $x$, $z$ 
+del punto A en ese instante?
 \end{enumerate}
 
 
-\item  \label{punto13_d}  En un ensayo de un elemento de concreto se mide la deformación en un mismo punto mediante tres galgas de deformación. Las galgas de deformación se disponen en un arreglo tal y como se muestra en la \cref{ensayogalga},
+\item  \label{punto13_d}  En un ensayo de un elemento de concreto se mide la 
+deformación en un mismo punto mediante tres galgas de deformación. Las galgas 
+de deformación se disponen en un arreglo tal y como se muestra en la 
+\cref{ensayogalga}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4.5in]{galgas.pdf}
+	\caption{Galgas de deformación}
+	\label{ensayogalga}
+\end{figure}
 
-	%
-	\begin{figure}[H]
-		\centering
-		\hspace*{6mm}
-			\includegraphics[width=4.5in]{galgas.pdf}
-		\caption{ Galgas de deformación}
-		\label{ensayogalga}
-	\end{figure}
-	%
 
 Si las galgas solo registran la deformación axial y las mediciones de laboratorio reportaron: $\varepsilon_{xx} = -0.0003$; $\varepsilon_{x'x'} = 0.0004$; $\varepsilon_{y''y''} = 0.0002$. Se solicita
 
@@ -1419,9 +1542,9 @@ Si las galgas solo registran la deformación axial y las mediciones de laborator
 
 \item Distorsión angular máxima. 
 
-\item Deformación axial máxima
+\item Deformación axial máxima.
 
-\item Configuración deformada de la partícula
+\item Configuración deformada de la partícula.
 \end{enumerate}
 
 \end{enumerate}
