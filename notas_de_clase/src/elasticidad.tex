@@ -16,45 +16,64 @@ Al final de esta sección el estudiante deberá estar en la capacidad de
 \item[•] Operar en problemas de elasticidad simples.
 \end{itemize}
 
-Como se discutió en el capítulo 5 las condiciones de equilibrio en términos de tensiones se reducen a 3 ecuaciones diferenciales parciales en las 9 componentes del tensor de tensiones y a 3 relaciones de simetría resultantes del equilibrio rotacional del punto material: en total estas correspondían a 6 ecuaciones en 9 incógnitas. Al introducir los cambios cinemáticos en términos del tensor de deformaciones unitarias se involucran en el problema las siguientes 6 ecuaciones adicionales y 9 incógnitas más
+Como se discutió en el capítulo 5 las condiciones de equilibrio en términos de 
+tensiones se reducen a 3 ecuaciones diferenciales parciales en las 9
+componentes del tensor de tensiones y a 3 relaciones de simetría resultantes 
+del equilibrio rotacional del punto material: en total estas correspondían a 6 
+ecuaciones en 9 incógnitas. Al introducir los cambios cinemáticos en términos 
+del tensor de deformaciones unitarias se involucran en el problema las 
+siguientes 6 ecuaciones adicionales y 9 incógnitas más
 \begin{align*}
-&\varepsilon_{xx} = \frac{\partial u}{\partial x}\, ,\quad
-\varepsilon_{yy} = \frac{\partial v}{\partial y}\, ,\quad
-\varepsilon_{zz} = \frac{\partial w}{\partial z}\, ,\\
-&\varepsilon_{xy} = \frac{1}{2}\left(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x} \right)\, ,\quad
-\varepsilon_{xz} = \frac{1}{2}\left(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x} \right)\, ,\quad
-\varepsilon_{yz} = \frac{1}{2}\left(\frac{\partial v}{\partial z} + \frac{\partial w}{\partial y} \right)\, ,
+&\varepsilon_{xx} = \pdv{u}{x}\, ,\quad
+\varepsilon_{yy} = \pdv{v}{y}\, ,\quad
+\varepsilon_{zz} = \pdv{w}{z}\, ,\\
+&\varepsilon_{xy} = \frac{1}{2}\left(\pdv{u}{y} + \pdv{v}{x}\right)\, ,\quad
+\varepsilon_{xz} = \frac{1}{2}\left(\pdv{u}{z} + \pdv{w}{x}\right)\, ,\quad
+\varepsilon_{yz} = \frac{1}{2}\left(\pdv{v}{z} + \pdv{w}{y}\right)\, ,
 \end{align*}
-con lo que se tienen en total 12 ecuaciones en 18 incógnitas.
+con lo que se tienen 12 ecuaciones en 18 incógnitas.
 
-Aunque todos los problemas abordados hasta el momento han estado relacionados con sólidos, también es cierto que en ningún momento hemos hecho distinción alguna de un material a otro. Es decir las soluciones en términos de tensiones para problemas como el de la cuña autosoportada son igualmente válidas independientemente del material del que este fabricada la cuña. En esta sección se presentan  relaciones entre las tensiones y las deformaciones las cuales cambiarán necesariamente de un material a otro. Por ejemplo, refiriéndonos al problema de la cuña, es natural esperar que si 2 cuñas con iguales geometrías y sometidas a los mismos cortantes de magnitud $S$, pero fabricadas de 2 materiales diferentes, por ejemplo acero y madera, éstas se deformen en magnitudes diferentes. De forma general podemos escribir estas relaciones como
+Aunque todos los problemas abordados hasta el momento han estado relacionados 
+con sólidos, también es cierto que en ningún momento hemos hecho distinción 
+alguna de un material a otro. Es decir las soluciones en términos de tensiones 
+para problemas como el de la cuña autosoportada son igualmente válidas 
+independientemente del material del que este fabricada la cuña. En esta sección 
+se presentan  relaciones entre las tensiones y las deformaciones las cuales 
+cambiarán necesariamente de un material a otro. Por ejemplo, refiriéndonos al 
+problema de la cuña, es natural esperar que si 2 cuñas con iguales geometrías y 
+sometidas a los mismos cortantes de magnitud $S$, pero fabricadas de 2 
+materiales diferentes, por ejemplo acero y madera, éstas se deformen en 
+magnitudes diferentes. De forma general podemos escribir estas relaciones como
 \begin{equation}
-\left\{ \begin{array}{*{20}{c}}
+\begin{Bmatrix}
 \sigma_{xx}\\
-\sigma _{yy}\\
-\sigma _{zz}\\
+\sigma_{yy}\\
+\sigma_{zz}\\
 \tau_{yz}\\
 \tau_{xz}\\
 \tau_{xy}
-\end{array} \right\} = \left[ \begin{array}{*{20}{c}}
+\end{Bmatrix} = \begin{bmatrix}
 C_{11} &C_{12} &C_{13} &C_{14} &C_{15} &C_{16}\\
 C_{21} &C_{22} &C_{23} &C_{24} &C_{25} &C_{26}\\
 C_{31} &C_{32} &C_{33} &C_{34} &C_{35} &C_{36}\\
 C_{41} &C_{42} &C_{43} &C_{44} &C_{45} &C_{46}\\
 C_{51} &C_{52} &C_{53} &C_{54} &C_{55} &C_{56}\\
 C_{61} &C_{62} &C_{63} &C_{64} &C_{65} &C_{66}
-\end{array} \right]\left\{ \begin{array}{*{20}{c}}
+\end{bmatrix}
+\begin{Bmatrix}
 \varepsilon_{xx}\\
 \varepsilon_{yy}\\
 \varepsilon_{zz}\\
 \varepsilon_{yz}\\
 \varepsilon_{xz}\\
 \varepsilon_{xy}
-\end{array} \right\}.
-\label{conselas}
+\end{Bmatrix}\, .
+\label{eq:constitutivas}
 \end{equation}
 
-Con la \cref{conselas} se tienen ahora 18 ecuaciones en 18 incógnitas con lo cual la solubilidad o no del problema depende ahora de las condiciones especificadas en la frontera.
+Con la \cref{eq:constitutivas} se tienen ahora 18 ecuaciones en 18 incógnitas 
+con lo cual la solubilidad o no del problema depende ahora de las condiciones 
+especificadas en la frontera.
 
 \section{Hipótesis básicas}
 En esta sección se particulariza el modelo del medio continuo al modelo más simple: un sólido elástico lineal. Las hipótesis básicas para la teoría de elasticidad lineal son:
@@ -65,42 +84,58 @@ En esta sección se particulariza el modelo del medio continuo al modelo más si
 
 \item \textbf{Los materiales son homogéneos.} Esto implica que las propiedades de los materiales son iguales en todos los puntos del medio.
 
-\item \textbf{Los materiales son lineales.} Un material es lineal si las deformaciones pueden escribirse como una relación lineal de las tensiones, es decir, si satisface la \cref{conselas}.
+\item \textbf{Los materiales son lineales.} Un material es lineal si las 
+deformaciones pueden escribirse como una relación lineal de las tensiones, es 
+decir, si satisface la \cref{eq:constitutivas}.
 
 \item \textbf{Las deformaciones son pequeñas.} Esto implica que las ecuaciones de equilibrio son válidas en la configuración inicial del medio.
 
 \end{itemize}
 
-Estas consideraciones hacen que la \cref{conselas} se simplifique enormemente, y que la cantidad de constantes involucradas se reduzcan de 36 a 2.
+Estas consideraciones hacen que la \cref{eq:constitutivas} se simplifique 
+enormemente, y que la cantidad de constantes involucradas se reduzcan de 36 a 2.
 
 \section{Relación tensión-deformación}
-Considerando las hipótesis planteadas en el párrafo anterior las relaciones de la  \cref{conselas} se reducen a las relaciones tensión - deformación dadas en la  \cref{esfdef}:
+Considerando las hipótesis planteadas en el párrafo anterior las relaciones de 
+la  \cref{eq:constitutivas} se reducen a las relaciones tensión - deformación 
+dadas en la  \cref{eq:esf_def}:
 
-\begin{equation} \label{esfdef}
+\begin{equation} \label{eq:esf_def}
 \begin{split}
-& \sigma_{xx} = \dfrac{E}{(1 + \nu)} \varepsilon_{xx} + \dfrac{\nu E}{(1 + \nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz}) \\
-& \sigma_{yy} =\dfrac{E}{(1 + \nu)} \varepsilon_{yy} + \dfrac{\nu E}{(1 + \nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz}) \\
-& \sigma _{zz} = \dfrac{E}{(1 + \nu)} \varepsilon_{zz} + \dfrac{\nu E}{(1 + \nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz}) \\
-& \tau_{xy} = G \gamma_{xy}  \\
-& \tau_{xz} = G \gamma_{xz}  \\
-& \tau_{zy} = G \gamma_{yz}
+& \sigma_{xx} = \dfrac{E}{(1 + \nu)} \varepsilon_{xx} + \dfrac{\nu E}{(1 + 
+\nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz})\, , \\
+& \sigma_{yy} =\dfrac{E}{(1 + \nu)} \varepsilon_{yy} + \dfrac{\nu E}{(1 + 
+\nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz})\, , \\
+& \sigma _{zz} = \dfrac{E}{(1 + \nu)} \varepsilon_{zz} + \dfrac{\nu E}{(1 + 
+\nu)(1-2 \nu)} (\varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz})\, , \\
+& \tau_{xy} = G \gamma_{xy}\, ,  \\
+& \tau_{xz} = G \gamma_{xz}\, ,  \\
+& \tau_{zy} = G \gamma_{yz}\, ,
+\end{split}
+\end{equation}
+y  las relaciones deformación - tensión dadas en la \cref{eq:def_esf}:
+\begin{equation} \label{eq:def_esf}
+\begin{split}
+& \varepsilon_{xx} = \frac{1}{E}\left[ \sigma_{xx} - \nu (\sigma_{yy} + 
+\sigma_{zz})\right]\, , \\
+& \varepsilon_{yy} = \frac{1}{E}\left[ \sigma_{yy} - \nu (\sigma_{xx} + 
+\sigma_{zz}) \right]\, , \\
+& \varepsilon_{zz} = \frac{1}{E}\left[ \sigma_{zz} - \nu (\sigma_{xx} + 
+\sigma_{yy}) \right]\, , \\
+& \gamma_{xy} = \frac{\tau_{xy}}{G}\, , \\
+& \gamma_{xz} = \frac{\tau_{xz}}{G}\, , \\
+& \gamma_{zy} = \frac{\tau_{zy}}{G}\, .
 \end{split}
 \end{equation}
 
-y  las relaciones deformación - tensión dadas en la \cref{defesf}:
-\begin{equation} \label{defesf}
-\begin{split}
-& \varepsilon_{xx} = \frac{1}{E}\left[ \sigma_{xx} - \nu (\sigma_{yy} + \sigma_{zz})\right] \\
-& \varepsilon_{yy} = \frac{1}{E}\left[ \sigma_{yy} - \nu (\sigma_{xx} + \sigma_{zz}) \right] \\
-& \varepsilon_{zz} = \frac{1}{E}\left[ \sigma_{zz} - \nu (\sigma_{xx} + \sigma_{yy}) \right] \\
-& \gamma_{xy} = \frac{\tau_{xy}}{G} \\
-& \gamma_{xz} = \frac{\tau_{xz}}{G} \\
-& \gamma_{zy} = \frac{\tau_{zy}}{G}\, ,
-\end{split}
-\end{equation}
-
-En la \cref{esfdef} y en la \cref{defesf}, conocidas comúnmente como la Ley de Hooke, las constantes $E$ (módulo elástico o de módulo de Young) , $G$ (módulo elástico de cortante) y $\nu$ (relación de Poisson) son propias de cada material. El valor de dichas constantes se puede determinar mediante ensayos de laboratorio de tensión simple para el módulo elástico $E$ y relación de Poisson $\nu$ y de torsión pura para el módulo de cortante $G$. Por otro lado es posible hallar la siguiente relación entre constantes.
-\[G = \dfrac{E}{2(1 + \nu)}\]
+En la \cref{eq:esf_def} y en la \cref{eq:def_esf}, conocidas comúnmente como la 
+Ley de Hooke, las constantes $E$ (módulo elástico o de módulo de Young) , $G$ 
+(módulo elástico de cortante) y $\nu$ (relación de Poisson) son propias de cada 
+material. El valor de dichas constantes se puede determinar mediante ensayos de 
+laboratorio de tensión simple para el módulo elástico $E$ y relación de Poisson 
+$\nu$ y de torsión pura para el módulo de cortante $G$. Por otro lado es 
+posible hallar la siguiente relación entre constantes
+\[G = \dfrac{E}{2(1 + \nu)}\, .\]
 
 \section{Idealizaciones en 2D}
 
@@ -129,7 +164,14 @@ en coordenadas polares.
 
 
 \subsection{Tensión plana}
-Decimos que un medio continuo está en tensión plana (o esfuerzo plano) si el estado de esfuerzos es tal que una de sus componentes principales es cero en todo el medio. Podemos elegir esta dirección principal alineada con \(z\), lo que implica \(\sigma_{zz}=\sigma_{xz}=\sigma_{yz}=0\) en todo el cuerpo. Esta idealización es común para placas delgadas con cargas paralelas a las caras. En algunos casos, se puede considerar como tensión plana placas levemente curvadas. Este es el caso de un cilindro con pared delgada bajo la acción de una presión, como en un tanque.
+Decimos que un medio continuo está en tensión plana (o esfuerzo plano) si el 
+estado de esfuerzos es tal que una de sus componentes principales es cero en 
+todo el medio. Podemos elegir esta dirección principal alineada con \(z\), lo 
+que implica \(\sigma_{zz}=\sigma_{xz}=\sigma_{yz}=0\) en todo el cuerpo. Esta 
+idealización es común para placas delgadas con cargas paralelas a las caras. En 
+algunos casos, se puede considerar como tensión plana placas levemente 
+curvadas. Este es el caso de un cilindro con pared delgada bajo la acción de 
+una presión, como en un tanque.
 
 Las relaciones deformación-tensión en este caso se reducen a
 \begin{equation} \label{platension}
@@ -141,7 +183,9 @@ Las relaciones deformación-tensión en este caso se reducen a
 \end{split}
 \end{equation}
 
-Note que \(\varepsilon_{zz} \neq 0\), sin embargo, puede prescindirse de él para el análisis, pues puede obtenerse a partir de los esfuerzos/deformaciones en el plano.
+Note que \(\varepsilon_{zz} \neq 0\), sin embargo, puede prescindirse de él 
+para el análisis, pues puede obtenerse a partir de los esfuerzos/deformaciones 
+en el plano.
 
 
 \subsection{Deformación plana}
@@ -207,16 +251,20 @@ Usando las relaciones tensión-deformación para tensión plana (o deformación 
 \end{align*}
 
 Recordando las relaciones:
-\[\left\{ d\vec u \right\} = \left[ \varepsilon  \right] \cdot \left\{ d\vec x \right\} + \left[ \omega  \right] \cdot \left\{ d\vec x\right\}\]
+\[\{ \dd{\vec u} \} = [\varepsilon] \{ \dd{\vec x}\} + [\omega] \{\dd{\vec x}\]
 las cuales para el caso plano se simplifican a
 \begin{align*}
-&du = \varepsilon_{xx}dx + \frac{\gamma_{xy}}{2}dy - \frac{\omega_{xy}}{2}dy\\
-&dv = \varepsilon_{yy}dy + \frac{\gamma_{xy}}{2}dx + \frac{\omega_{xy}}{2}dx
+&\dd{u} = \varepsilon_{xx}\dd{x} + \frac{\gamma_{xy}}{2}\dd{y} - 
+\frac{\omega_{xy}}{2}\dd{y}\\
+&\dd{v} = \varepsilon_{yy}\dd{y} + \frac{\gamma_{xy}}{2}\dd{x} + 
+\frac{\omega_{xy}}{2}\dd{x}
 \end{align*}
 y reconociendo que por la simetría del problema las componentes rotacionales son nulas se tiene que
-\[u = \int \frac{1}{E}[ S \cot\phi  + \nu S \tan\phi]dx  \equiv \frac{1}{E}[S \cot\phi  + \nu S \tan\phi]x + A\]
+\[u = \int \frac{1}{E}[S \cot\phi  + \nu S \tan\phi]\dd{x}  \equiv 
+\frac{1}{E}[S \cot\phi  + \nu S \tan\phi]x + A\, ,\]
 y
-\[v =  - \int \frac{1}{E}[S \tan\phi  + \nu \cot\phi]dy  \equiv  - \frac{1}{E}[S \tan\phi  + \nu S \cot\phi]y + B\]
+\[v =  - \int \frac{1}{E}[S \tan\phi  + \nu \cot\phi]\dd{y}  \equiv  - 
+\frac{1}{E}[S \tan\phi  + \nu S \cot\phi]y + B\, .\]
 donde $A$ y $B$ son constantes de integración.
 
 
@@ -255,7 +303,9 @@ y la longitud final sería:
 
 Por otro lado, la barra cuadrada está sometida a esfuerzo axial $\sigma_{xx}$, $\sigma_{yy}$ y $\sigma_{zz}$, pero solo se deforma en el eje $z$ que es la deformación de interés. Para este caso entonces,
 \[\varepsilon _{zz_c} = \dfrac{\sigma_{zz_c} }{(2 \mu + \lambda)}\]
-donde $\mu =   \left(\dfrac{E }{2(1 + \nu)}\right)$  y $\lambda =   \left(\dfrac{\nu{E} }{(1 + \nu) (1 - 2\nu)}\right)$.
+donde
+\[\mu = \left(\dfrac{E}{2(1 + \nu)}\right)\quad  \text{y}\quad
+\lambda =  \left(\dfrac{\nu{E}}{(1 + \nu) (1 - 2\nu)}\right)\, .\]
 
 Llamando $A = (2 \mu + \lambda)$ se tiene que la longitud final para la barra cuadrada sería:
 \begin{equation}
@@ -329,11 +379,12 @@ Los esfuerzos para la barra cuadrada están dados por
 \end{equation}
 
 El corte máximo se da entonces
-\[\tau_{max} = \varepsilon _{zz_c}  \left(\dfrac{2\mu + \lambda - \lambda}{2}\right)\]
+\[\tau_{\max} = \varepsilon _{zz_c}  \left(\dfrac{2\mu + \lambda - 
+\lambda}{2}\right)\]
 llamando de nuevo $A = (2 \mu + \lambda)$,
-\[\tau_{max} = \sigma_{zz_c} \left(\dfrac{\mu}{A}\right)\]
+\[\tau_{\max} = \sigma_{zz_c} \left(\dfrac{\mu}{A}\right)\]
 para  $\sigma_{zz_c} = 1000 \; \text{kgf/cm}^2$,
-\[\tau_{max} = 1000 \left(\dfrac{\mu}{A}\right) \; \text{kgf/cm}^2\, .\]
+\[\tau_{\max} = 1000 \left(\dfrac{\mu}{A}\right) \; \text{kgf/cm}^2\, .\]
 
 \end{itemize}
 
@@ -355,7 +406,10 @@ en donde $2\beta = 2\theta/h$, representa el giro por unidad de longitud y está
 
 \begin{itemize}
 \item
-Si el cilindro debe ir al interior de una cavidad cilíndrica, es decir, el radio de la cavidad debe ser mayor o igual al del cilindro deformado ¿Cuál es el radio interno mínimo de la cavidad si $h=1$ m, $R = 10$ cm y $2\theta = \sqrt{21}/10$ rad?
+Si el cilindro debe ir al interior de una cavidad cilíndrica, es decir, el 
+radio de la cavidad debe ser mayor o igual al del cilindro deformado ¿Cuál es 
+el radio interno mínimo de la cavidad si $h=1$ m, $R = 10$ cm y $2\theta = 
+\sqrt{21}/10$ rad?
 
 
 Para resolver este problema debemos saber cuál es el máximo radio que el cilindro va a tener luego de deformarse, para ello necesitamos la región con mayores desplazamientos. Para saber en dónde ocurren los mayores desplazamientos podemos analizar las ecuaciones de desplazamientos para ver que esto pasa en $z=h$. El campo de desplazamiento allí sería (sin considerar el desplazamiento en $z$ que es nulo):
@@ -467,7 +521,7 @@ y resolviendo esta ecuación para \(\theta\), obtenemos
 \begin{enumerate}
 
 \item \label{punto01_m} Para un campo de desplazamientos dado por:
-\[\mathbf{u} = a(x^2 - 5y^2)\hat{\mathbf{i}} + (2ax y)\hat{\mathbf{j}} \]
+\[\mathbf{u} = a(x^2 - 5y^2)\hat{\imath} + (2ax y)\hat{\jmath} \]
 
 \begin{enumerate}
 \item Determinar el tensor de deformación
@@ -503,7 +557,8 @@ y resolviendo esta ecuación para \(\theta\), obtenemos
 
 
 \item \label{punto04_m} En la \cref{fig:viga} se muestra una viga en voladizo de sección unitaria con una carga distribuida en su extremo de forma parabólica.
-\[\mathbf{t} = \frac{Pc^2}{2I}\left(1-\frac{y^2}{c^2}\right)\hat{\mathbf{j}}\].La solución para esfuerzos es de la forma
+\[\mathbf{t} = \frac{Pc^2}{2I}\left(1 - \frac{y^2}{c^2}\right)\hat{j}\].La 
+solución para esfuerzos es de la forma
 \begin{align*}
 &\sigma_{xx} = -\frac{P}{I}xy \enspace ,\\
 &\sigma_{yy} = 0 \enspace ,\\
