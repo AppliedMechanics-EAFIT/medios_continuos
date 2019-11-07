@@ -1,14 +1,13 @@
-# Actividad de Computación en Medios Continuos
+# Optimización de una presa
 
-Este repositorio almacena de manera temporal una actividad que incorpora el uso
-de la Mecánica Computacional con la materia Mecánica de los Medios Continuos.
+Esta actividad requiere diseñar una presa sujeta a un criterio de optimalidad dado por la relación benefición/costo.
 
-## Versiones estáticas de los Notebooks
+Los siguientes notebooks pueden ser de utilidad para actividad.
 
-1. [Diseño de una presa de concreto](https://nbviewer.jupyter.org/github/jgomezc1/Act_medios_TEMP/blob/master/01_solidspy_dam_design.ipynb)
+1. [Diseño de una presa de concreto](https://nbviewer.jupyter.org/github/AppliedMechanics-EAFIT/medios_continuos/blob/master/actividades/presa/01_solidspy_dam_design.ipynb)
 
-2. [Solución analitica presa triangular](https://nbviewer.jupyter.org/github/jgomezc1/Act_medios_TEMP/blob/master/02_dam_analytic_solution.ipynb)
+2. [Solución analitica presa triangular](https://nbviewer.jupyter.org/github/AppliedMechanics-EAFIT/medios_continuos/blob/master/actividades/presa/02_dam_analytic_solution.ipynb)
 
-3. [Creación modelo en SolidsPy](https://nbviewer.jupyter.org/github/jgomezc1/Act_medios_TEMP/blob/master/03_solidspy_how_to_model.ipynb)
+3. [Creación modelo en SolidsPy](https://nbviewer.jupyter.org/github/AppliedMechanics-EAFIT/medios_continuos/blob/master/actividades/presa/03_solidspy_how_to_model.ipynb)
 
-4. [Análisis modelo en SolidsPy](https://nbviewer.jupyter.org/github/jgomezc1/Act_medios_TEMP/blob/master/04_solidspy_how_to_analysis.ipynb)
+4. [Análisis modelo en SolidsPy](https://github.com/AppliedMechanics-EAFIT/medios_continuos/blob/master/actividades/presa/04_solidspy_how_to_analysis.ipynb)
