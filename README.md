@@ -1,5 +1,7 @@
 # Mecánica de los medios continuos
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AppliedMechanics-EAFIT/medios_continuos/master)
+
 Material de clase IC0263 Mecánica de los Medios Continuos, pregrado en
 ingeniería civil de la Universidad EAFIT.
 
@@ -8,7 +10,9 @@ ingeniería civil de la Universidad EAFIT.
 - Notas de clase, con los archivos fuente y el documento en
   [pdf](https://github.com/AppliedMechanics-EAFIT/Notas-MMC/raw/master/notas_de_clase/notas_medios.pdf).
 
-- Notebooks de [Jupyter](http://jupyter.org/).
+- Notebooks de [Jupyter](http://jupyter.org/) con ejercicios.
+
+- Actividad
 
 
 ## Descarga del material
