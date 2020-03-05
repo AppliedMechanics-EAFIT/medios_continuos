@@ -9,26 +9,25 @@
 \usepackage{graphicx}
 \usepackage{cancel}
 \usepackage{url}
-\usepackage[final]{pdfpages}
+%\usepackage[final]{pdfpages}
 \usepackage{enumerate}
 \usepackage{mathtools}
 \usepackage{subfig}
-\usepackage{subfiles}	
-\usepackage{hyperref} %% Para incluir detalles cucas del pdf
+\usepackage{subfiles}
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{leftidx}
 \usepackage{cite}  %% Para poner bonitas las citas
+\usepackage{hyperref} %% Para incluir detalles de pdf
 \usepackage{bookmark} %% Para poder organizar las etiquetas en pdf
 \usepackage{cleveref}
 \usepackage{parskip}
 \usepackage[left=3cm,right=3cm,top=4.0cm,bottom=3cm]{geometry}
 \usepackage{physics}
 
-%% Configuracion paquetes
+%%% Configuracion paquetes %%%
 
 \patchcmd\btxselectlanguage{\csname}{\csname TEMPPATCH}{}{} % Para hacer a babelbib funcionar
-
 
 \hypersetup{
 	bookmarksopen=true,
@@ -53,7 +52,10 @@
     labelsep=period
 }
 
-% Nuevos Comandos
+\setlength{\parskip}{16 pt}
+
+
+%%% Nuevos Comandos %%%
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\figurename}{Figura}
 \renewcommand{\contentsname}{Tabla de Contenido}
@@ -72,5 +74,7 @@
     \array{*\c@MaxMatrixCols c}}
 \makeatother
 
-%% Ajustes
+%%% Ajustes %%%
+
+
 \decimalpoint
