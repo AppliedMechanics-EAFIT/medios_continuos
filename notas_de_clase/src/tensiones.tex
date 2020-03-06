@@ -59,7 +59,7 @@ partícula se reduce entonces a la segunda ley de Newton que relaciona los
 cambios en la cantidad de movimiento y la fuerza como
 
 \begin{equation}
-\vec F = \frac{{d\vec P}}{{dt}} \equiv \frac{{dm\vec V}}{{dt}}.
+\vec F = \frac{\dd{\vec P}}{\dd{t}} \equiv \frac{\dd{m\vec V}}{\dd{t}}.
 \label{morate}
 \end{equation}
 
@@ -531,13 +531,26 @@ sistema de referencia, o más interesante aún, deseamos saber como varían las 
 	\label{rotation}
 \end{figure}
 
-En la figura se hace la descripción esquemática del tensor en el sistema primado y no primado respectivamente. En la sección anterior se resolvió el problema de la determinación del vector de tracciones en asocio con una dirección normal $\hat{n}$ (ver \cref{CauchyFormula}). Para resolver el problema de transformación bajo rotación basta con reconocer las direcciones $\hat{i'}$, $\hat{j'}$ y $\hat{k'}$  del nuevo sistema de referencia como vectores normales a lo largo de los cuales se desea determinar los vectores de tracciones ${\vec t^{(i')}}$, ${\vec t^{(j')}}$ y ${\vec t^{(k')}}$. En la \cref{roteje} se presentan en línea púrpura las direcciones asociadas con el sistema de referencia $x-y-z$, mientras que en línea negra se presentan las direcciones asociadas con el sistema de referencia primado $x'-y'-z'$. Denotaremos por $\sigma$ al tensor de tensiones en el primer sistema de referencia y por $\sigma'$ el del segundo. 
+En la figura se hace la descripción esquemática del tensor en el sistema 
+primado y no primado respectivamente. En la sección anterior se resolvió el 
+problema de la determinación del vector de tracciones en asocio con una 
+dirección normal $\hat{n}$ (ver \cref{CauchyFormula}). Para resolver el 
+problema de transformación bajo rotación basta con reconocer las direcciones 
+$\hat{i'}$, $\hat{j'}$ y $\hat{k'}$  del nuevo sistema de referencia como 
+vectores normales a lo largo de los cuales se desea determinar los vectores de 
+tracciones ${\vec t^{(i')}}$, ${\vec t^{(j')}}$ y ${\vec t^{(k')}}$. En la 
+\cref{roteje} se presentan en línea púrpura las direcciones asociadas con el 
+sistema de referencia $x-y-z$, mientras que en línea negra se presentan las
+ 
+direcciones asociadas con el sistema de referencia primado $x'-y'-z'$. 
+Denotaremos por $\sigma$ al tensor de tensiones en el primer sistema de 
+referencia y por $\sigma'$ el del segundo. 
 
 \begin{figure}[H]
 \centering
-	\includegraphics[width=2.8 in]{rota_ejes.pdf}
-	\caption{Representación de tensor de tensiones en sistema $x-y-z$ y $x'-y'-z'$.}
-	\label{roteje}
+\includegraphics[height=2.5 in]{rota_ejes.pdf}
+\caption{Representación de tensor de tensiones en sistema $x-y-z$ y $x'-y'-z'$.}
+\label{roteje}
 \end{figure}
 
 
@@ -547,30 +560,37 @@ con vectores normales $\hat{i'}$, $\hat{j'}$ y $\hat{k'}$ de acuerdo con:
 
 \begin{equation}
 \begin{aligned}
-&\left\{ {{t^{(i')}}} \right\} = \left[ \sigma  \right]\left\{ i' \right\} \\
-&\left\{ {{t^{(j')}}} \right\} = \left[ \sigma  \right]\left\{ j' \right\} \\
-&\left\{ {{t^{(k')}}} \right\} = \left[ \sigma  \right]\left\{ k' \right\}
+&\{ t^{(i')} \} = \left[ \sigma  \right]\left\{ i' \right\} \\
+&\{ t^{(j')} \} = \left[ \sigma  \right]\left\{ j' \right\} \\
+&\{ t^{(k')} \} = \left[ \sigma  \right]\left\{ k' \right\}
 \end{aligned}
 \label{proy1}
 \end{equation}
 %
-Ahora, estos vectores deben ser expresados en términos de componentes escalares en el sistema de referencia $x'-y'-z'$ para lo cual proyectamos cada uno de ellos a lo largo de las direcciones $\hat{i'}$, $\hat{j'}$ y $\hat{k'}$ como sigue;
-
+Ahora, estos vectores deben ser expresados en términos de componentes escalares 
+en el sistema de referencia $x'-y'-z'$ para lo cual proyectamos cada uno de 
+ellos a lo largo de las direcciones $\hat{i'}$, $\hat{j'}$ y $\hat{k'}$ como 
+sigue
 \begin{equation}
 \begin{aligned}
-&{{\vec t}^{(i')}} = [{{\vec t}^{(i')}} \cdot \hat i']\hat i' + [{{\vec t}^{(i')}} \cdot \hat j']\hat j' + [{{\vec t}^{(i')}} \cdot \hat k']\hat k' \\
-&{{\vec t}^{(j')}} = [{{\vec t}^{(j')}} \cdot \hat i']\hat i' + [{{\vec t}^{(j')}} \cdot \hat j']\hat j' + [{{\vec t}^{(j')}} \cdot \hat k']\hat k' \\
-&{{\vec t}^{(k')}} = [{{\vec t}^{(k')}} \cdot \hat i']\hat i' + [{{\vec t}^{(k')}} \cdot \hat j']\hat j' + [{{\vec t}^{(k')}} \cdot \hat k']\hat k'
+&\vec{t}^{(i')} = [\vec{t}^{(i')} \cdot \hat i']\hat i' + [\vec{t}^{(i')} 
+\cdot \hat j']\hat j' + [\vec{t}^{(i')} \cdot \hat k']\hat k' \\
+&\vec{t}^{(j')} = [\vec{t}^{(j')} \cdot \hat i']\hat i' + [\vec{t}^{(j')} \cdot 
+\hat j']\hat j' + [\vec{t}^{(j')} \cdot \hat k']\hat k' \\
+&\vec{t}^{(k')} = [\vec{t}^{(k')} \cdot \hat i']\hat i' + [\vec{t}^{(k')} \cdot 
+\hat j']\hat j' + [\vec{t}^{(k')} \cdot \hat k']\hat k'
 \end{aligned}
 \label{proy2}
 \end{equation}
 
 Estas expresiones equivalen a:
-%
 \begin{align*}
-& {{\vec t}^{(i')}} = {\sigma _{x'x'}}\hat i' + {\tau _{x'y'}}\hat j' + {\tau _{x'z'}}\hat k' \\
-& {{\vec t}^{(j')}} = {\tau _{y'x'}}\hat i' + {\sigma _{y'y'}}\hat j' + {\tau _{y'z'}}\hat k' \\
-&{{\vec t}^{(k')}} = {\tau _{z'x'}}\hat i' + {\tau _{z'y'}}\hat j' + {\sigma _{z'z'}}\hat k'.
+& \vec{t}^{(i')} = \sigma_{x'x'}\hat i' + \tau_{x'y'}\hat j' + \tau_{x'z'}\hat 
+k' \\
+& \vec{t}^{(j')} = \tau_{y'x'}\hat i' + \sigma_{y'y'}\hat j' + \tau_{y'z'}\hat 
+k' \\
+&\vec{t}^{(k')} = \tau_{z'x'}\hat i' + \tau_{z'y'}\hat j' + \sigma_{z'z'}\hat 
+k'.
 \end{align*} \\
 
 %
@@ -578,15 +598,14 @@ Finalmente si escribimos los vectores $\hat{i'}$, $\hat{j'}$ y $\hat{k'}$ en el 
 
 \begin{equation}
 \begin{aligned}
-&\hat i' = {C_{x'x}}\hat i + {C_{x'y}}\hat j + {C_{x'z}}\hat k \\
-&\hat j' = {C_{y'x}}\hat i + {C_{y'y}}\hat j + {C_{y'z}}\hat k \\
-&\hat k' = {C_{z'x}}\hat i + {C_{z'y}}\hat j + {C_{z'z}}\hat k
+&\hat i' = C_{x'x}\hat i + C_{x'y}\hat j + C_{x'z}\hat k \\
+&\hat j' = C_{y'x}\hat i + C_{y'y}\hat j + C_{y'z}\hat k \\
+&\hat k' = C_{z'x}\hat i + C_{z'y}\hat j + C_{z'z}\hat k
 \end{aligned}
 \label{cosdir}
 \end{equation}
 
 Substituyendo las \cref{proy1} y \cref{cosdir} en la \cref{proy2} se tiene:
-
 %
 \begin{align}
 [\sigma'] = [C] [\sigma] {[C]^T}
@@ -607,7 +626,14 @@ sistemas y está dada por: \\
 
 \subsection{Transformación por rotación 2D. Círculo de Mohr}
 %
-En muchas aplicaciones prácticas los problemas de tensiones pueden ser estudiados mediante un análisis en dos dimensiones. Cuando éste es el caso la transformación por rotación puede ser desarrollada a partir de una herramienta gráfica conocida como el círculo de Mohr.  En lo que sigue se deducen las expresiones para pasar de un tensor con representación en un sistema $x-y$ a su respresentación en un sistema primado $x'-y'$. En la \cref{rota2D} se muestra la descripción esquemática del tensor en el sistema primado y no primado respectivamente. 
+En muchas aplicaciones prácticas los problemas de tensiones pueden ser 
+estudiados mediante un análisis en dos dimensiones. Cuando éste es el caso la 
+transformación por rotación puede ser desarrollada a partir de una herramienta 
+gráfica conocida como el círculo de Mohr. En lo que sigue se deducen las 
+expresiones para pasar de un tensor con representación en un sistema $x-y$ a su 
+respresentación en un sistema primado $x'-y'$. En la \cref{rota2D} se muestra 
+la descripción esquemática del tensor en el sistema primado y no primado 
+respectivamente. 
 
 \begin{figure}[H]
 \centering
@@ -646,7 +672,8 @@ S_\theta & C_\theta
 \label{trans2d}
 \end{equation}
 
-Desarrollando la multiplicación matricial y escribiendo las tres expresiones que definen los tres escalares $\sigma ' _{xx}$, $\sigma ' _{yy}$ y $\tau ' _{xy}$:\\
+Desarrollando la multiplicación matricial y escribiendo las tres expresiones 
+que definen los tres escalares $\sigma'_{xx}$, $\sigma'_{yy}$ y $\tau'_{xy}$:\\
 
 \begin{equation}
 \begin{aligned}
@@ -658,27 +685,29 @@ Desarrollando la multiplicación matricial y escribiendo las tres expresiones qu
 \end{equation}
 %
 
-Sumando la primera y la  segunda en la expresion anterior se tiene:
-
+Sumando la primera y la  segunda en la expresión anterior se tiene:
 \begin{equation}
-	\sigma ' _{xx} + \sigma ' _{yy} =   \sigma _{xx} +  \sigma _{yy}
-	\label{inva}
+\sigma'_{xx} + \sigma'_{yy} = \sigma_{xx} + \sigma_{yy}
+\label{inva}
 \end{equation}
 %
-La  \cref{inva} muestra que la suma de las componentes normales (elementos sobre la diagonal) es invariante (no cambia) bajo la rotación del sistema de referencia. Eliminando $\sigma ' _{yy}$, se tiene:\\
+La  \cref{inva} muestra que la suma de las componentes normales (elementos 
+sobre la diagonal) es invariante (no cambia) bajo la rotación del sistema de 
+referencia. Eliminando $\sigma'_{yy}$, se tiene:\\
 %
 \begin{equation}
-	\sigma ' _{xx} -(\sigma _{xx} + \sigma _{yy}) = -(\sigma _{xx} S^2 _\theta + \sigma _{yy} C^2 _\theta - 2 \tau _{xy} S _\theta C_\theta). \\
+\sigma'_{xx} - (\sigma_{xx} + \sigma_{yy}) = -(\sigma_{xx} S^2_\theta + 
+\sigma_{yy} C^2_\theta - 2 \tau_{xy} S_\theta C_\theta). \\
 \label{sigypyp}
 \end{equation}
 %
 Utilizando las relaciones trigonométricas:\\
-\\
-	$sen ^2 \theta = \frac{1}{2} \left( 1 - cos \left( 2 \theta \right) \right)$\\\\
-	$cos ^2 \theta = \frac{1}{2} \left( 1 + cos \left( 2 \theta \right) \right)$\\\\
-	$ cos ^2 \theta -sen ^2 \theta =  cos \left( 2 \theta \right)$\\\\
-	$sen \theta cos  \theta = \frac{1}{2} sen \left( 2 \theta \right)$ \\\\
-%
+\begin{align*}
+&\sin^2\theta = \frac{1}{2}[1 - \cos(2\theta)]\\
+&\cos^2\theta = \frac{1}{2}[1 + \cos(2\theta)]\\
+&\cos^2\theta -\sin^2 \theta =  \cos( 2 \theta)\\
+&\sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)
+\end{align*}
 la \cref{sigypyp} se puede reescribir como: \\
 
 \begin{equation*}
