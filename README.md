@@ -18,6 +18,9 @@ Los archivos almacenados en este repositorio se pueden descargar directamente o 
 
 ## Actividad usando computación (2020-01)
 
+* [Determinación de la respuesta de una presa de concreto](https://nbviewer.jupyter.org/github/AppliedMechanics-EAFIT/medios_continuos/blob/master/actividades/presa/01_solidspy_dam_design.ipynb)
+
+
 
 ## Descarga del material
 
