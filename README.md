@@ -2,8 +2,10 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AppliedMechanics-EAFIT/medios_continuos/master)
 
-Material de clase IC0263 Mecánica de los Medios Continuos, pregrado en
-ingeniería civil de la Universidad EAFIT.
+## Introducción
+Este repositorio contiene recursos de aprendizaje para el curso **Mecánica de los Medios Continuos** dictado a estudiantes de segundo año (4to semestre) del programa de Ingeniería Civil de la Universidad EAFIT. El curso cubre la teoría de los medios deformables partiendo del planteamiento del problema de muchas particulas hasta introducir los conceptos de tensor de tensiones, tensor de deformaciones unitarias y discutir las ecuaciones de equilibrio para un sólido elástico.
+
+Los archivos almacenados en este repositorio se pueden descargar directamente o clonar el repo como se describe mas adelante. El repo contiene algunos ejemplos descritos en térmnos de Notebooks de [Jupyter](http://jupyter.org/).
 
 ## Contenido
 
