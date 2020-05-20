@@ -2,12 +2,12 @@
 // author: Juan Gomez
 
 c = 5.0; 						// for size elements
-Ap = 30.0;
-Ac = 5.0;
-Hp = 80.0;
-Hs = 200.0;
-Dl = 300.0;
-Dr = 300.0;
+Ap = 60.0;
+Ac = 30.0;
+Hp = 100.0;
+Hs = 100.0;
+Dl = 100.0;
+Dr = 100.0;
 
 // Define vertex points 						
 Point(1) = {-Dl   , -Hs , 0, c};		        // {x,y,z, size}
