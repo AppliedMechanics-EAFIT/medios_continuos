@@ -13,8 +13,8 @@ dependencies:
   - ipyevents
   - pyvista
   - itkwidgets
+  - panel
   - sympy
-  - mayavi
   - pip
   - pip:
     - meshio==3.0
