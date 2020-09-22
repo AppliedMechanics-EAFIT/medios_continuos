@@ -13,6 +13,7 @@ dependencies:
   - ipyevents
   - pyvista
   - itkwidgets
+  - panel
   - sympy
   - mayavi
   - pip
