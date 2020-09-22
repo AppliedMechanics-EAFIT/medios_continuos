@@ -1,4 +1,4 @@
-name: medios-continuos
+name: medios_continuos
 channels:
   - conda-forge
   - defaults
@@ -11,8 +11,8 @@ dependencies:
   - sympy
   - jupyter
   # Paquetes para visualización
-  - vtk
-  - pyvista==0.23.1
+#  - vtk
+#  - pyvista==0.23.1
   - mayavi
   - pyqt
   - ipywidgets
