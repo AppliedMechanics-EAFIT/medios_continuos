@@ -1,20 +1,22 @@
 name: medios-continuos
 channels:
   - conda-forge
+  - defaults
 dependencies:
+  # Paquetes básicos
   - python>3.6
   - numpy
   - scipy
   - matplotlib
-  - pyqt>=5.9
-  - vtk>=8
+  - sympy
   - jupyter
-  - ipywidgets
-  - ipyevents
+  # Paquetes para visualización
+  - vtk
   - pyvista
+  - pyqt
+  - ipywidgets
   - itkwidgets
   - panel
-  - sympy
   - pip
   - pip:
     - meshio==3.0
